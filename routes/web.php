@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{locale}', 'PageController@home')->name('home');
+
+Auth::routes();
