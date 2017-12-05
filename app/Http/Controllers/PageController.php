@@ -7,21 +7,27 @@ use App;
 
 class PageController extends Controller
 {
-    public function home($locale) {
-        App::setLocale($locale);
+    public function home() {
+        return view('home');
+    }
 
-        if (App::isLocale('en')) {
-            $hello = 'Hello';
-        }
+    public function art() {
+        return view('home');
+    }
 
-        if (App::isLocale('nl')) {
-            $hello = 'Hallo';
-        }
+    public function isearch($query = null) {
+        return view('home');
+    }
 
-        if (App::isLocale('fr')) {
-            $hello = 'Bonjour';
-        }
+    public function myauctions() {
+        return view('home');
+    }
 
-        return view('home', compact('hello'));
+    public function mybids() {
+        return view('home');
+    }
+
+    public function contact() {
+        return view('home');
     }
 }

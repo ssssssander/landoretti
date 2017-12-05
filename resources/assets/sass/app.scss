@@ -8,6 +8,122 @@
 // Bootstrap
 // @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+
+// Algemeen
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: inherit;
+    }
+}
 body {
-    font-family: 'Arimo', sans-serif;
+    font-family: "Arimo", sans-serif;
+    font-size: 15px;
+}
+.active {
+    font-weight: bold;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1024px;
+}
+
+
+// Header
+
+.line {
+    background-color: #01a6a0;
+    height: 4px;
+}
+.logo {
+    box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
+    position: absolute;
+    top: 0;
+}
+header {
+    .margin-from-logo {
+        margin-left: 170px;
+    }
+    nav {
+        display: inline-block;
+    }
+    li {
+        padding: 18px 0;
+        display: inline-block;
+    }
+    .header-personal {
+        @extend .margin-from-logo;
+        font-size: 13px;
+
+        nav {
+            a {
+                border-right: 1px solid $secondary-color;
+                color: $secondary-color;
+                padding: 0 30px;
+            }
+        }
+        li:last-of-type a {
+            border-right: 0;
+        }
+        li:first-of-type a {
+            padding-left: 0;
+        }
+        .search {
+            float: right;
+            padding-top: 14px;
+
+            input {
+                padding: 5px 25px;
+                border-radius: 3px;
+                border: 1px solid #bebebd;
+                color: #1d1d1b;
+            }
+            .icon {
+                background-image: url("/img/search.png");
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    .header-nav-stretch-bg {
+        background-color: $header-nav-bg-color;
+
+        .header-nav {
+            @extend .margin-from-logo;
+
+            nav {
+                font-weight: bold;
+
+                a {
+                    padding: 0 15px;
+                    color: $primary-color;
+                }
+                li:first-of-type a {
+                    padding-left: 0;
+                }
+            }
+            .languages {
+                color: $secondary-color;
+                float: right;
+                font-size: 13px;
+
+                a {
+                    padding: 0 10px;
+                }
+                li:last-of-type a {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
 }

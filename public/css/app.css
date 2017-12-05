@@ -1,4 +1,127 @@
-@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);body {
-  font-family: 'Arimo', sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+  font-size: 15px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.line {
+  background-color: #01a6a0;
+  height: 4px;
+}
+
+.logo {
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
+          box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
+  position: absolute;
+  top: 0;
+}
+
+header .margin-from-logo,
+header .header-personal,
+header .header-nav-stretch-bg .header-nav {
+  margin-left: 170px;
+}
+
+header nav {
+  display: inline-block;
+}
+
+header li {
+  padding: 18px 0;
+  display: inline-block;
+}
+
+header .header-personal {
+  font-size: 13px;
+}
+
+header .header-personal nav a {
+  border-right: 1px solid #0a1e75;
+  color: #0a1e75;
+  padding: 0 30px;
+}
+
+header .header-personal li:last-of-type a {
+  border-right: 0;
+}
+
+header .header-personal li:first-of-type a {
+  padding-left: 0;
+}
+
+header .header-personal .search {
+  float: right;
+  padding-top: 14px;
+}
+
+header .header-personal .search input {
+  padding: 5px 25px;
+  border-radius: 3px;
+  border: 1px solid #bebebd;
+  color: #1d1d1b;
+}
+
+header .header-personal .search .icon {
+  background-image: url("/img/search.png");
+  width: 18px;
+  height: 18px;
+}
+
+header .header-nav-stretch-bg {
+  background-color: #eaeaea;
+}
+
+header .header-nav-stretch-bg .header-nav nav {
+  font-weight: bold;
+}
+
+header .header-nav-stretch-bg .header-nav nav a {
+  padding: 0 15px;
+  color: #4e4e4e;
+}
+
+header .header-nav-stretch-bg .header-nav nav li:first-of-type a {
+  padding-left: 0;
+}
+
+header .header-nav-stretch-bg .header-nav .languages {
+  color: #0a1e75;
+  float: right;
+  font-size: 13px;
+}
+
+header .header-nav-stretch-bg .header-nav .languages a {
+  padding: 0 10px;
+}
+
+header .header-nav-stretch-bg .header-nav .languages li:last-of-type a {
+  padding-right: 0;
 }
 
