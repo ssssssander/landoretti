@@ -14,7 +14,7 @@
 Route::prefix('en')->group(function() {
     Route::get('/', 'PageController@home')->name('/');
     Route::get('art', 'PageController@art')->name('art');
-    Route::post('isearch/{query?}', 'PageController@isearch')->name('isearch');
+    Route::get('isearch', 'PageController@isearch')->name('isearch');
     Route::get('myauctions', 'PageController@myauctions')->name('myauctions');
     Route::get('mybids', 'PageController@mybids')->name('mybids');
     Route::get('contact', 'PageController@contact')->name('contact');

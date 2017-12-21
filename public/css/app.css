@@ -36,16 +36,17 @@ body {
   height: 4px;
 }
 
-.logo {
+header .logo {
   -webkit-box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
           box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
   position: absolute;
   top: 0;
+  z-index: 1;
 }
 
 header .margin-from-logo,
 header .header-personal,
-header .header-nav-stretch-bg .header-nav {
+header .stretch-bg .header-nav {
   margin-left: 170px;
 }
 
@@ -76,52 +77,74 @@ header .header-personal li:first-of-type a {
   padding-left: 0;
 }
 
-header .header-personal .search {
+header .header-personal form {
   float: right;
   padding-top: 14px;
 }
 
-header .header-personal .search input {
+header .header-personal form input[type=text] {
   padding: 5px 25px;
   border-radius: 3px;
   border: 1px solid #bebebd;
   color: #1d1d1b;
 }
 
-header .header-personal .search .icon {
-  background-image: url("/img/search.png");
+header .header-personal form input[type=submit] {
+  background: url("/img/search.png");
   width: 18px;
   height: 18px;
+  border: none;
+  vertical-align: middle;
 }
 
-header .header-nav-stretch-bg {
+header .stretch-bg {
   background-color: #eaeaea;
 }
 
-header .header-nav-stretch-bg .header-nav nav {
+header .stretch-bg .header-nav nav {
   font-weight: bold;
 }
 
-header .header-nav-stretch-bg .header-nav nav a {
+header .stretch-bg .header-nav nav a {
   padding: 0 15px;
   color: #4e4e4e;
 }
 
-header .header-nav-stretch-bg .header-nav nav li:first-of-type a {
+header .stretch-bg .header-nav nav li:first-of-type a {
   padding-left: 0;
 }
 
-header .header-nav-stretch-bg .header-nav .languages {
+header .stretch-bg .header-nav .languages {
   color: #0a1e75;
   float: right;
   font-size: 13px;
 }
 
-header .header-nav-stretch-bg .header-nav .languages a {
+header .stretch-bg .header-nav .languages a {
   padding: 0 10px;
 }
 
-header .header-nav-stretch-bg .header-nav .languages li:last-of-type a {
+header .stretch-bg .header-nav .languages li:last-of-type a {
   padding-right: 0;
+}
+
+.slideshow {
+  width: 100%;
+}
+
+.info {
+  margin-bottom: 50px;
+}
+
+.info h2 {
+  font-size: 40px;
+  color: #0a1e75;
+  font-weight: normal;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.popular {
+  margin-bottom: 100px;
 }
 

@@ -26,50 +26,47 @@
                     <ul>
                         <li>
                             <a href="{{ route('register') }}" {{ Route::is('register') ? 'class=active' : null }}>
-                                {{ up(trans('header.register')) }}
+                                @lang('header.register')
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('login') }}" {{ Route::is('login') ? 'class=active' : null }}>
-                                {{ up(trans('header.login')) }}
+                                @lang('header.login')
                             </a>
                         </li>
                     </ul>
                 </nav>
-                <form class="search">
-                    <input type="text" placeholder="@lang('header.search')">
-                    <a href="{{ route('isearch) }}"></a>
-                </form>
+                @include('includes.search')
             </div>
         </div>
-        <div class="header-nav-stretch-bg">
+        <div class="stretch-bg">
             <div class="wrapper">
                 <div class="header-nav">
                     <nav>
                         <ul>
-                            <li><a href="{{ route('/') }}">{{ up(trans('header.home')) }}</a></li>
-                            <li><a href="{{ route('art') }}">{{ up(trans('header.art')) }}</a></li>
-                            <li><a href="{{ route('isearch') }}">{{ up(trans('header.isearch')) }}</a></li>
-                            <li><a href="{{ route('myauctions') }}">{{ up(trans('header.myauctions')) }}</a></li>
-                            <li><a href="{{ route('mybids') }}">{{ up(trans('header.mybids')) }}</a></li>
-                            <li><a href="{{ route('contact') }}">{{ up(trans('header.contact')) }}</a></li>
+                            <li><a href="{{ route('/') }}">@lang('header.home')</a></li>
+                            <li><a href="{{ route('art') }}">@lang('header.art')</a></li>
+                            <li><a href="{{ route('isearch') }}">@lang('header.isearch')</a></li>
+                            <li><a href="{{ route('myauctions') }}">@lang('header.myauctions')</a></li>
+                            <li><a href="{{ route('mybids') }}">@lang('header.mybids')</a></li>
+                            <li><a href="{{ route('contact') }}">@lang('header.contact')</a></li>
                         </ul>
                     </nav>
                     <span class="languages">
                         <ul>
                             <li>
                                 <a href="/nl/{{ Route::currentRouteName() }}" {{ App::isLocale('nl') ? 'class=active' : null }}>
-                                    {{ up(trans('header.nl')) }}
+                                    @lang('header.nl')
                                 </a>
                             </li>
                             <li>
                                 <a href="/fr/{{ Route::currentRouteName() }}" {{ App::isLocale('fr') ? 'class=active' : null }}>
-                                    {{ up(trans('header.fr')) }}
+                                    @lang('header.fr')
                                 </a>
                             </li>
                             <li>
                                 <a href="/en/{{ Route::currentRouteName() }}" {{ App::isLocale('en') ? 'class=active' : null }}>
-                                    {{ up(trans('header.en')) }}
+                                    @lang('header.en')
                                 </a>
                             </li>
                         </ul>

@@ -15,8 +15,10 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function isearch($query = null) {
-        return view('home');
+    public function isearch(Request $request) {
+        $query = $request->input('query');
+
+        return view('home', compact('query'));
     }
 
     public function myauctions() {

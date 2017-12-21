@@ -8,9 +8,6 @@
 // Bootstrap
 // @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
-
-// Algemeen
-
 * {
     margin: 0;
     padding: 0;
@@ -37,20 +34,17 @@ body {
     margin: 0 auto;
     width: 1024px;
 }
-
-
-// Header
-
 .line {
     background-color: #01a6a0;
     height: 4px;
 }
-.logo {
-    box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
-    position: absolute;
-    top: 0;
-}
 header {
+    .logo {
+        box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
     .margin-from-logo {
         margin-left: 170px;
     }
@@ -78,25 +72,27 @@ header {
         li:first-of-type a {
             padding-left: 0;
         }
-        .search {
+        form {
             float: right;
             padding-top: 14px;
 
-            input {
+            input[type=text] {
                 padding: 5px 25px;
                 border-radius: 3px;
                 border: 1px solid #bebebd;
                 color: #1d1d1b;
             }
-            .icon {
-                background-image: url("/img/search.png");
+            input[type=submit] {
+                background: url("/img/search.png");
                 width: 18px;
                 height: 18px;
+                border: none;
+                vertical-align: middle;
             }
         }
     }
-    .header-nav-stretch-bg {
-        background-color: $header-nav-bg-color;
+    .stretch-bg {
+        background-color: $stretch-bg-color;
 
         .header-nav {
             @extend .margin-from-logo;
@@ -126,4 +122,21 @@ header {
             }
         }
     }
+}
+.slideshow {
+    width: 100%;
+}
+.info {
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: 40px;
+        color: $secondary-color;
+        font-weight: normal;
+        text-align: center;
+        padding: 50px 0
+    }
+}
+.popular {
+    margin-bottom: 100px;
 }
