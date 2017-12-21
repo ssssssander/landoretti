@@ -26,6 +26,7 @@ a {
 body {
     font-family: "Arimo", sans-serif;
     font-size: 15px;
+    color: $primary-color;
 }
 .active {
     font-weight: bold;
@@ -33,6 +34,9 @@ body {
 .wrapper {
     margin: 0 auto;
     width: 1024px;
+}
+.stretch-bg {
+    background-color: $stretch-bg-color;
 }
 .line {
     background-color: #01a6a0;
@@ -91,34 +95,30 @@ header {
             }
         }
     }
-    .stretch-bg {
-        background-color: $stretch-bg-color;
+    .header-nav {
+        @extend .margin-from-logo;
 
-        .header-nav {
-            @extend .margin-from-logo;
+        nav {
+            font-weight: bold;
 
-            nav {
-                font-weight: bold;
-
-                a {
-                    padding: 0 15px;
-                    color: $primary-color;
-                }
-                li:first-of-type a {
-                    padding-left: 0;
-                }
+            a {
+                padding: 0 15px;
+                color: $primary-color;
             }
-            .languages {
-                color: $secondary-color;
-                float: right;
-                font-size: 13px;
+            li:first-of-type a {
+                padding-left: 0;
+            }
+        }
+        .languages {
+            color: $secondary-color;
+            float: right;
+            font-size: 13px;
 
-                a {
-                    padding: 0 10px;
-                }
-                li:last-of-type a {
-                    padding-right: 0;
-                }
+            a {
+                padding: 0 10px;
+            }
+            li:last-of-type a {
+                padding-right: 0;
             }
         }
     }
@@ -126,17 +126,57 @@ header {
 .slideshow {
     width: 100%;
 }
-.info {
-    margin-bottom: 50px;
-
+.block {
     h2 {
         font-size: 40px;
         color: $secondary-color;
         font-weight: normal;
         text-align: center;
-        padding: 50px 0
+        padding: 50px 0;
     }
 }
+.info {
+    margin-bottom: 50px;
+
+    div {
+        width: 300px;
+
+        padding: 0 55px;
+        margin-right: 40px;
+        display: inline-block;
+        text-align: center;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+        h3 {
+            font-size: 25px;
+            font-weight: normal;
+            padding: 30px 0 12px 0;
+        }
+    }
+}
+.info + .stretch-bg {
+    padding-bottom: 100px;
+}
 .popular {
-    margin-bottom: 100px;
+    span {
+        background: url("/img/arrow.png");
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        margin-left: 20px;
+    }
+    div {
+        width: 314px;
+        display: inline-block;
+    }
+    img {
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            filter: brightness(50%);
+        }
+    }
 }

@@ -20,6 +20,7 @@ a:visited {
 body {
   font-family: "Arimo", sans-serif;
   font-size: 15px;
+  color: #4e4e4e;
 }
 
 .active {
@@ -29,6 +30,10 @@ body {
 .wrapper {
   margin: 0 auto;
   width: 1024px;
+}
+
+.stretch-bg {
+  background-color: #eaeaea;
 }
 
 .line {
@@ -46,7 +51,7 @@ header .logo {
 
 header .margin-from-logo,
 header .header-personal,
-header .stretch-bg .header-nav {
+header .header-nav {
   margin-left: 170px;
 }
 
@@ -97,34 +102,30 @@ header .header-personal form input[type=submit] {
   vertical-align: middle;
 }
 
-header .stretch-bg {
-  background-color: #eaeaea;
-}
-
-header .stretch-bg .header-nav nav {
+header .header-nav nav {
   font-weight: bold;
 }
 
-header .stretch-bg .header-nav nav a {
+header .header-nav nav a {
   padding: 0 15px;
   color: #4e4e4e;
 }
 
-header .stretch-bg .header-nav nav li:first-of-type a {
+header .header-nav nav li:first-of-type a {
   padding-left: 0;
 }
 
-header .stretch-bg .header-nav .languages {
+header .header-nav .languages {
   color: #0a1e75;
   float: right;
   font-size: 13px;
 }
 
-header .stretch-bg .header-nav .languages a {
+header .header-nav .languages a {
   padding: 0 10px;
 }
 
-header .stretch-bg .header-nav .languages li:last-of-type a {
+header .header-nav .languages li:last-of-type a {
   padding-right: 0;
 }
 
@@ -132,11 +133,7 @@ header .stretch-bg .header-nav .languages li:last-of-type a {
   width: 100%;
 }
 
-.info {
-  margin-bottom: 50px;
-}
-
-.info h2 {
+.block h2 {
   font-size: 40px;
   color: #0a1e75;
   font-weight: normal;
@@ -144,7 +141,53 @@ header .stretch-bg .header-nav .languages li:last-of-type a {
   padding: 50px 0;
 }
 
-.popular {
-  margin-bottom: 100px;
+.info {
+  margin-bottom: 50px;
+}
+
+.info div {
+  width: 300px;
+  padding: 0 55px;
+  margin-right: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+.info div:last-of-type {
+  margin-right: 0;
+}
+
+.info div h3 {
+  font-size: 25px;
+  font-weight: normal;
+  padding: 30px 0 12px 0;
+}
+
+.info + .stretch-bg {
+  padding-bottom: 100px;
+}
+
+.popular span {
+  background: url("/img/arrow.png");
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.popular div {
+  width: 314px;
+  display: inline-block;
+}
+
+.popular img {
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.popular img:hover {
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 
