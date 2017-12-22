@@ -18,10 +18,6 @@ ul {
 }
 a {
     text-decoration: none;
-
-    &:visited {
-        color: inherit;
-    }
 }
 body {
     font-family: "Arimo", sans-serif;
@@ -41,6 +37,21 @@ body {
 .line {
     background-color: #01a6a0;
     height: 4px;
+}
+.search {
+    input[type=text] {
+        padding: 5px 25px;
+        border-radius: 3px;
+        border: 1px solid #bebebd;
+        color: #1d1d1b;
+    }
+    input[type=submit] {
+        background: url("/img/search.png");
+        width: 18px;
+        height: 18px;
+        border: none;
+        vertical-align: middle;
+    }
 }
 header {
     .logo {
@@ -75,24 +86,6 @@ header {
         }
         li:first-of-type a {
             padding-left: 0;
-        }
-        form {
-            float: right;
-            padding-top: 14px;
-
-            input[type=text] {
-                padding: 5px 25px;
-                border-radius: 3px;
-                border: 1px solid #bebebd;
-                color: #1d1d1b;
-            }
-            input[type=submit] {
-                background: url("/img/search.png");
-                width: 18px;
-                height: 18px;
-                border: none;
-                vertical-align: middle;
-            }
         }
     }
     .header-nav {
@@ -158,6 +151,7 @@ header {
 }
 .info + .stretch-bg {
     padding-bottom: 100px;
+    margin-bottom: 100px;
 }
 .popular {
     span {
@@ -178,5 +172,46 @@ header {
         &:hover {
             filter: brightness(50%);
         }
+    }
+}
+footer {
+    border-top: 1px solid $separator-color;
+
+    ul {
+        margin-bottom: 22px;
+
+        li {
+            font-size: 14px;
+
+            &:first-of-type {
+                color: $black;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            a {
+                color: $primary-link-color;
+            }
+        }
+    }
+
+    .sitemap {
+        padding-top: 40px;
+        width: 780px;
+        display: inline-block;
+        border-right: 1px solid $separator-color;
+
+        div {
+            vertical-align: top;
+            width: 265px;
+            display: inline-block;
+
+            &:last-of-type {
+                width: 240px;
+            }
+        }
+    }
+    .contact {
+        display: inline-block;
+        width: 220px;
     }
 }

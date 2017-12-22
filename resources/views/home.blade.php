@@ -26,10 +26,10 @@
         <div class="wrapper block popular">
             <h2>@lang('home.most_popular')<span></span></h2>
             <div>
-                <img src="{{ asset('img/popular1.png') }}" alt="">
-                <img src="{{ asset('img/popular2.png') }}" alt="">
+                <a href="#"><img src="{{ asset('img/popular1.png') }}" alt="Popular 1"></a>
+                <a href="#"><img src="{{ asset('img/popular2.png') }}" alt="Popular 2"></a>
             </div>
-            <img src="{{ asset('img/popular3.png') }}" alt="">
+            <a href="#"><img src="{{ asset('img/popular3.png') }}" alt="Popular 3"></a>
         </div>
     </div>
 @endsection

@@ -13,10 +13,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: inherit;
-}
-
 body {
   font-family: "Arimo", sans-serif;
   font-size: 15px;
@@ -39,6 +35,21 @@ body {
 .line {
   background-color: #01a6a0;
   height: 4px;
+}
+
+.search input[type=text] {
+  padding: 5px 25px;
+  border-radius: 3px;
+  border: 1px solid #bebebd;
+  color: #1d1d1b;
+}
+
+.search input[type=submit] {
+  background: url("/img/search.png");
+  width: 18px;
+  height: 18px;
+  border: none;
+  vertical-align: middle;
 }
 
 header .logo {
@@ -80,26 +91,6 @@ header .header-personal li:last-of-type a {
 
 header .header-personal li:first-of-type a {
   padding-left: 0;
-}
-
-header .header-personal form {
-  float: right;
-  padding-top: 14px;
-}
-
-header .header-personal form input[type=text] {
-  padding: 5px 25px;
-  border-radius: 3px;
-  border: 1px solid #bebebd;
-  color: #1d1d1b;
-}
-
-header .header-personal form input[type=submit] {
-  background: url("/img/search.png");
-  width: 18px;
-  height: 18px;
-  border: none;
-  vertical-align: middle;
 }
 
 header .header-nav nav {
@@ -165,6 +156,7 @@ header .header-nav .languages li:last-of-type a {
 
 .info + .stretch-bg {
   padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .popular span {
@@ -189,5 +181,49 @@ header .header-nav .languages li:last-of-type a {
 .popular img:hover {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+}
+
+footer {
+  border-top: 1px solid #e5e5e5;
+}
+
+footer ul {
+  margin-bottom: 22px;
+}
+
+footer ul li {
+  font-size: 14px;
+}
+
+footer ul li:first-of-type {
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer ul li a {
+  color: #01a6a0;
+}
+
+footer .sitemap {
+  padding-top: 40px;
+  width: 780px;
+  display: inline-block;
+  border-right: 1px solid #e5e5e5;
+}
+
+footer .sitemap div {
+  vertical-align: top;
+  width: 265px;
+  display: inline-block;
+}
+
+footer .sitemap div:last-of-type {
+  width: 240px;
+}
+
+footer .contact {
+  display: inline-block;
+  width: 220px;
 }
 
