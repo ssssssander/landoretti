@@ -40,6 +40,7 @@ body {
 }
 .search {
     input[type=text] {
+        width: 207px;
         padding: 5px 25px;
         border-radius: 3px;
         border: 1px solid #bebebd;
@@ -51,6 +52,7 @@ body {
         height: 18px;
         border: none;
         vertical-align: middle;
+        cursor: pointer;
     }
 }
 header {
@@ -60,18 +62,21 @@ header {
         top: 0;
         z-index: 1;
     }
-    .margin-from-logo {
+    .header-partial {
         margin-left: 170px;
+        padding: 14px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     nav {
         display: inline-block;
     }
     li {
-        padding: 18px 0;
         display: inline-block;
     }
     .header-personal {
-        @extend .margin-from-logo;
+        @extend .header-partial;
         font-size: 13px;
 
         nav {
@@ -89,7 +94,7 @@ header {
         }
     }
     .header-nav {
-        @extend .margin-from-logo;
+        @extend .header-partial;
 
         nav {
             font-weight: bold;
@@ -104,7 +109,6 @@ header {
         }
         .languages {
             color: $secondary-color;
-            float: right;
             font-size: 13px;
 
             a {
@@ -129,11 +133,12 @@ header {
     }
 }
 .info {
+    @extend .wrapper;
+    @extend .block;
     margin-bottom: 50px;
 
     div {
         width: 300px;
-
         padding: 0 55px;
         margin-right: 40px;
         display: inline-block;
@@ -154,6 +159,9 @@ header {
     margin-bottom: 100px;
 }
 .popular {
+    @extend .wrapper;
+    @extend .block;
+
     span {
         background: url("/img/arrow.png");
         width: 28px;
@@ -193,11 +201,12 @@ footer {
             }
         }
     }
-
-    .sitemap {
+    .footer-item {
         padding-top: 40px;
-        width: 780px;
         display: inline-block;
+    }
+    .sitemap {
+        @extend .footer-item;
         border-right: 1px solid $separator-color;
 
         div {
@@ -211,7 +220,17 @@ footer {
         }
     }
     .contact {
-        display: inline-block;
-        width: 220px;
+        @extend .footer-item;
+        vertical-align: top;
+        padding-left: 30px;
+
+        ul:first-of-type li {
+            margin-bottom: 20px;
+        }
+    }
+    .search {
+        input[type=text] {
+            width: 183px;
+        }
     }
 }

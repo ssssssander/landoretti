@@ -23,7 +23,9 @@ body {
   font-weight: bold;
 }
 
-.wrapper {
+.wrapper,
+.info,
+.popular {
   margin: 0 auto;
   width: 1024px;
 }
@@ -38,6 +40,7 @@ body {
 }
 
 .search input[type=text] {
+  width: 207px;
   padding: 5px 25px;
   border-radius: 3px;
   border: 1px solid #bebebd;
@@ -50,6 +53,7 @@ body {
   height: 18px;
   border: none;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 header .logo {
@@ -60,10 +64,20 @@ header .logo {
   z-index: 1;
 }
 
-header .margin-from-logo,
+header .header-partial,
 header .header-personal,
 header .header-nav {
   margin-left: 170px;
+  padding: 14px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header nav {
@@ -71,7 +85,6 @@ header nav {
 }
 
 header li {
-  padding: 18px 0;
   display: inline-block;
 }
 
@@ -108,7 +121,6 @@ header .header-nav nav li:first-of-type a {
 
 header .header-nav .languages {
   color: #0a1e75;
-  float: right;
   font-size: 13px;
 }
 
@@ -124,7 +136,9 @@ header .header-nav .languages li:last-of-type a {
   width: 100%;
 }
 
-.block h2 {
+.block h2,
+.info h2,
+.popular h2 {
   font-size: 40px;
   color: #0a1e75;
   font-weight: normal;
@@ -205,10 +219,14 @@ footer ul li a {
   color: #01a6a0;
 }
 
-footer .sitemap {
+footer .footer-item,
+footer .sitemap,
+footer .contact {
   padding-top: 40px;
-  width: 780px;
   display: inline-block;
+}
+
+footer .sitemap {
   border-right: 1px solid #e5e5e5;
 }
 
@@ -223,7 +241,15 @@ footer .sitemap div:last-of-type {
 }
 
 footer .contact {
-  display: inline-block;
-  width: 220px;
+  vertical-align: top;
+  padding-left: 30px;
+}
+
+footer .contact ul:first-of-type li {
+  margin-bottom: 20px;
+}
+
+footer .search input[type=text] {
+  width: 183px;
 }
 

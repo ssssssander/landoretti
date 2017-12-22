@@ -4,7 +4,7 @@
 
 @section('content')
     <img src="{{ asset('img/slideshow.png') }}" alt="Slideshow" class="slideshow">
-    <div class="wrapper block info">
+    <div class="info">
         <h2>@lang('home.how_does_it_work')</h2>
         <div>
             <img src="{{ asset('img/sign_up.png') }}" alt="@lang('home.sign_up')">
@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="stretch-bg">
-        <div class="wrapper block popular">
+        <div class="popular">
             <h2>@lang('home.most_popular')<span></span></h2>
             <div>
                 <a href="#"><img src="{{ asset('img/popular1.png') }}" alt="Popular 1"></a>
