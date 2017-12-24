@@ -18,11 +18,18 @@ ul {
 }
 a {
     text-decoration: none;
+
+    &[href^=mailto] {
+        text-decoration: underline;
+    }
 }
 body {
     font-family: "Arimo", sans-serif;
     font-size: 15px;
     color: $primary-color;
+}
+.container {
+    position: relative;
 }
 .active {
     font-weight: bold;
@@ -35,16 +42,44 @@ body {
     background-color: $stretch-bg-color;
 }
 .line {
-    background-color: #01a6a0;
+    background-color: $primary-link-color;
     height: 4px;
+}
+.logo {
+    box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
+    position: absolute;
+    z-index: 10;
+    width: 103px;
+    height: 140px;
+}
+.logo-top {
+    @extend .logo;
+    top: 0;
+}
+.logo-bottom {
+    @extend .logo;
+    bottom: 0;
 }
 .search {
     input[type=text] {
         width: 207px;
         padding: 5px 25px;
         border-radius: 3px;
-        border: 1px solid #bebebd;
-        color: #1d1d1b;
+        border: 1px solid $search-border-color;
+        color: $search-color;
+
+        &::-webkit-input-placeholder {
+           font-style: italic;
+        }
+        &:-moz-placeholder {
+           font-style: italic;
+        }
+        &::-moz-placeholder {
+           font-style: italic;
+        }
+        &:-ms-input-placeholder {
+           font-style: italic;
+        }
     }
     input[type=submit] {
         background: url("/img/search.png");
@@ -53,30 +88,26 @@ body {
         border: none;
         vertical-align: middle;
         cursor: pointer;
+        margin-left: 5px;
     }
 }
-header {
-    .logo {
-        box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
-        position: absolute;
-        top: 0;
-        z-index: 1;
-    }
-    .header-partial {
-        margin-left: 170px;
-        padding: 14px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.header-item {
+    margin-left: 170px;
+    padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     nav {
         display: inline-block;
     }
     li {
         display: inline-block;
     }
+}
+header {
     .header-personal {
-        @extend .header-partial;
+        @extend .header-item;
         font-size: 13px;
 
         nav {
@@ -93,30 +124,30 @@ header {
             padding-left: 0;
         }
     }
-    .header-nav {
-        @extend .header-partial;
+}
+.header-nav {
+    @extend .header-item;
 
-        nav {
-            font-weight: bold;
+    nav {
+        font-weight: bold;
 
-            a {
-                padding: 0 15px;
-                color: $primary-color;
-            }
-            li:first-of-type a {
-                padding-left: 0;
-            }
+        a {
+            padding: 0 15px;
+            color: $primary-color;
         }
-        .languages {
-            color: $secondary-color;
-            font-size: 13px;
+        li:first-of-type a {
+            padding-left: 0;
+        }
+    }
+    .languages {
+        color: $secondary-color;
+        font-size: 13px;
 
-            a {
-                padding: 0 10px;
-            }
-            li:last-of-type a {
-                padding-right: 0;
-            }
+        a {
+            padding: 0 10px;
+        }
+        li:last-of-type a {
+            padding-right: 0;
         }
     }
 }
@@ -208,15 +239,12 @@ footer {
     .sitemap {
         @extend .footer-item;
         border-right: 1px solid $separator-color;
+        padding-bottom: 65px;
 
         div {
             vertical-align: top;
-            width: 265px;
+            width: 250px;
             display: inline-block;
-
-            &:last-of-type {
-                width: 240px;
-            }
         }
     }
     .contact {
@@ -232,5 +260,33 @@ footer {
         input[type=text] {
             width: 183px;
         }
+    }
+    .phone {
+        background: url("/img/phone.png") left no-repeat;
+        margin-top: 30px;
+        padding-left: 20px;
+    }
+    .mail {
+        background: url("/img/mail.png") left no-repeat;
+        padding-left: 20px;
+    }
+    .social {
+        margin-top: 40px;
+
+        @each $social in facebook, twitter, youtube, plus {
+          .#{$social} {
+            background-image: url("/img/#{$social}.png");
+          }
+        }
+        a {
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+        }
+    }
+    .copyright {
+        margin-top: 86px;
+        color: $copyright-color;
+        font-size: 12px;
     }
 }

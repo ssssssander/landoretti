@@ -54,6 +54,6 @@ return [
     'oostende' => 'xxxx, Oostende',
     'phone_number' => '+xx (0)x xxx xx xx',
     'email_address' => 'info@landorettiart.com',
-    'copyright' => '© 2013 Studio6, Inc. All rights reserved.'
+    'copyright' => '© 2017 Studio6, Inc. All rights reserved.',
 
 ];
