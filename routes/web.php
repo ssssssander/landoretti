@@ -18,7 +18,8 @@ Route::prefix('en')->group(function() {
     Route::get('myauctions', 'PageController@myauctions')->name('myauctions');
     Route::get('mybids', 'PageController@mybids')->name('mybids');
     Route::get('contact', 'PageController@contact')->name('contact');
+
+    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    Route::post('register', 'Auth\RegisterController@register');
     // More...
 });
-
-Auth::routes();

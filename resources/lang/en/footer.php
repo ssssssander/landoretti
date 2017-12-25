@@ -1,6 +1,7 @@
 <?php
 
 return [
+
     'help' => 'HELP',
     'login' => 'Login',
     'register' => 'Register',

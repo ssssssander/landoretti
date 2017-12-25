@@ -30,6 +30,15 @@ input[type=submit] {
   cursor: pointer;
 }
 
+.title,
+.block h2,
+.info h2,
+.popular h2,
+.info div h3,
+main h1 {
+  font-weight: normal;
+}
+
 .active {
   font-weight: bold;
 }
@@ -71,7 +80,8 @@ input[type=submit] {
 
 .input,
 header input[type=email],
-header input[type=password] {
+header input[type=password],
+main .register input:not([type=submit]) {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
 }
@@ -151,7 +161,7 @@ header .header-personal li,
 
 header input[type=email],
 header input[type=password] {
-  padding: 2px;
+  padding: 2px 0 2px 5px;
   margin-right: 20px;
   width: 100px;
 }
@@ -215,7 +225,6 @@ header .header-personal li:first-of-type a {
 .popular h2 {
   font-size: 40px;
   color: #0a1e75;
-  font-weight: normal;
   text-align: center;
   padding: 50px 0;
 }
@@ -238,7 +247,6 @@ header .header-personal li:first-of-type a {
 
 .info div h3 {
   font-size: 25px;
-  font-weight: normal;
   padding: 30px 0 12px 0;
 }
 
@@ -363,7 +371,50 @@ footer .social a {
 
 footer .copyright {
   margin-top: 86px;
-  color: #eaeaea;
   font-size: 12px;
+}
+
+main {
+  margin: 80px 0 60px 0;
+}
+
+main h1 {
+  font-size: 45px;
+}
+
+main .register h1 {
+  margin-bottom: 40px;
+}
+
+main .register label {
+  color: #0a1e75;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+main .register input:not([type=submit]) {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+main .register input[type=submit] {
+  background-color: #01a6a0;
+  text-align: center;
+  width: 200px;
+  padding: 15px;
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+}
+
+main .register div {
+  width: calc(50% - 25px);
+  display: inline-block;
+}
+
+main .register div:first-of-type {
+  margin-right: 45px;
 }
 

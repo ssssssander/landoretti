@@ -34,6 +34,9 @@ input[type=submit] {
     vertical-align: middle;
     cursor: pointer;
 }
+.title {
+    font-weight: normal;
+}
 .active {
     font-weight: bold;
 }
@@ -117,7 +120,7 @@ header {
     input[type=email], input[type=password] {
         @extend .input;
         @extend .input-placeholder-italic;
-        padding: 2px;
+        padding: 2px 0 2px 5px;
         margin-right: 20px;
         width: 100px;
     }
@@ -176,9 +179,9 @@ header {
 }
 .block {
     h2 {
+        @extend .title;
         font-size: 40px;
         color: $secondary-color;
-        font-weight: normal;
         text-align: center;
         padding: 50px 0;
     }
@@ -199,8 +202,8 @@ header {
             margin-right: 0;
         }
         h3 {
+            @extend .title;
             font-size: 25px;
-            font-weight: normal;
             padding: 30px 0 12px 0;
         }
     }
@@ -306,7 +309,49 @@ footer {
     }
     .copyright {
         margin-top: 86px;
-        color: $tertiary-color;
         font-size: 12px;
+    }
+}
+main {
+    margin: 80px 0 60px 0;
+
+    h1 {
+        @extend .title;
+        font-size: 45px;
+    }
+
+    .register {
+        h1 {
+            margin-bottom: 40px;
+        }
+        label {
+            color: $secondary-color;
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        input:not([type=submit]) {
+            @extend .input;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        input[type=submit] {
+            background-color: $primary-link-color;
+            text-align: center;
+            width: 200px;
+            padding: 15px;
+            color: $white;
+            display: block;
+            font-size: 17px;
+        }
+        div {
+            width: calc(50% - 25px);
+            display: inline-block;
+
+            &:first-of-type {
+                margin-right: 45px;
+            }
+        }
     }
 }
