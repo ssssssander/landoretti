@@ -15,13 +15,11 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        @include('includes.logo', ['position' => 'top'])
-        @include('includes.header')
-        @yield('content')
-        @include('includes.footer')
-        @include('includes.logo', ['position' => 'bottom'])
-    </div>
+    @include('includes.logo', ['position' => 'top'])
+    @include('includes.header')
+    @yield('content')
+    @include('includes.footer')
+    @include('includes.logo', ['position' => 'bottom'])
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}"></script>
 </body>

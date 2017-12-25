@@ -27,9 +27,12 @@ body {
     font-family: "Arimo", sans-serif;
     font-size: 15px;
     color: $primary-color;
-}
-.container {
     position: relative;
+}
+input[type=submit] {
+    border: none;
+    vertical-align: middle;
+    cursor: pointer;
 }
 .active {
     font-weight: bold;
@@ -39,7 +42,7 @@ body {
     width: 1024px;
 }
 .stretch-bg {
-    background-color: $stretch-bg-color;
+    background-color: $tertiary-color;
 }
 .line {
     background-color: $primary-link-color;
@@ -60,26 +63,31 @@ body {
     @extend .logo;
     bottom: 0;
 }
+.input {
+    border: 1px solid $tertiary-color;
+    background-color: $input-bg-color;
+}
+.input-placeholder-italic {
+    &::-webkit-input-placeholder {
+       font-style: italic;
+    }
+    &:-moz-placeholder {
+       font-style: italic;
+    }
+    &::-moz-placeholder {
+       font-style: italic;
+    }
+    &:-ms-input-placeholder {
+       font-style: italic;
+    }
+}
 .search {
     input[type=text] {
+        @extend .input-placeholder-italic;
+        border: 1px solid $tertiary-color;
         width: 207px;
-        padding: 5px 25px;
+        padding: 5px 0 5px 25px;
         border-radius: 3px;
-        border: 1px solid $search-border-color;
-        color: $search-color;
-
-        &::-webkit-input-placeholder {
-           font-style: italic;
-        }
-        &:-moz-placeholder {
-           font-style: italic;
-        }
-        &::-moz-placeholder {
-           font-style: italic;
-        }
-        &:-ms-input-placeholder {
-           font-style: italic;
-        }
     }
     input[type=submit] {
         background: url("/img/search.png");
@@ -106,19 +114,31 @@ body {
     }
 }
 header {
+    input[type=email], input[type=password] {
+        @extend .input;
+        @extend .input-placeholder-italic;
+        padding: 2px;
+        margin-right: 20px;
+        width: 100px;
+    }
+    input[type=submit] {
+        width: 23px;
+        height: 23px;
+        background: $tertiary-color url("/img/arrow_right.png") center no-repeat;
+    }
     .header-personal {
         @extend .header-item;
         font-size: 13px;
 
         nav {
             a {
-                border-right: 1px solid $secondary-color;
+                border-left: 1px solid $secondary-color;
                 color: $secondary-color;
                 padding: 0 30px;
             }
         }
-        li:last-of-type a {
-            border-right: 0;
+        li:first-of-type a {
+            border-left: 0;
         }
         li:first-of-type a {
             padding-left: 0;
@@ -194,7 +214,7 @@ header {
     @extend .block;
 
     span {
-        background: url("/img/arrow.png");
+        background: url("/img/arrow_down.png");
         width: 28px;
         height: 28px;
         display: inline-block;
@@ -214,7 +234,7 @@ header {
     }
 }
 footer {
-    border-top: 1px solid $separator-color;
+    border-top: 1px solid $tertiary-color;
 
     ul {
         margin-bottom: 22px;
@@ -238,7 +258,7 @@ footer {
     }
     .sitemap {
         @extend .footer-item;
-        border-right: 1px solid $separator-color;
+        border-right: 1px solid $tertiary-color;
         padding-bottom: 65px;
 
         div {
@@ -286,7 +306,7 @@ footer {
     }
     .copyright {
         margin-top: 86px;
-        color: $copyright-color;
+        color: $tertiary-color;
         font-size: 12px;
     }
 }

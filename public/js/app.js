@@ -121,8 +121,16 @@ window.Vue = __webpack_require__(3);
 
 Vue.component('example-component', __webpack_require__(7));
 
-var app = new Vue({
-  el: '#app'
+var login = new Vue({
+  el: '#login',
+  data: {
+    clickedLoginBtn: false
+  },
+  methods: {
+    showLoginInputs: function showLoginInputs() {
+      this.clickedLoginBtn = true;
+    }
+  }
 });
 
 /***/ }),

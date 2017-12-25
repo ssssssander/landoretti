@@ -17,6 +17,14 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app'
-});
+var login = new Vue({
+  el: '#login',
+  data: {
+    clickedLoginBtn: false
+  },
+  methods: {
+    showLoginInputs: function () {
+      this.clickedLoginBtn = true;
+    }
+  }
+})

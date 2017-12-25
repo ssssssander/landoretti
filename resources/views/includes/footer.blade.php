@@ -5,7 +5,7 @@
                 <ul>
                     <li>@lang('footer.help')</li>
                     <li><a href="#">@lang('footer.login')</a></li>
-                    <li><a href="#">@lang('footer.register')</a></li>
+                    <li><a href="{{ route('register') }}">@lang('footer.register')</a></li>
                 </ul>
                 <ul>
                     <li>@lang('footer.help')</li>
@@ -17,9 +17,9 @@
                 </ul>
                 <ul>
                     <li>@lang('footer.languages')</li>
-                    <li><a href="#">@lang('footer.dutch')</a></li>
-                    <li><a href="#">@lang('footer.french')</a></li>
-                    <li><a href="#">@lang('footer.english')</a></li>
+                    <li><a href="/nl/{{ Route::currentRouteName() }}">@lang('footer.dutch')</a></li>
+                    <li><a href="/fr/{{ Route::currentRouteName() }}">@lang('footer.french')</a></li>
+                    <li><a href="/en/{{ Route::currentRouteName() }}">@lang('footer.english')</a></li>
                 </ul>
             </div>
             <div>
