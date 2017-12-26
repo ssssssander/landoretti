@@ -10,16 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'PageController@home');
+Route::get('/', function() { return redirect()->route('home'); });
 
 Route::prefix('en')->group(function() {
-    Route::get('/', 'PageController@home')->name('/');
-    Route::get('art', 'PageController@art')->name('art');
+    Route::get('/home', function() { return redirect()->route('home'); });
+    Route::get('/', 'PageController@home')->name('home');
     Route::get('isearch', 'PageController@isearch')->name('isearch');
-    Route::get('myauctions', 'PageController@myauctions')->name('myauctions');
-    Route::get('mybids', 'PageController@mybids')->name('mybids');
-    Route::get('contact', 'PageController@contact')->name('contact');
 
     Route::middleware(['auth'])->group(function () {
         Route::get('profile', 'PageController@profile')->name('profile');
@@ -29,7 +25,6 @@ Route::prefix('en')->group(function() {
     Route::post('login', 'Auth\LoginController@login')->name('login');
     Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Auth\RegisterController@register');
-    // More...
 });
 
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');

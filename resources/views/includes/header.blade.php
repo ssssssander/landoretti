@@ -24,15 +24,15 @@
                     @endguest
                     @auth
                         <li>
-                            <a href="#">watchl</a>
+                            <a href="#">@lang('header.watchlist')</a>
                         </li>
                         <li>
-                            <a href="#">prfl</a>
+                            <a href="{{ route('profile') }}" {{ Route::is('profile') ? 'class=active' : null }}>@lang('header.profile')</a>
                         </li>
                         <li class="logout">
                             <a href="#">
                                 {!! Form::open(['route' => 'logout']) !!}
-                                {!! Form::submit('l_o') !!}
+                                {!! Form::submit(trans('header.logout')) !!}
                                 {!! Form::close() !!}
                             </a>
                         </li>

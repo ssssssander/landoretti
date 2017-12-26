@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', trans('header.home'))
+@section('title', trans('home.home'))
 
 @section('content')
     <img src="{{ asset('img/slideshow.png') }}" alt="Slideshow" class="slideshow">

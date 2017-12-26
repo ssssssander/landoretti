@@ -2,6 +2,7 @@
 
 return [
 
+    'home' => 'Home',
     'how_does_it_work' => 'How does it work?',
     'sign_up' => 'Sign up',
     'make_deals' => 'Make deals',

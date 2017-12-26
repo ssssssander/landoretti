@@ -3,12 +3,12 @@
         <div class="header-nav">
             <nav>
                 <ul>
-                    <li><a href="{{ route('/') }}">@lang('header.home')</a></li>
-                    <li><a href="{{ route('art') }}">@lang('header.art')</a></li>
-                    <li><a href="{{ route('isearch') }}">@lang('header.isearch')</a></li>
-                    <li><a href="{{ route('myauctions') }}">@lang('header.myauctions')</a></li>
-                    <li><a href="{{ route('mybids') }}">@lang('header.mybids')</a></li>
-                    <li><a href="{{ route('contact') }}">@lang('header.contact')</a></li>
+                    <li><a href="{{ route('home') }}">@lang('header.home')</a></li>
+                    <li><a href="#">@lang('header.art')</a></li>
+                    <li><a href="#">@lang('header.isearch')</a></li>
+                    <li><a href="#">@lang('header.myauctions')</a></li>
+                    <li><a href="#">@lang('header.mybids')</a></li>
+                    <li><a href="#">@lang('header.contact')</a></li>
                 </ul>
             </nav>
             <span class="languages">

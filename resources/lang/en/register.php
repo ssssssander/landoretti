@@ -20,6 +20,7 @@ return [
     'be' => 'Belgium',
     'nl' => 'The Netherlands',
     'gb' => 'Great Britain',
+    'ie' => 'Ireland',
     'fr' => 'France',
     'lu' => 'Luxembourg',
 

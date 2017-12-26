@@ -3,15 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
     public function home() {
-        return view('home');
-    }
-
-    public function art() {
         return view('home');
     }
 
@@ -21,19 +17,9 @@ class PageController extends Controller
         return view('home', compact('query'));
     }
 
-    public function myauctions() {
-        return view('home');
-    }
+    public function profile(Request $request) {
+        $user = Auth::user();
 
-    public function mybids() {
-        return view('home');
-    }
-
-    public function contact() {
-        return view('home');
-    }
-
-    public function profile() {
-        return view('home');
+        return view('profile', compact('user'));
     }
 }

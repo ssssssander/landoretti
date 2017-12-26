@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', trans('header.register'))
+@section('title', trans('register.register'))
 
 @section('content')
     <div class="wrapper">
@@ -43,6 +43,7 @@
                         ['BE' => trans('register.be'),
                         'NL' => trans('register.nl'),
                         'GB' => trans('register.gb'),
+                        'IE' => trans('register.ie'),
                         'FR' => trans('register.fr'),
                         'LU' => trans('register.lu'),
                         ], 'BE', ['class' => $errors->has('country') ? 'has-error' : '']) !!}
@@ -70,6 +71,7 @@
                             ['+32' => '+32',
                             '+31' => '+31',
                             '+44' => '+44',
+                            '+353' => '+353',
                             '+33' => '+33',
                             '+352' => '+352',
                             ], '+32', ['class' => $errors->has('calling_code') ? 'has-error' : '']) !!}

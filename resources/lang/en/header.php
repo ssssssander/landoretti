@@ -7,7 +7,7 @@ return [
     'search' => 'Search',
     'email' => 'Email',
     'password' => 'Password',
-    'watchist' => 'WATCHLIST',
+    'watchlist' => 'WATCHLIST',
     'profile' => 'PROFILE',
     'logout' => 'LOGOUT',
     'home' => 'HOME',
