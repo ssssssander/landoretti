@@ -5,7 +5,7 @@ return [
     'register' => 'REGISTER',
     'login' => 'LOGIN',
     'search' => 'Search',
-    'user' => 'User',
+    'email' => 'Email',
     'password' => 'Password',
     'watchist' => 'WATCHLIST',
     'profile' => 'PROFILE',

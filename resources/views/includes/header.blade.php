@@ -15,7 +15,7 @@
                                     @lang('header.login')
                                 </a>
                                 {!! Form::open(['route' => 'login', 'v-if' => 'clickedLoginBtn']) !!}
-                                {!! Form::email('email', '', ['placeholder' => trans('header.user')]) !!}
+                                {!! Form::email('email', '', ['placeholder' => trans('header.email')]) !!}
                                 {!! Form::password('password', ['placeholder' => trans('header.password')]) !!}
                                 {!! Form::submit('') !!}
                                 {!! Form::close() !!}

@@ -131,10 +131,27 @@ header {
             background: $tertiary-color url("/img/arrow_right.png") center no-repeat;
         }
     }
+    .header-personal {
+        @extend .header-item;
+        font-size: 13px;
+
+        a {
+            border-left: 1px solid $secondary-color;
+            color: $secondary-color;
+            padding: 0 30px;
+        }
+        li:first-of-type a {
+            border-left: 0;
+        }
+        li:first-of-type a {
+            padding-left: 0;
+        }
+    }
     .logout {
         a {
-            padding: 0 !important;
+            padding: 0;
         }
+
         form {
             display: inline-block;
 
@@ -142,24 +159,6 @@ header {
                 background-color: $white;
                 padding: 0 30px;
             }
-        }
-    }
-    .header-personal {
-        @extend .header-item;
-        font-size: 13px;
-
-        nav {
-            a {
-                border-left: 1px solid $secondary-color;
-                color: $secondary-color;
-                padding: 0 30px;
-            }
-        }
-        li:first-of-type a {
-            border-left: 0;
-        }
-        li:first-of-type a {
-            padding-left: 0;
         }
     }
 }

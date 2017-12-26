@@ -173,24 +173,11 @@ header #login input[type=submit] {
   background: #eaeaea url("/img/arrow_right.png") center no-repeat;
 }
 
-header .logout a {
-  padding: 0 !important;
-}
-
-header .logout form {
-  display: inline-block;
-}
-
-header .logout form input[type=submit] {
-  background-color: #ffffff;
-  padding: 0 30px;
-}
-
 header .header-personal {
   font-size: 13px;
 }
 
-header .header-personal nav a {
+header .header-personal a {
   border-left: 1px solid #0a1e75;
   color: #0a1e75;
   padding: 0 30px;
@@ -202,6 +189,19 @@ header .header-personal li:first-of-type a {
 
 header .header-personal li:first-of-type a {
   padding-left: 0;
+}
+
+header .logout a {
+  padding: 0;
+}
+
+header .logout form {
+  display: inline-block;
+}
+
+header .logout form input[type=submit] {
+  background-color: #ffffff;
+  padding: 0 30px;
 }
 
 .header-nav nav {
