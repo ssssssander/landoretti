@@ -100,8 +100,9 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'agree_tac' => [
+            'required' => 'You have to agree to the terms & conditions.',
+            'accepted' => 'You have to agree to the terms & conditions.',
         ],
     ],
 
@@ -116,6 +117,19 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => trans('register.name'),
+        'email' => trans('register.email'),
+        'password' => trans('register.password'),
+        'password_confirmation' => trans('register.password_confirmation'),
+        'country' => trans('register.country'),
+        'zip' => trans('register.zip'),
+        'city' => trans('register.city'),
+        'address' => trans('register.address'),
+        'phone_number' => trans('register.phone_number'),
+        'account_number' => trans('register.account_number'),
+        'vat_number' => trans('register.vat_number'),
+        'alt_payment' => trans('register.alt_payment'),
+    ],
 
 ];

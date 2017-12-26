@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/en/profile';
 
     /**
      * Create a new controller instance.
@@ -51,6 +52,17 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'password_confirmation' => 'required|string|min:6',
+            'country' => 'required|string', Rule::in(['BE', 'NL', 'GB', 'FR', 'LU']),
+            'zip' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'address' => 'required|string|max:255',
+            'calling_code' => 'required|string', Rule::in(['+32', '+31', '+44', '+33', '+352']),
+            'phone_number' => 'required|string|max:255',
+            'account_number' => 'required|string|max:255',
+            'vat_number' => 'required|string|max:255',
+            'alt_payment' => 'required|string|max:255',
+            'agree_tac' => 'required|accepted',
         ]);
     }
 
@@ -66,6 +78,14 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'country' => $data['country'],
+            'zip' => $data['zip'],
+            'city' => $data['city'],
+            'address' => $data['address'],
+            'phone_number' => $data['calling_code'] . $data['phone_number'],
+            'account_number' => $data['account_number'],
+            'vat_number' => $data['vat_number'],
+            'alt_payment' => $data['alt_payment'],
         ]);
     }
 }

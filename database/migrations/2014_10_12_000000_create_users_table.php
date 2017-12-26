@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('phone_number');
             $table->string('account_number');
             $table->string('vat_number');
+            $table->string('alt_payment');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -32,4 +32,8 @@ class PageController extends Controller
     public function contact() {
         return view('home');
     }
+
+    public function profile() {
+        return view('home');
+    }
 }

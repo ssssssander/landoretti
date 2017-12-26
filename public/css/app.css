@@ -79,38 +79,39 @@ main h1 {
 }
 
 .input,
-header input[type=email],
-header input[type=password],
-main .register input:not([type=submit]) {
+header #login input[type=email],
+header #login input[type=password],
+main form input:not([type=submit]):not([type=checkbox]),
+main form select {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
 }
 
 .input-placeholder-italic::-webkit-input-placeholder,
 .search input[type=text]::-webkit-input-placeholder,
-header input[type=email]::-webkit-input-placeholder,
-header input[type=password]::-webkit-input-placeholder {
+header #login input[type=email]::-webkit-input-placeholder,
+header #login input[type=password]::-webkit-input-placeholder {
   font-style: italic;
 }
 
 .input-placeholder-italic:-moz-placeholder,
 .search input[type=text]:-moz-placeholder,
-header input[type=email]:-moz-placeholder,
-header input[type=password]:-moz-placeholder {
+header #login input[type=email]:-moz-placeholder,
+header #login input[type=password]:-moz-placeholder {
   font-style: italic;
 }
 
 .input-placeholder-italic::-moz-placeholder,
 .search input[type=text]::-moz-placeholder,
-header input[type=email]::-moz-placeholder,
-header input[type=password]::-moz-placeholder {
+header #login input[type=email]::-moz-placeholder,
+header #login input[type=password]::-moz-placeholder {
   font-style: italic;
 }
 
 .input-placeholder-italic:-ms-input-placeholder,
 .search input[type=text]:-ms-input-placeholder,
-header input[type=email]:-ms-input-placeholder,
-header input[type=password]:-ms-input-placeholder {
+header #login input[type=email]:-ms-input-placeholder,
+header #login input[type=password]:-ms-input-placeholder {
   font-style: italic;
 }
 
@@ -159,17 +160,30 @@ header .header-personal li,
   display: inline-block;
 }
 
-header input[type=email],
-header input[type=password] {
+header #login input[type=email],
+header #login input[type=password] {
   padding: 2px 0 2px 5px;
   margin-right: 20px;
   width: 100px;
 }
 
-header input[type=submit] {
+header #login input[type=submit] {
   width: 23px;
   height: 23px;
   background: #eaeaea url("/img/arrow_right.png") center no-repeat;
+}
+
+header .logout a {
+  padding: 0 !important;
+}
+
+header .logout form {
+  display: inline-block;
+}
+
+header .logout form input[type=submit] {
+  background-color: #ffffff;
+  padding: 0 30px;
 }
 
 header .header-personal {
@@ -382,24 +396,30 @@ main h1 {
   font-size: 45px;
 }
 
-main .register h1 {
-  margin-bottom: 40px;
+main form {
+  margin-top: 40px;
 }
 
-main .register label {
+main form label {
   color: #0a1e75;
-  display: block;
   font-size: 20px;
   margin-bottom: 10px;
+  display: block;
 }
 
-main .register input:not([type=submit]) {
-  width: 100%;
+main form input:not([type=submit]):not([type=checkbox]),
+main form select {
   padding: 15px;
-  margin-bottom: 30px;
+  width: 100%;
 }
 
-main .register input[type=submit] {
+main form input:not([type=submit]):not([type=checkbox]).has-error,
+main form select.has-error {
+  background-color: #fff1f1;
+  border-color: #fd0100;
+}
+
+main form input[type=submit] {
   background-color: #01a6a0;
   text-align: center;
   width: 200px;
@@ -409,12 +429,60 @@ main .register input[type=submit] {
   font-size: 17px;
 }
 
-main .register div {
-  width: calc(50% - 25px);
+main form input[type=checkbox] + label {
+  color: initial;
+  font-size: initial;
+  display: initial;
+  margin-left: 10px;
+}
+
+main form .row {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main form .row .row-item {
+  width: 48%;
   display: inline-block;
 }
 
-main .register div:first-of-type {
-  margin-right: 45px;
+main form .row .half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main form .row .full {
+  width: 100%;
+}
+
+main form .row .calling-code {
+  width: 30%;
+}
+
+main form .row .phone-number {
+  width: 66%;
+}
+
+.errors {
+  padding: 30px 50px;
+  margin: 60px 0 40px 0;
+  color: #fd0100;
+  background-color: #fff1f1;
+}
+
+.errors ul {
+  list-style-type: initial;
 }
 

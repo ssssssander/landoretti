@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/', 'PageController@home');
+
 Route::prefix('en')->group(function() {
     Route::get('/', 'PageController@home')->name('/');
     Route::get('art', 'PageController@art')->name('art');
@@ -19,7 +21,15 @@ Route::prefix('en')->group(function() {
     Route::get('mybids', 'PageController@mybids')->name('mybids');
     Route::get('contact', 'PageController@contact')->name('contact');
 
+    Route::middleware(['auth'])->group(function () {
+        Route::get('profile', 'PageController@profile')->name('profile');
+    });
+
+    // Auth routes
+    Route::post('login', 'Auth\LoginController@login')->name('login');
     Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Auth\RegisterController@register');
     // More...
 });
+
+Route::post('logout', 'Auth\LoginController@logout')->name('logout');

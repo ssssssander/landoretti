@@ -117,17 +117,32 @@ input[type=submit] {
     }
 }
 header {
-    input[type=email], input[type=password] {
-        @extend .input;
-        @extend .input-placeholder-italic;
-        padding: 2px 0 2px 5px;
-        margin-right: 20px;
-        width: 100px;
+    #login {
+        input[type=email], input[type=password] {
+            @extend .input;
+            @extend .input-placeholder-italic;
+            padding: 2px 0 2px 5px;
+            margin-right: 20px;
+            width: 100px;
+        }
+        input[type=submit] {
+            width: 23px;
+            height: 23px;
+            background: $tertiary-color url("/img/arrow_right.png") center no-repeat;
+        }
     }
-    input[type=submit] {
-        width: 23px;
-        height: 23px;
-        background: $tertiary-color url("/img/arrow_right.png") center no-repeat;
+    .logout {
+        a {
+            padding: 0 !important;
+        }
+        form {
+            display: inline-block;
+
+            input[type=submit] {
+                background-color: $white;
+                padding: 0 30px;
+            }
+        }
     }
     .header-personal {
         @extend .header-item;
@@ -319,22 +334,24 @@ main {
         @extend .title;
         font-size: 45px;
     }
+    form {
+        margin-top: 40px;
 
-    .register {
-        h1 {
-            margin-bottom: 40px;
-        }
         label {
             color: $secondary-color;
-            display: block;
             font-size: 20px;
             margin-bottom: 10px;
+            display: block;
         }
-        input:not([type=submit]) {
+        input:not([type=submit]):not([type=checkbox]), select {
             @extend .input;
-            width: 100%;
             padding: 15px;
-            margin-bottom: 30px;
+            width: 100%;
+
+            &.has-error {
+                background-color: $error-bg-color;
+                border-color: $error-color;
+            }
         }
         input[type=submit] {
             background-color: $primary-link-color;
@@ -345,13 +362,45 @@ main {
             display: block;
             font-size: 17px;
         }
-        div {
-            width: calc(50% - 25px);
-            display: inline-block;
+        input[type=checkbox] + label {
+            color: initial;
+            font-size: initial;
+            display: initial;
+            margin-left: 10px;
+        }
+        .row {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
 
-            &:first-of-type {
-                margin-right: 45px;
+            .row-item {
+                width: 48%;
+                display: inline-block;
+            }
+            .half {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            .full {
+                width: 100%;
+            }
+            .calling-code {
+                width: 30%;
+            }
+            .phone-number {
+                width: 66%;
             }
         }
+    }
+}
+.errors {
+    padding: 30px 50px;
+    margin: 60px 0 40px 0;
+    color: $error-color;
+    background-color: $error-bg-color;
+
+    ul {
+        list-style-type: initial;
     }
 }
