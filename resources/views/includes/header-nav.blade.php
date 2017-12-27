@@ -14,17 +14,17 @@
             <span class="languages">
                 <ul>
                     <li>
-                        <a href="/nl/{{ Route::currentRouteName() }}" {{ App::isLocale('nl') ? 'class=active' : null }}>
+                        <a href="{{ route('setLocale', ['locale' => 'nl']) }}" {{ App::isLocale('nl') ? 'class=active' : null }}>
                             @lang('header.nl')
                         </a>
                     </li>
                     <li>
-                        <a href="/fr/{{ Route::currentRouteName() }}" {{ App::isLocale('fr') ? 'class=active' : null }}>
+                        <a href="{{ route('setLocale', ['locale' => 'fr']) }}" {{ App::isLocale('fr') ? 'class=active' : null }}>
                             @lang('header.fr')
                         </a>
                     </li>
                     <li>
-                        <a href="/en/{{ Route::currentRouteName() }}" {{ App::isLocale('en') ? 'class=active' : null }}>
+                        <a href="{{ route('setLocale', ['locale' => 'en']) }}" {{ App::isLocale('en') ? 'class=active' : null }}>
                             @lang('header.en')
                         </a>
                     </li>

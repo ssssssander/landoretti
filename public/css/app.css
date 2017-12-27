@@ -151,10 +151,7 @@ header .header-personal,
 
 .header-item nav,
 header .header-personal nav,
-.header-nav nav {
-  display: inline-block;
-}
-
+.header-nav nav,
 .header-item li,
 header .header-personal li,
 .header-nav li {
@@ -178,22 +175,24 @@ header .header-personal {
   font-size: 13px;
 }
 
-header .header-personal a {
+header .header-personal li {
   border-left: 1px solid #0a1e75;
   color: #0a1e75;
-  padding: 0 30px;
+  width: 120px;
+  text-align: center;
 }
 
-header .header-personal li:first-of-type a {
+header .header-personal li:first-of-type {
   border-left: 0;
 }
 
-header .header-personal li:first-of-type a {
-  padding-left: 0;
+header .header-personal .watchlist {
+  background: url("/img/watchlist.png") left no-repeat;
 }
 
-header .logout a {
-  padding: 0;
+header .header-personal .profile {
+  background: url("/img/profile.png") 20px no-repeat;
+  padding-left: 20px;
 }
 
 header .logout form {
@@ -202,7 +201,6 @@ header .logout form {
 
 header .logout form input[type=submit] {
   background-color: #ffffff;
-  padding: 0 30px;
   color: #0a1e75;
 }
 
@@ -210,12 +208,15 @@ header .logout form input[type=submit] {
   font-weight: bold;
 }
 
-.header-nav nav a {
+.header-nav nav li {
   padding: 0 15px;
+}
+
+.header-nav nav li a {
   color: #4e4e4e;
 }
 
-.header-nav nav li:first-of-type a {
+.header-nav nav li:first-of-type {
   padding-left: 0;
 }
 
@@ -224,12 +225,9 @@ header .logout form input[type=submit] {
   font-size: 13px;
 }
 
-.header-nav .languages a {
-  padding: 0 10px;
-}
-
-.header-nav .languages li:last-of-type a {
-  padding-right: 0;
+.header-nav .languages li {
+  width: 36px;
+  text-align: right;
 }
 
 .slideshow {

@@ -1,11 +1,5 @@
-
-// Fonts
 @import url("https://fonts.googleapis.com/css?family=Arimo:400,700");
-
-// Variables
 @import "variables";
-
-// Bootstrap
 // @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 * {
@@ -110,10 +104,7 @@ input[type=submit] {
     justify-content: space-between;
     align-items: center;
 
-    nav {
-        display: inline-block;
-    }
-    li {
+    nav, li {
         display: inline-block;
     }
 }
@@ -136,29 +127,30 @@ header {
         @extend .header-item;
         font-size: 13px;
 
-        a {
+        li {
             border-left: 1px solid $secondary-color;
             color: $secondary-color;
-            padding: 0 30px;
+            width: 120px;
+            text-align: center;
+
+            &:first-of-type {
+                border-left: 0;
+            }
         }
-        li:first-of-type a {
-            border-left: 0;
+        .watchlist {
+            background: url("/img/watchlist.png") left no-repeat;
         }
-        li:first-of-type a {
-            padding-left: 0;
+        .profile {
+            background: url("/img/profile.png") 20px no-repeat;
+            padding-left: 20px;
         }
     }
     .logout {
-        a {
-            padding: 0;
-        }
-
         form {
             display: inline-block;
 
             input[type=submit] {
                 background-color: $white;
-                padding: 0 30px;
                 color: $secondary-color;
             }
         }
@@ -170,23 +162,24 @@ header {
     nav {
         font-weight: bold;
 
-        a {
+        li {
             padding: 0 15px;
-            color: $primary-color;
-        }
-        li:first-of-type a {
-            padding-left: 0;
+
+            a {
+                color: $primary-color;
+            }
+            &:first-of-type {
+                padding-left: 0;
+            }
         }
     }
     .languages {
         color: $secondary-color;
         font-size: 13px;
 
-        a {
-            padding: 0 10px;
-        }
-        li:last-of-type a {
-            padding-right: 0;
+        li {
+            width: 36px;
+            text-align: right;
         }
     }
 }

@@ -10,21 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function() { return redirect()->route('home'); });
 
-Route::prefix('en')->group(function() {
-    Route::get('/home', function() { return redirect()->route('home'); });
-    Route::get('/', 'PageController@home')->name('home');
-    Route::get('isearch', 'PageController@isearch')->name('isearch');
+Route::get('home', function() { return redirect()->route('home'); });
+Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
+Route::get('/', 'PageController@home')->name('home');
+Route::get('isearch', 'PageController@isearch')->name('isearch');
 
-    Route::middleware(['auth'])->group(function () {
-        Route::get('profile', 'PageController@profile')->name('profile');
-    });
-
-    // Auth routes
-    Route::post('login', 'Auth\LoginController@login')->name('login');
-    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
-    Route::post('register', 'Auth\RegisterController@register');
+Route::middleware(['auth'])->group(function() {
+    Route::get('profile', 'PageController@profile')->name('profile');
 });
 
+// Auth routes
+Route::post('login', 'Auth\LoginController@login')->name('login');
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('register', 'Auth\RegisterController@register');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
