@@ -175,24 +175,32 @@ header .header-personal {
   font-size: 13px;
 }
 
-header .header-personal li {
+header .header-personal a {
   border-left: 1px solid #0a1e75;
   color: #0a1e75;
-  width: 120px;
-  text-align: center;
+  padding: 0 30px;
 }
 
-header .header-personal li:first-of-type {
+header .header-personal li:first-of-type a {
   border-left: 0;
+  padding-left: 0;
 }
 
 header .header-personal .watchlist {
   background: url("/img/watchlist.png") left no-repeat;
+  padding-left: 25px;
+}
+
+header .header-personal .watchlist a {
+  padding-right: 25px;
 }
 
 header .header-personal .profile {
-  background: url("/img/profile.png") 20px no-repeat;
-  padding-left: 20px;
+  background: url("/img/profile.png") 25px no-repeat;
+}
+
+header .header-personal .profile a {
+  padding-left: 50px;
 }
 
 header .logout form {

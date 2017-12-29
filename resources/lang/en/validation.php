@@ -101,7 +101,6 @@ return [
 
     'custom' => [
         'agree_tac' => [
-            'required' => 'You have to agree to the terms & conditions.',
             'accepted' => 'You have to agree to the terms & conditions.',
         ],
     ],

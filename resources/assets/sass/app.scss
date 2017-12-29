@@ -127,22 +127,29 @@ header {
         @extend .header-item;
         font-size: 13px;
 
-        li {
+        a {
             border-left: 1px solid $secondary-color;
             color: $secondary-color;
-            width: 120px;
-            text-align: center;
-
-            &:first-of-type {
-                border-left: 0;
-            }
+            padding: 0 30px;
+        }
+        li:first-of-type a {
+            border-left: 0;
+            padding-left: 0;
         }
         .watchlist {
             background: url("/img/watchlist.png") left no-repeat;
+            padding-left: 25px;
+
+            a {
+                padding-right: 25px;
+            }
         }
         .profile {
-            background: url("/img/profile.png") 20px no-repeat;
-            padding-left: 20px;
+            background: url("/img/profile.png") 25px no-repeat;
+
+            a {
+                padding-left: 50px;
+            }
         }
     }
     .logout {

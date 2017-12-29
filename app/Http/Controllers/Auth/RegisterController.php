@@ -62,7 +62,7 @@ class RegisterController extends Controller
             'account_number' => 'required|string|max:255',
             'vat_number' => 'required|string|max:255',
             'alt_payment' => 'required|string|max:255',
-            'agree_tac' => 'required|accepted',
+            'agree_tac' => 'accepted',
         ]);
     }
 
