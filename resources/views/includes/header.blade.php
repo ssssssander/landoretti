@@ -40,5 +40,5 @@
             @include('includes.search')
         </div>
     </div>
-    @include('includes.header-nav')
+    @include('includes.header_nav')
 </header>

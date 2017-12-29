@@ -65,7 +65,7 @@
                     {!! Form::text('address', '', ['class' => $errors->has('address') ? 'has-error' : '']) !!}
                 </div>
                 <div class="row-item half">
-                    <div class="row-item calling-code">
+                    <div class="row-item third">
                         {!! Form::label('phone_number', trans('register.phone_number')) !!}
                         {!! Form::select('calling_code',
                             ['+32' => '+32',
@@ -76,7 +76,7 @@
                             '+352' => '+352',
                             ], '+32', ['class' => $errors->has('calling_code') ? 'has-error' : '']) !!}
                     </div>
-                    <div class="row-item phone-number">
+                    <div class="row-item two-third">
                         {!! Form::text('phone_number', '', ['class' => $errors->has('phone_number') ? 'has-error' : '']) !!}
                     </div>
                 </div>
@@ -100,7 +100,8 @@
             <div class="row">
                 <div class="row-item">
                     {!! Form::checkbox('agree_tac', 'yes', '', ['id' => 'agree_tac']) !!}
-                    {!! Form::label('agree_tac', trans('register.agree_tac'), ['class' => $errors->has('agree_tac') ? 'has-error' : '']) !!}
+                    {!! Form::label('agree_tac', trans('register.agree')) !!}
+                    <a href="#">@lang('register.tac')</a>
                 </div>
             </div>
             <div class="row">

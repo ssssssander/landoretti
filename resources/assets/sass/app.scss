@@ -344,15 +344,19 @@ main {
             margin-bottom: 10px;
             display: block;
         }
-        input:not([type=submit]):not([type=checkbox]), select {
+        input:not([type=submit]):not([type=checkbox]), select, textarea {
             @extend .input;
             padding: 15px;
             width: 100%;
+            height: 47px;
 
             &.has-error {
                 background-color: $error-bg-color;
                 border-color: $error-color;
             }
+        }
+        textarea {
+
         }
         input[type=submit] {
             background-color: $primary-link-color;
@@ -364,10 +368,15 @@ main {
             font-size: 17px;
         }
         input[type=checkbox] + label {
-            color: initial;
-            font-size: initial;
+            color: $primary-color;
+            font-size: 15px;
             display: initial;
             margin-left: 10px;
+
+            &+a {
+                text-decoration: underline;
+                color: $primary-link-color;
+            }
         }
         .row {
             margin-bottom: 30px;
@@ -386,11 +395,11 @@ main {
             .full {
                 width: 100%;
             }
-            .calling-code {
-                width: 30%;
+            .third {
+                width: 32%;
             }
-            .phone-number {
-                width: 66%;
+            .two-third {
+                width: 64%;
             }
         }
     }

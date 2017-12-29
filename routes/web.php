@@ -15,6 +15,8 @@ Route::get('home', function() { return redirect()->route('home'); });
 Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
 Route::get('/', 'PageController@home')->name('home');
 Route::get('isearch', 'PageController@isearch')->name('isearch');
+Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
+Route::get('newauction', 'PageController@newAuction')->name('newAuction');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('profile', 'PageController@profile')->name('profile');
