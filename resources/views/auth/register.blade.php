@@ -6,15 +6,7 @@
     <div class="wrapper">
         <main class="register">
             <h1>@lang('register.register')</h1>
-            @if ($errors->any())
-                <div class="errors">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            @include('includes.errors')
             {!! Form::open(['route' => 'register']) !!}
             <div class="row">
                 <div class="row-item">
@@ -97,13 +89,7 @@
                     {!! Form::text('alt_payment', '', ['class' => $errors->has('alt_payment') ? 'has-error' : '']) !!}
                 </div>
             </div>
-            <div class="row">
-                <div class="row-item">
-                    {!! Form::checkbox('agree_tac', 'yes', '', ['id' => 'agree_tac']) !!}
-                    {!! Form::label('agree_tac', trans('register.agree')) !!}
-                    <a href="#">@lang('register.tac')</a>
-                </div>
-            </div>
+            @include('includes.agree_tac')
             <div class="row">
                 <div class="row-item">
                     {!! Form::submit(trans('register.register_submit')) !!}

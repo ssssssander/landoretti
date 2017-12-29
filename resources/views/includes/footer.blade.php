@@ -31,6 +31,7 @@
                     <li><a href="#">@lang('footer.african_american')</a></li>
                     <li><a href="#">@lang('footer.asian_contemporary')</a></li>
                     <li><a href="#">@lang('footer.conceptual')</a></li>
+                    <li><a href="#">@lang('footer.contemporary')</a></li>
                     <li><a href="#">@lang('footer.emerging_artists')</a></li>
                     <li><a href="#">@lang('footer.figurative')</a></li>
                     <li><a href="#">@lang('footer.middle_eastern_contemporary')</a></li>

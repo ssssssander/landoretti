@@ -32,13 +32,27 @@ input[type=submit] {
   cursor: pointer;
 }
 
-.title,
-.block h2,
-.info h2,
-.popular h2,
-.info div h3,
-main h1,
-.profile .profile-info h2 {
+h1 {
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+h6 {
   font-weight: normal;
 }
 
@@ -109,34 +123,34 @@ main form textarea {
 }
 
 .input-placeholder-italic::-webkit-input-placeholder,
-.search input[type=text]::-webkit-input-placeholder,
+.search input[type=search]::-webkit-input-placeholder,
 header #login input[type=email]::-webkit-input-placeholder,
 header #login input[type=password]::-webkit-input-placeholder {
   font-style: italic;
 }
 
 .input-placeholder-italic:-moz-placeholder,
-.search input[type=text]:-moz-placeholder,
+.search input[type=search]:-moz-placeholder,
 header #login input[type=email]:-moz-placeholder,
 header #login input[type=password]:-moz-placeholder {
   font-style: italic;
 }
 
 .input-placeholder-italic::-moz-placeholder,
-.search input[type=text]::-moz-placeholder,
+.search input[type=search]::-moz-placeholder,
 header #login input[type=email]::-moz-placeholder,
 header #login input[type=password]::-moz-placeholder {
   font-style: italic;
 }
 
 .input-placeholder-italic:-ms-input-placeholder,
-.search input[type=text]:-ms-input-placeholder,
+.search input[type=search]:-ms-input-placeholder,
 header #login input[type=email]:-ms-input-placeholder,
 header #login input[type=password]:-ms-input-placeholder {
   font-style: italic;
 }
 
-.search input[type=text] {
+.search input[type=search] {
   border: 1px solid #eaeaea;
   width: 207px;
   padding: 5px 0 5px 25px;
@@ -368,7 +382,7 @@ footer .contact div {
   margin-top: 30px;
 }
 
-footer .search input[type=text] {
+footer .search input[type=search] {
   width: 183px;
 }
 
@@ -407,6 +421,10 @@ main {
   margin: 80px 0 60px 0;
 }
 
+main.new-auction {
+  width: 750px;
+}
+
 main h1 {
   font-size: 45px;
   margin-bottom: 40px;
@@ -425,6 +443,7 @@ main form textarea {
   padding: 15px;
   width: 100%;
   height: 47px;
+  color: #4e4e4e;
 }
 
 main form input:not([type=submit]):not([type=checkbox]).has-error,
@@ -432,6 +451,11 @@ main form select.has-error,
 main form textarea.has-error {
   background-color: #fff1f1;
   border-color: #fd0100;
+}
+
+main form textarea {
+  font-family: "Arimo", sans-serif;
+  height: 120px;
 }
 
 main form input[type=submit] {
@@ -444,14 +468,18 @@ main form input[type=submit] {
   font-size: 17px;
 }
 
-main form input[type=checkbox] + label {
+main form .agree-tac {
+  margin-top: 80px;
+}
+
+main form .agree-tac input[type=checkbox] + label {
   color: #4e4e4e;
   font-size: 15px;
   display: initial;
   margin-left: 10px;
 }
 
-main form input[type=checkbox] + label + a {
+main form .agree-tac input[type=checkbox] + label + a {
   text-decoration: underline;
   color: #01a6a0;
 }
@@ -493,6 +521,44 @@ main form .row .third {
 
 main form .row .two-third {
   width: 64%;
+}
+
+main form .row .optional label {
+  display: inline-block;
+}
+
+main form .row .optional label:last-of-type {
+  font-size: 15px;
+}
+
+main form .row p {
+  font-size: 14px;
+}
+
+main form .row .upload,
+main form .row input[type=file] {
+  background-color: #4e4e4e;
+  color: #ffffff;
+  padding: 10px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+main form .row.cash input {
+  padding-left: 30px;
+  background: #f8f8f8 url("/img/euro.png") 10px no-repeat;
 }
 
 .errors {

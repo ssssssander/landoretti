@@ -30,8 +30,10 @@ input[type=submit] {
     vertical-align: middle;
     cursor: pointer;
 }
-.title {
-    font-weight: normal;
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-weight: normal;
+    }
 }
 .active {
     font-weight: bold;
@@ -92,7 +94,7 @@ input[type=submit] {
     }
 }
 .search {
-    input[type=text] {
+    input[type=search] {
         @extend .input-placeholder-italic;
         border: 1px solid $tertiary-color;
         width: 207px;
@@ -207,7 +209,6 @@ header {
 }
 .block {
     h2 {
-        @extend .title;
         font-size: 40px;
         color: $secondary-color;
         text-align: center;
@@ -230,7 +231,6 @@ header {
             margin-right: 0;
         }
         h3 {
-            @extend .title;
             font-size: 25px;
             padding: 30px 0 12px 0;
         }
@@ -306,7 +306,7 @@ footer {
         }
     }
     .search {
-        input[type=text] {
+        input[type=search] {
             width: 183px;
         }
     }
@@ -332,8 +332,10 @@ footer {
 main {
     margin: 80px 0 60px 0;
 
+    &.new-auction {
+        width: 750px;
+    }
     h1 {
-        @extend .title;
         font-size: 45px;
         margin-bottom: 40px;
     }
@@ -349,6 +351,7 @@ main {
             padding: 15px;
             width: 100%;
             height: 47px;
+            color: $primary-color;
 
             &.has-error {
                 background-color: $error-bg-color;
@@ -356,7 +359,8 @@ main {
             }
         }
         textarea {
-
+            font-family: "Arimo", sans-serif;
+            height: 120px;
         }
         input[type=submit] {
             background-color: $primary-link-color;
@@ -367,15 +371,19 @@ main {
             display: block;
             font-size: 17px;
         }
-        input[type=checkbox] + label {
-            color: $primary-color;
-            font-size: 15px;
-            display: initial;
-            margin-left: 10px;
+        .agree-tac {
+            margin-top: 80px;
 
-            &+a {
-                text-decoration: underline;
-                color: $primary-link-color;
+            input[type=checkbox] + label {
+                color: $primary-color;
+                font-size: 15px;
+                display: initial;
+                margin-left: 10px;
+
+                &+a {
+                    text-decoration: underline;
+                    color: $primary-link-color;
+                }
             }
         }
         .row {
@@ -401,6 +409,37 @@ main {
             .two-third {
                 width: 64%;
             }
+            .optional {
+                label {
+                    display: inline-block;
+
+                    &:last-of-type {
+                        font-size: 15px;
+                    }
+                }
+            }
+            p {
+                font-size: 14px;
+            }
+            .upload, input[type=file] {
+                background-color: $primary-color;
+                color: $white;
+                padding: 10px;
+                height: 54px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: 14px;
+            }
+            &.cash {
+                input {
+                    padding-left: 30px;
+                    background: $input-bg-color url("/img/euro.png") 10px no-repeat;
+                }
+            }
         }
     }
 }
@@ -420,7 +459,6 @@ main {
         border: 1px solid $tertiary-color;
 
         h2 {
-            @extend .title;
             margin-bottom: 30px;
         }
         .profile-info-col {

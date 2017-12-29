@@ -19,6 +19,7 @@ return [
     'african_american' => 'African American',
     'asian_contemporary' => 'Asian Contemporary',
     'conceptual' => 'Conceptual',
+    'contemporary' => 'Contemporary',
     'emerging_artists' => 'Emerging Artists',
     'figurative' => 'Figurative',
     'middle_eastern_contemporary' => 'Middle Eastern Contemporary',

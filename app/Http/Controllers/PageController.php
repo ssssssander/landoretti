@@ -26,6 +26,10 @@ class PageController extends Controller
         return view('new_auction');
     }
 
+    public function addAuction(Request $request) {
+        return view('home');
+    }
+
     public function profile(Request $request) {
         $user = Auth::user();
 
