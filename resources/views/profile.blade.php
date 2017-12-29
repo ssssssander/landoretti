@@ -6,15 +6,29 @@
     <div class="wrapper">
         <main class="profile">
             <h1>@lang('profile.profile')</h1>
-            <p>{{ $user->name }}</p>
-            <p>{{ $user->email }}</p>
-            <p>{{ $user->phone_number }}</p>
-            <p>{{ $user->address }}</p>
-            <p>{{ $user->zip }}, {{ $user->city }}</p>
-            <p>@lang('register.vat_number')</p>
-            <p>{{ $user->vat_number }}</p>
-            <p>@lang('register.account_number')</p>
-            <p>{{ $user->account_number }}</p>
+            <div class="profile-info">
+                <h2>{{ $user->name }}</h2>
+                <div class="profile-info-col">
+                    <div class="item">
+                        <p class="mail-icon"><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></p>
+                        <p class="phone-icon">{{ $user->phone_number }}</p>
+                    </div>
+                    <div class="item">
+                        <p>{{ $user->address }}</p>
+                        <p>{{ $user->zip }}, {{ $user->city }}</p>
+                    </div>
+                </div>
+                <div class="profile-info-col">
+                    <div class="item">
+                        <p class="sub-title">@lang('profile.vat_number')</p>
+                        <p>{{ $user->vat_number }}</p>
+                    </div>
+                    <div class="item">
+                        <p class="sub-title">@lang('profile.account_number')</p>
+                        <p>{{ $user->account_number }}</p>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 @endsection

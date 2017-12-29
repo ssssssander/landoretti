@@ -16,6 +16,7 @@ a {
 
 a[href^=mailto] {
   text-decoration: underline;
+  color: #01a6a0;
 }
 
 body {
@@ -36,7 +37,8 @@ input[type=submit] {
 .info h2,
 .popular h2,
 .info div h3,
-main h1 {
+main h1,
+.profile .profile-info h2 {
   font-weight: normal;
 }
 
@@ -58,6 +60,23 @@ main h1 {
 .line {
   background-color: #01a6a0;
   height: 4px;
+}
+
+.col,
+.profile .profile-info .profile-info-col {
+  vertical-align: top;
+  width: 250px;
+  display: inline-block;
+}
+
+.phone-icon {
+  background: url("/img/phone.png") left no-repeat;
+  padding-left: 20px;
+}
+
+.mail-icon {
+  background: url("/img/mail.png") left no-repeat;
+  padding-left: 20px;
 }
 
 .logo,
@@ -186,20 +205,20 @@ header .header-personal li:first-of-type a {
   padding-left: 0;
 }
 
-header .header-personal .watchlist {
+header .header-personal .watchlist-icon {
   background: url("/img/watchlist.png") left no-repeat;
   padding-left: 25px;
 }
 
-header .header-personal .watchlist a {
+header .header-personal .watchlist-icon a {
   padding-right: 25px;
 }
 
-header .header-personal .profile {
+header .header-personal .profile-icon {
   background: url("/img/profile.png") 25px no-repeat;
 }
 
-header .header-personal .profile a {
+header .header-personal .profile-icon a {
   padding-left: 50px;
 }
 
@@ -335,12 +354,6 @@ footer .sitemap {
   padding-bottom: 65px;
 }
 
-footer .sitemap div {
-  vertical-align: top;
-  width: 250px;
-  display: inline-block;
-}
-
 footer .contact {
   vertical-align: top;
   padding-left: 30px;
@@ -350,39 +363,32 @@ footer .contact ul:first-of-type li {
   margin-bottom: 20px;
 }
 
+footer .contact div {
+  margin-top: 30px;
+}
+
 footer .search input[type=text] {
   width: 183px;
-}
-
-footer .phone {
-  background: url("/img/phone.png") left no-repeat;
-  margin-top: 30px;
-  padding-left: 20px;
-}
-
-footer .mail {
-  background: url("/img/mail.png") left no-repeat;
-  padding-left: 20px;
 }
 
 footer .social {
   margin-top: 40px;
 }
 
-footer .social .facebook {
-  background-image: url("/img/facebook.png");
+footer .social .facebook-icon {
+  background: url("/img/facebook.png") no-repeat;
 }
 
-footer .social .twitter {
-  background-image: url("/img/twitter.png");
+footer .social .twitter-icon {
+  background: url("/img/twitter.png") no-repeat;
 }
 
-footer .social .youtube {
-  background-image: url("/img/youtube.png");
+footer .social .youtube-icon {
+  background: url("/img/youtube.png") no-repeat;
 }
 
-footer .social .plus {
-  background-image: url("/img/plus.png");
+footer .social .plus-icon {
+  background: url("/img/plus.png") no-repeat;
 }
 
 footer .social a {
@@ -402,10 +408,7 @@ main {
 
 main h1 {
   font-size: 45px;
-}
-
-main form {
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 main form label {
@@ -492,5 +495,40 @@ main form .row .phone-number {
 
 .errors ul {
   list-style-type: initial;
+}
+
+.profile .profile-info {
+  padding: 20px 45px;
+  border: 1px solid #eaeaea;
+}
+
+.profile .profile-info h2 {
+  margin-bottom: 30px;
+}
+
+.profile .profile-info .profile-info-col {
+  border-right: 1px solid #eaeaea;
+  margin-left: 45px;
+}
+
+.profile .profile-info .profile-info-col:first-of-type {
+  margin-left: 0;
+}
+
+.profile .profile-info .profile-info-col:last-of-type {
+  border-right: 0;
+}
+
+.profile .profile-info .profile-info-col p {
+  margin-bottom: 2px;
+}
+
+.profile .profile-info .profile-info-col .sub-title {
+  color: #0a1e75;
+  font-weight: bold;
+}
+
+.profile .profile-info .profile-info-col .item:first-of-type {
+  margin-bottom: 30px;
 }
 

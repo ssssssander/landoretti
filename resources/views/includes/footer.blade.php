@@ -1,7 +1,7 @@
 <footer>
     <div class="wrapper">
         <div class="sitemap">
-            <div>
+            <div class="col">
                 @guest
                     <ul>
                         <li>@lang('footer.help')</li>
@@ -24,7 +24,7 @@
                     <li><a href="{{ route('setLocale', ['locale' => 'en']) }}">@lang('footer.english')</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="col">
                 <ul>
                     <li>@lang('footer.style')</li>
                     <li><a href="#">@lang('footer.abstract')</a></li>
@@ -49,7 +49,7 @@
                     <li><a href="#">@lang('footer.sculpture')</a></li>
                 </ul>
             </div>
-            <div>
+            <div class="col">
                 <ul>
                     <li>@lang('footer.price')</li>
                     <li><a href="#">@lang('footer.up_to_5000')</a></li>
@@ -85,14 +85,18 @@
                 <li>@lang('footer.landoretti_art')</li>
                 <li>@lang('footer.street_name')</li>
                 <li>@lang('footer.oostende')</li>
-                <li class="phone">@lang('footer.phone_number')</li>
-                <li class="mail"><a href="mailto:@lang('footer.email_address')">@lang('footer.email_address')</a></li>
+                <li>
+                    <div>
+                        <p class="phone-icon">@lang('footer.phone_number')</p>
+                        <p class="mail-icon"><a href="mailto:@lang('footer.email_address')">@lang('footer.email_address')</a></p>
+                    </div>
+                </li>
             </ul>
             <div class="social">
-                <a class="facebook" href="https://www.facebook.com"></a>
-                <a class="twitter" href="https://www.twitter.com"></a>
-                <a class="youtube" href="https://www.youtube.com"></a>
-                <a class="plus" href="https://www.plus.google.com"></a>
+                <a class="facebook-icon" href="https://www.facebook.com"></a>
+                <a class="twitter-icon" href="https://www.twitter.com"></a>
+                <a class="youtube-icon" href="https://www.youtube.com"></a>
+                <a class="plus-icon" href="https://www.plus.google.com"></a>
             </div>
             <div class="copyright">@lang('footer.copyright')</div>
         </div>

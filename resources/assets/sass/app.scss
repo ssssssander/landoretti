@@ -16,6 +16,7 @@ a {
 
     &[href^=mailto] {
         text-decoration: underline;
+        color: $primary-link-color;
     }
 }
 body {
@@ -45,6 +46,17 @@ input[type=submit] {
 .line {
     background-color: $primary-link-color;
     height: 4px;
+}
+.col {
+    vertical-align: top;
+    width: 250px;
+    display: inline-block;
+}
+@each $contact in phone, mail {
+  .#{$contact}-icon {
+    background: url("/img/#{$contact}.png") left no-repeat;
+    padding-left: 20px;
+  }
 }
 .logo {
     box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
@@ -136,7 +148,7 @@ header {
             border-left: 0;
             padding-left: 0;
         }
-        .watchlist {
+        .watchlist-icon {
             background: url("/img/watchlist.png") left no-repeat;
             padding-left: 25px;
 
@@ -144,7 +156,7 @@ header {
                 padding-right: 25px;
             }
         }
-        .profile {
+        .profile-icon {
             background: url("/img/profile.png") 25px no-repeat;
 
             a {
@@ -279,12 +291,6 @@ footer {
         @extend .footer-item;
         border-right: 1px solid $tertiary-color;
         padding-bottom: 65px;
-
-        div {
-            vertical-align: top;
-            width: 250px;
-            display: inline-block;
-        }
     }
     .contact {
         @extend .footer-item;
@@ -294,27 +300,22 @@ footer {
         ul:first-of-type li {
             margin-bottom: 20px;
         }
+
+        div {
+            margin-top: 30px;
+        }
     }
     .search {
         input[type=text] {
             width: 183px;
         }
     }
-    .phone {
-        background: url("/img/phone.png") left no-repeat;
-        margin-top: 30px;
-        padding-left: 20px;
-    }
-    .mail {
-        background: url("/img/mail.png") left no-repeat;
-        padding-left: 20px;
-    }
     .social {
         margin-top: 40px;
 
         @each $social in facebook, twitter, youtube, plus {
-          .#{$social} {
-            background-image: url("/img/#{$social}.png");
+          .#{$social}-icon {
+            background: url("/img/#{$social}.png") no-repeat;
           }
         }
         a {
@@ -334,10 +335,9 @@ main {
     h1 {
         @extend .title;
         font-size: 45px;
+        margin-bottom: 40px;
     }
     form {
-        margin-top: 40px;
-
         label {
             color: $secondary-color;
             font-size: 20px;
@@ -403,5 +403,38 @@ main {
 
     ul {
         list-style-type: initial;
+    }
+}
+.profile {
+    .profile-info {
+        padding: 20px 45px;
+        border: 1px solid $tertiary-color;
+
+        h2 {
+            @extend .title;
+            margin-bottom: 30px;
+        }
+        .profile-info-col {
+            @extend .col;
+            border-right: 1px solid $tertiary-color;
+            margin-left: 45px;
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+            &:last-of-type {
+                border-right: 0;
+            }
+            p {
+                margin-bottom: 2px;
+            }
+            .sub-title {
+                color: $secondary-color;
+                font-weight: bold;
+            }
+            .item:first-of-type {
+                margin-bottom: 30px;
+            }
+        }
     }
 }

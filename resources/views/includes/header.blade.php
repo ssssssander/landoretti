@@ -21,10 +21,10 @@
                         </li>
                     @endguest
                     @auth
-                        <li class="watchlist">
+                        <li class="watchlist-icon">
                             <a href="#">@lang('header.watchlist')</a>
                         </li>
-                        <li class="profile">
+                        <li class="profile-icon">
                             <a href="{{ route('profile') }}" {{ Route::is('profile') ? 'class=active' : null }}>@lang('header.profile')</a>
                         </li>
                         <li class="logout">
