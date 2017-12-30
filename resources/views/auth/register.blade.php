@@ -31,14 +31,7 @@
             <div class="row">
                 <div class="row-item">
                     {!! Form::label('country', trans('register.country')) !!}
-                    {!! Form::select('country',
-                        ['BE' => trans('register.be'),
-                        'NL' => trans('register.nl'),
-                        'GB' => trans('register.gb'),
-                        'IE' => trans('register.ie'),
-                        'FR' => trans('register.fr'),
-                        'LU' => trans('register.lu'),
-                        ], 'BE', ['class' => $errors->has('country') ? 'has-error' : '']) !!}
+                    {!! Form::select('country', trans('register.countries'), array_keys(trans('register.countries'))[0], ['class' => $errors->has('country') ? 'has-error' : '']) !!}
                 </div>
                 <div class="row-item half">
                     <div class="row-item">
@@ -59,14 +52,7 @@
                 <div class="row-item half">
                     <div class="row-item third">
                         {!! Form::label('phone_number', trans('register.phone_number')) !!}
-                        {!! Form::select('calling_code',
-                            ['+32' => '+32',
-                            '+31' => '+31',
-                            '+44' => '+44',
-                            '+353' => '+353',
-                            '+33' => '+33',
-                            '+352' => '+352',
-                            ], '+32', ['class' => $errors->has('calling_code') ? 'has-error' : '']) !!}
+                        {!! Form::select('calling_code', trans('register.calling_codes'), array_keys(trans('register.calling_codes'))[0], ['class' => $errors->has('calling_code') ? 'has-error' : '']) !!}
                     </div>
                     <div class="row-item two-third">
                         {!! Form::text('phone_number', '', ['class' => $errors->has('phone_number') ? 'has-error' : '']) !!}

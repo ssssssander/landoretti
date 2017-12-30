@@ -16,9 +16,11 @@ return [
     'myauctions' => 'MYAUCTIONS',
     'mybids' => 'MYBIDS',
     'contact' => 'CONTACT',
-    'nl' => 'NL',
-    'fr' => 'FR',
-    'en' => 'EN',
+    'languages' => [
+        'nl' => 'NL',
+        'fr' => 'FR',
+        'en' => 'EN',
+    ],
     'logo_alt' => 'Landoretti logo',
     'description' => 'Landoretti Art is an art auction site aimed on providing an amazing user experience for both buyers and sellers alike.',
 

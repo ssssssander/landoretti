@@ -129,6 +129,8 @@ return [
         'account_number' => trans('register.account_number'),
         'vat_number' => trans('register.vat_number'),
         'alt_payment' => trans('register.alt_payment'),
+        'style' => trans('new_auction.style'),
+        'title' => trans('new_auction.title'),
     ],
 
 ];

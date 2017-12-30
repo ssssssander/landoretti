@@ -16,7 +16,7 @@
                             {!! Form::open(['route' => 'login', 'v-if' => 'clickedLoginBtn']) !!}
                             {!! Form::email('email', '', ['placeholder' => trans('header.email')]) !!}
                             {!! Form::password('password', ['placeholder' => trans('header.password')]) !!}
-                            {!! Form::submit('') !!}
+                            {!! Form::submit('&gt;') !!}
                             {!! Form::close() !!}
                         </li>
                     @endguest

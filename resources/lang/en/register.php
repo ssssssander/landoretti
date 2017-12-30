@@ -18,11 +18,21 @@ return [
     'agree' => 'I Agree To',
     'tac' => 'The Terms & Conditions',
     'register_submit' => 'REGISTER',
-    'be' => 'Belgium',
-    'nl' => 'The Netherlands',
-    'gb' => 'Great Britain',
-    'ie' => 'Ireland',
-    'fr' => 'France',
-    'lu' => 'Luxembourg',
+    'countries' => [
+        'be' => 'Belgium',
+        'nl' => 'The Netherlands',
+        'gb' => 'Great Britain',
+        'ie' => 'Ireland',
+        'fr' => 'France',
+        'lu' => 'Luxembourg',
+    ],
+    'calling_codes' => [
+        '32' => '+32',
+        '31' => '+31',
+        '44' => '+44',
+        '353' => '+353',
+        '33' => '+33',
+        '352' => '+352',
+    ],
 
 ];

@@ -202,7 +202,7 @@ header #login input[type=password] {
 header #login input[type=submit] {
   width: 23px;
   height: 23px;
-  background: #eaeaea url("/img/arrow_right.png") center no-repeat;
+  background-color: #eaeaea;
 }
 
 header .header-personal {
@@ -468,6 +468,40 @@ main form input[type=submit] {
   font-size: 17px;
 }
 
+main form input[type=submit] + a {
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  color: #01a6a0;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+main form .upload {
+  background-color: #4e4e4e;
+  color: #ffffff;
+  padding: 10px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+main form p {
+  font-size: 14px;
+}
+
 main form .agree-tac {
   margin-top: 80px;
 }
@@ -529,31 +563,6 @@ main form .row .optional label {
 
 main form .row .optional label:last-of-type {
   font-size: 15px;
-}
-
-main form .row p {
-  font-size: 14px;
-}
-
-main form .row .upload,
-main form .row input[type=file] {
-  background-color: #4e4e4e;
-  color: #ffffff;
-  padding: 10px;
-  height: 54px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  margin-bottom: 0;
-  font-weight: bold;
-  font-size: 14px;
 }
 
 main form .row.cash input {

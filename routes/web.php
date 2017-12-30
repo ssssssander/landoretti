@@ -11,16 +11,18 @@
 |
 */
 
-Route::get('home', function() { return redirect()->route('home'); });
+Route::get('home', 'PageController@redirectHome');
+Route::get('login', 'PageController@redirectHome');
+
 Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
 Route::get('/', 'PageController@home')->name('home');
 Route::get('isearch', 'PageController@isearch')->name('isearch');
-Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
-Route::get('newauction', 'PageController@newAuction')->name('newAuction');
-Route::post('addauction', 'PageController@addAuction')->name('addAuction');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('profile', 'PageController@profile')->name('profile');
+    Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
+    Route::get('newauction', 'PageController@newAuction')->name('newAuction');
+    Route::post('addauction', 'PageController@addAuction')->name('addAuction');
 });
 
 // Auth routes

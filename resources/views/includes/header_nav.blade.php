@@ -13,21 +13,13 @@
             </nav>
             <span class="languages">
                 <ul>
-                    <li>
-                        <a href="{{ route('setLocale', ['locale' => 'nl']) }}" {{ App::isLocale('nl') ? 'class=active' : null }}>
-                            @lang('header.nl')
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('setLocale', ['locale' => 'fr']) }}" {{ App::isLocale('fr') ? 'class=active' : null }}>
-                            @lang('header.fr')
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('setLocale', ['locale' => 'en']) }}" {{ App::isLocale('en') ? 'class=active' : null }}>
-                            @lang('header.en')
-                        </a>
-                    </li>
+                    @foreach(trans('header.languages') as $key => $language)
+                        <li>
+                            <a href="{{ route('setLocale', ['locale' => $key]) }}" {{ App::isLocale($key) ? 'class=active' : null }}>
+                                {{ $language }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </span>
         </div>

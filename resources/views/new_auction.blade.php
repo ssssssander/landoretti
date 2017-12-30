@@ -10,31 +10,17 @@
             {!! Form::open(['route' => 'addAuction', 'files' => true]) !!}
             <div class="row">
                 <div class="row-item two-third">
-                    {!! Form::select('style',
-                        ['abstract' => trans('footer.abstract'),
-                        'african_american' => trans('footer.african_american'),
-                        'asian_contemporary' => trans('footer.asian_contemporary'),
-                        'conceptual' => trans('footer.conceptual'),
-                        'contemporary' => trans('footer.contemporary'),
-                        'emerging_artists' => trans('footer.emerging_artists'),
-                        'figurative' => trans('footer.figurative'),
-                        'middle_eastern_contemporary' => trans('footer.middle_eastern_contemporary'),
-                        'minimalism' => trans('footer.minimalism'),
-                        'modern' => trans('footer.modern'),
-                        'pop' => trans('footer.pop'),
-                        'urban' => trans('footer.urban'),
-                        'vintage_photographs' => trans('footer.vintage_photographs'),
-                        ], null, ['placeholder' => trans('new_auction.style'), 'class' => $errors->has('style') ? 'has-error' : '']) !!}
+                    {!! Form::select('style', trans('footer.styles1'), null, ['placeholder' => trans('new_auction.style'), 'class' => $errors->has('style') ? 'has-error' : '']) !!}
                 </div>
             </div>
             <div class="row">
                 <div class="row-item two-third">
-                    {!! Form::label('title', trans('new_auction.auction_title')) !!}
-                    {!! Form::text('title', '', ['placeholder' => trans('new_auction.auction_title'), 'class' => $errors->has('title') ? 'has-error' : '']) !!}
+                    {!! Form::label('title', trans('new_auction.title')) !!}
+                    {!! Form::text('title', '', ['placeholder' => trans('new_auction.title'), 'class' => $errors->has('title') ? 'has-error' : '']) !!}
                 </div>
                 <div class="row-item third">
                     {!! Form::label('year', trans('new_auction.year')) !!}
-                    {!! Form::text('year', '', ['class' => $errors->has('title') ? 'has-error' : '']) !!}
+                    {!! Form::text('year', '', ['class' => $errors->has('year') ? 'has-error' : '']) !!}
                 </div>
             </div>
             <div class="row">
@@ -73,23 +59,18 @@
             <div class="row">
                 <div class="row-item full">
                     {!! Form::label('photos', trans('new_auction.photos')) !!}
-                    <p>@lang('new_auction.photos_text1')</p>
-                    <p>@lang('new_auction.photos_text2')</p>
+                    @foreach(trans('new_auction.photos_texts') as $photos_text)
+                        <p>{{ $photos_text }}</p>
+                    @endforeach
                 </div>
             </div>
             <div class="row">
-                <div class="row-item third">
-                    {!! Form::label('artwork_image', trans('new_auction.upload_artwork'), ['class' => 'upload']) !!}
-                    {!! Form::file('artwork_image') !!}
-                </div>
-                <div class="row-item third">
-                    {!! Form::label('signature_image', trans('new_auction.upload_signature'), ['class' => 'upload']) !!}
-                    {!! Form::file('signature_image') !!}
-                </div>
-                <div class="row-item third">
-                    {!! Form::label('artwork_image', trans('new_auction.upload_artwork'), ['class' => 'upload']) !!}
-                    {!! Form::file('optional_image') !!}
-                </div>
+                @foreach(trans('new_auction.upload_texts') as $key => $upload_text)
+                    <div class="row-item third">
+                        {!! Form::label("{$key}_image", $upload_text, ['class' => 'upload']) !!}
+                        {!! Form::file("{$key}_image") !!}
+                    </div>
+                @endforeach
             </div>
             <div class="row">
                 <div class="row-item">
@@ -118,15 +99,16 @@
                 </div>
                 <div class="row-item two-third">
                     {!! Form::label('attention', trans('new_auction.attention')) !!}
-                    <p>@lang('new_auction.attention_text1')</p>
-                    <p>@lang('new_auction.attention_text2')</p>
-                    <p>@lang('new_auction.attention_text3')</p>
+                    @foreach(trans('new_auction.attention_texts') as $attention_text)
+                        <p>{{ $attention_text }}</p>
+                    @endforeach
                 </div>
             </div>
             @include('includes.agree_tac')
             <div class="row">
                 <div class="row-item">
                     {!! Form::submit(trans('new_auction.add_auction')) !!}
+                    <a href="#">@lang('new_auction.ask_a_question')</a>
                 </div>
             </div>
             {!! Form::close() !!}

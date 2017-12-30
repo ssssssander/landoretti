@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\AddAuction;
 use Auth;
 use App;
 
@@ -26,7 +27,7 @@ class PageController extends Controller
         return view('new_auction');
     }
 
-    public function addAuction(Request $request) {
+    public function addAuction(AddAuction $request) {
         return view('home');
     }
 
@@ -44,5 +45,9 @@ class PageController extends Controller
         }
 
         return redirect()->back();
+    }
+
+    public function redirectHome(Request $request) {
+        return redirect()->route('home');
     }
 }

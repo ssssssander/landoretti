@@ -11,68 +11,61 @@
                 @endguest
                 <ul>
                     <li>@lang('footer.help')</li>
-                    <li><a href="#">@lang('footer.tos')</a></li>
-                    <li><a href="#">@lang('footer.privacy_policy')</a></li>
-                    <li><a href="#">@lang('footer.faq')</a></li>
-                    <li><a href="#">@lang('footer.contact_us')</a></li>
-                    <li><a href="#">@lang('footer.about_us')</a></li>
+                    @foreach(trans('footer.help_texts') as $help_text)
+                        <li><a href="#">{{ $help_text }}</a></li>
+                    @endforeach
                 </ul>
                 <ul>
-                    <li>@lang('footer.languages')</li>
-                    <li><a href="{{ route('setLocale', ['locale' => 'nl']) }}">@lang('footer.dutch')</a></li>
-                    <li><a href="{{ route('setLocale', ['locale' => 'fr']) }}">@lang('footer.french')</a></li>
-                    <li><a href="{{ route('setLocale', ['locale' => 'en']) }}">@lang('footer.english')</a></li>
+                    @foreach(trans('footer.languages') as $key => $language)
+                        @if($loop->first)
+                            <li>{{ $language }}</li>
+                        @else
+                            <li><a href="{{ route('setLocale', ['locale' => $key]) }}">{{ $language }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
             <div class="col">
                 <ul>
                     <li>@lang('footer.style')</li>
-                    <li><a href="#">@lang('footer.abstract')</a></li>
-                    <li><a href="#">@lang('footer.african_american')</a></li>
-                    <li><a href="#">@lang('footer.asian_contemporary')</a></li>
-                    <li><a href="#">@lang('footer.conceptual')</a></li>
-                    <li><a href="#">@lang('footer.contemporary')</a></li>
-                    <li><a href="#">@lang('footer.emerging_artists')</a></li>
-                    <li><a href="#">@lang('footer.figurative')</a></li>
-                    <li><a href="#">@lang('footer.middle_eastern_contemporary')</a></li>
-                    <li><a href="#">@lang('footer.minimalism')</a></li>
-                    <li><a href="#">@lang('footer.modern')</a></li>
-                    <li><a href="#">@lang('footer.pop')</a></li>
-                    <li><a href="#">@lang('footer.urban')</a></li>
-                    <li><a href="#">@lang('footer.vintage_photographs')</a></li>
+                    @foreach(trans('footer.styles1') as $style)
+                        <li><a href="#">{{ $style }}</a></li>
+                    @endforeach
                 </ul>
                 <ul>
                     <li>@lang('footer.style')</li>
-                    <li><a href="#">@lang('footer.design')</a></li>
-                    <li><a href="#">@lang('footer.paintings_and_works_on_paper')</a></li>
-                    <li><a href="#">@lang('footer.photographs')</a></li>
-                    <li><a href="#">@lang('footer.prints_and_multiples')</a></li>
-                    <li><a href="#">@lang('footer.sculpture')</a></li>
+                    @foreach(trans('footer.styles2') as $style)
+                        <li><a href="#">{{ $style }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col">
                 <ul>
-                    <li>@lang('footer.price')</li>
-                    <li><a href="#">@lang('footer.up_to_5000')</a></li>
-                    <li><a href="#">@lang('footer.5000_10000')</a></li>
-                    <li><a href="#">@lang('footer.10000_25000')</a></li>
-                    <li><a href="#">@lang('footer.25000_50000')</a></li>
-                    <li><a href="#">@lang('footer.50000_100000')</a></li>
-                    <li><a href="#">@lang('footer.above')</a></li>
+                    @foreach(trans('footer.prices') as $price)
+                        @if($loop->first)
+                            <li>{{ $price }}</li>
+                        @else
+                            <li><a href="#">{{ $price }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
                 <ul>
-                    <li>@lang('footer.era')</li>
-                    <li><a href="#">@lang('footer.pre_war')</a></li>
-                    <li><a href="#">@lang('footer.1940_1950')</a></li>
-                    <li><a href="#">@lang('footer.1960_1980')</a></li>
-                    <li><a href="#">@lang('footer.1990_present')</a></li>
+                    @foreach(trans('footer.eras') as $era)
+                        @if($loop->first)
+                            <li>{{ $era }}</li>
+                        @else
+                            <li><a href="#">{{ $era }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
                 <ul>
-                    <li>@lang('footer.endings')</li>
-                    <li><a href="#">@lang('footer.ending_this_week')</a></li>
-                    <li><a href="#">@lang('footer.newly_listed')</a></li>
-                    <li><a href="#">@lang('footer.purchase_now')</a></li>
-                    <li><a href="#">@lang('footer.1990_present')</a></li>
+                    @foreach(trans('footer.endings_texts') as $endings_text)
+                        @if($loop->first)
+                            <li>{{ $endings_text }}</li>
+                        @else
+                            <li><a href="#">{{ $endings_text }}</a></li>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
         </div>

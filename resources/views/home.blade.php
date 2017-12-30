@@ -6,21 +6,13 @@
     <img src="{{ asset('img/slideshow.png') }}" alt="Slideshow" class="slideshow">
     <div class="info">
         <h2>@lang('home.how_does_it_work')</h2>
-        <div>
-            <img src="{{ asset('img/sign_up.png') }}" alt="@lang('home.sign_up')">
-            <h3>@lang('home.sign_up')</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-        <div>
-            <img src="{{ asset('img/make_deals.png') }}" alt="@lang('home.make_deals')">
-            <h3>@lang('home.make_deals')</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
-        <div>
-            <img src="{{ asset('img/everyone_happy.png') }}" alt="@lang('home.everyone_happy')">
-            <h3>@lang('home.everyone_happy')</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
+        @foreach(trans('home.explanations') as $key => $explanation)
+            <div>
+                <img src="{{ asset("img/{$key}.png") }}" alt="{{ $explanation }}">
+                <h3>{{ $explanation }}</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        @endforeach
     </div>
     <div class="stretch-bg">
         <div class="popular">
