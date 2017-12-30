@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\AddAuction;
+use App\Auction;
 use Auth;
 use App;
+use DateTime;
 
 class PageController extends Controller
 {
@@ -20,7 +22,7 @@ class PageController extends Controller
     }
 
     public function myAuctions(Request $request) {
-        return view('my_auctions');
+        return view('my_auctions', compact('user'));
     }
 
     public function newAuction(Request $request) {
@@ -28,6 +30,43 @@ class PageController extends Controller
     }
 
     public function addAuction(AddAuction $request) {
+        $optionalImagePath = null;
+        $endDate = DateTime::createFromFormat('d/m/y', $request->end_date);
+        $formattedEndDate = $endDate->format('Y-m-d');
+
+        if($request->artwork_image->isValid() && $request->signature_image->isValid()) {
+            $artworkImagePath = $request->artwork_image->store('uploads/artwork_images');
+            $signatureImagePath = $request->signature_image->store('uploads/signature_images');
+        }
+        else {
+            return redirect()->back();
+        }
+
+
+        if(!empty($request->optional_image) && $request->optional_image->isValid()) {
+            $optionalImagePath = $request->optional_image->store('uploads/optional_images');
+        }
+
+        Auction::create([
+            'user_id' => Auth::id(),
+            'style' => $request->style,
+            'title' => $request->title,
+            'year' => $request->year,
+            'width' => $request->width,
+            'height' => $request->height,
+            'depth' => $request->depth,
+            'description' => $request->description,
+            'condition' => $request->condition,
+            'origin' => $request->origin,
+            'artwork_image_path' => $artworkImagePath,
+            'signature_image_path' => $signatureImagePath,
+            'optional_image_path' => $optionalImagePath,
+            'min_price' => $request->min_price,
+            'max_price' => $request->max_price,
+            'buyout_price' => $request->buyout_price,
+            'end_date' => $formattedEndDate,
+        ]);
+
         return view('home');
     }
 

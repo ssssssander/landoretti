@@ -533,6 +533,10 @@ main form .row .row-item {
   display: inline-block;
 }
 
+main form .row .row-item.has-error {
+  border: 1px solid #fd0100;
+}
+
 main form .row .half {
   display: -webkit-box;
   display: -ms-flexbox;

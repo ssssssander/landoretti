@@ -131,6 +131,18 @@ return [
         'alt_payment' => trans('register.alt_payment'),
         'style' => trans('new_auction.style'),
         'title' => trans('new_auction.title'),
+        'year' => trans('new_auction.year'),
+        'width' => trans('new_auction.width'),
+        'height' => trans('new_auction.height'),
+        'depth' => trans('new_auction.depth'),
+        'description' => trans('new_auction.description'),
+        'condition' => trans('new_auction.condition'),
+        'origin' => trans('new_auction.origin'),
+        'condition' => trans('new_auction.condition'),
+        'min_price' => trans('new_auction.min_price'),
+        'max_price' => trans('new_auction.max_price'),
+        'buyout_price' => trans('new_auction.buyout_price'),
+        'end_date' => trans('new_auction.end_date'),
     ],
 
 ];

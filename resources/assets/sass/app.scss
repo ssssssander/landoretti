@@ -420,6 +420,10 @@ main {
             .row-item {
                 width: 48%;
                 display: inline-block;
+
+                &.has-error {
+                    border: 1px solid $error-color;
+                }
             }
             .half {
                 display: flex;
