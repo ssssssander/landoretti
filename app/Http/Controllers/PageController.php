@@ -22,7 +22,7 @@ class PageController extends Controller
     }
 
     public function myAuctions(Request $request) {
-        return view('my_auctions', compact('user'));
+        return view('my_auctions');
     }
 
     public function newAuction(Request $request) {
@@ -67,7 +67,7 @@ class PageController extends Controller
             'end_date' => $formattedEndDate,
         ]);
 
-        return view('home');
+        return view('my_auctions');
     }
 
     public function profile(Request $request) {

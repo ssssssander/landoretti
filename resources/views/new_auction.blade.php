@@ -80,7 +80,7 @@
             <div class="row cash">
                 <div class="row-item third">
                     {!! Form::label('min_price', trans('new_auction.min_price')) !!}
-                    {!! Form::number('min_price', '', ['class' => $errors->has('min_price') ? 'has-error' : '', 'maxlength' => 8]) !!}
+                    {!! Form::number('min_price', '', ['class' => $errors->has('min_price') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
                 </div>
                 <div class="row-item third">
                     {!! Form::label('max_price', trans('new_auction.max_price')) !!}

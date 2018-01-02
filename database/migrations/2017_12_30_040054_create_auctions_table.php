@@ -30,7 +30,7 @@ class CreateAuctionsTable extends Migration
             $table->string('optional_image_path')->nullable();
             $table->integer('min_price')->unsigned();
             $table->integer('max_price')->unsigned();
-            $table->integer('buyout_price')->unsigned();
+            $table->integer('buyout_price')->unsigned()->nullable();
             $table->date('end_date');
             $table->timestamps();
 
