@@ -21,6 +21,12 @@ class PageController extends Controller
         return view('home', compact('query'));
     }
 
+    public function profile(Request $request) {
+        $user = Auth::user();
+
+        return view('profile', compact('user'));
+    }
+
     public function myAuctions(Request $request) {
         return view('my_auctions');
     }
@@ -70,10 +76,8 @@ class PageController extends Controller
         return view('my_auctions');
     }
 
-    public function profile(Request $request) {
-        $user = Auth::user();
-
-        return view('profile', compact('user'));
+    public function auctionDetail(Auction $auction, $auctionTitle = null) {
+        return view('auction_detail', compact('auction'));
     }
 
     public function setLocale(Request $request, $locale) {

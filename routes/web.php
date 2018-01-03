@@ -23,6 +23,7 @@ Route::middleware(['auth'])->group(function() {
     Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
     Route::get('newauction', 'PageController@newAuction')->name('newAuction');
     Route::post('addauction', 'PageController@addAuction')->name('addAuction');
+    Route::get('auction/{auction}/{auctionTitle?}', 'PageController@auctionDetail')->name('auctionDetail');
 });
 
 // Auth routes
