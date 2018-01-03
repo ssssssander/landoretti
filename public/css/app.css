@@ -272,7 +272,7 @@ header .logout form input[type=submit] {
   text-align: right;
 }
 
-.slideshow {
+.slideshow-home {
   width: 100%;
 }
 
@@ -626,14 +626,15 @@ main form .row.cash input {
   background-color: #f8f8f8;
   font-weight: bold;
   float: right;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 .my-auctions {
   width: 100%;
   border: 1px solid #eaeaea;
   border-collapse: collapse;
-  margin-top: 30px;
+  margin: 30px 0 60px 0;
 }
 
 .my-auctions th {
@@ -680,5 +681,27 @@ main form .row.cash input {
 .my-auctions .end-date,
 .my-auctions .remaining-time {
   width: 17%;
+}
+
+.auction-detail h1 {
+  margin-bottom: 15px;
+}
+
+.auction-detail h1 + div {
+  font-size: 14px;
+}
+
+.auction-detail h1 + div .bids {
+  color: #0a1e75;
+  padding-right: 20px;
+  background: url("/img/watchlist.png") right no-repeat;
+}
+
+.auction-detail .top {
+  margin-top: 30px;
+}
+
+.auction-detail .slideshow-detail {
+  width: 60%;
 }
 

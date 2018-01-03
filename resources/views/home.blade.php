@@ -3,7 +3,7 @@
 @section('title', trans('home.home'))
 
 @section('content')
-    <img src="{{ asset('img/slideshow.png') }}" alt="Slideshow" class="slideshow">
+    <img src="{{ asset('img/slideshow_home.png') }}" alt="Slideshow" class="slideshow-home">
     <div class="info">
         <h2>@lang('home.how_does_it_work')</h2>
         @foreach(trans('home.explanations') as $key => $explanation)

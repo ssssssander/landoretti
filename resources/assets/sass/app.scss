@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo:400,700");
 @import "variables";
-// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 * {
     margin: 0;
@@ -204,7 +203,7 @@ header {
         }
     }
 }
-.slideshow {
+.slideshow-home {
     width: 100%;
 }
 .block {
@@ -505,13 +504,14 @@ main {
     background-color: $input-bg-color;
     font-weight: bold;
     float: right;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    display: inline-block;
 }
 .my-auctions {
     width: 100%;
     border: 1px solid $tertiary-color;
     border-collapse: collapse;
-    margin-top: 30px;
+    margin: 30px 0 60px 0;
 
     th {
         background-color: $input-bg-color;
@@ -549,5 +549,26 @@ main {
     }
     .price, .end-date, .remaining-time {
         width: 17%;
+    }
+}
+.auction-detail {
+    h1 {
+        margin-bottom: 15px;
+
+        &+div {
+            font-size: 14px;
+
+            .bids {
+                color: $secondary-color;
+                padding-right: 20px;
+                background: url("/img/watchlist.png") right no-repeat;
+            }
+        }
+    }
+    .top {
+        margin-top: 30px;
+    }
+    .slideshow-detail {
+        width: 60%;
     }
 }

@@ -17,8 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="@lang('header.description')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link type="image/x-icon" rel="icon" href="{{ asset('favicon.ico') }}">
+    <link type="image/x-icon" href="{{ asset('favicon.ico') }}" rel="icon">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="https://static.sander.borret.mtantwerp.eu" rel="dns-prefetch">
     <title>{{ config('app.name') }} | @yield('title')</title>
 </head>
 <body>

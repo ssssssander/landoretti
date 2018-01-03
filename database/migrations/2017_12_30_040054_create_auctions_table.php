@@ -32,6 +32,7 @@ class CreateAuctionsTable extends Migration
             $table->integer('max_price')->unsigned();
             $table->integer('buyout_price')->unsigned()->nullable();
             $table->date('end_date');
+            $table->string('status')->default('active');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
