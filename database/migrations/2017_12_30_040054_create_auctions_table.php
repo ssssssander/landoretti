@@ -17,14 +17,14 @@ class CreateAuctionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->string('style');
-            $table->string('title');
+            $table->string('title', 255);
             $table->integer('year')->unsigned();
             $table->integer('width')->unsigned();
             $table->integer('height')->unsigned();
             $table->integer('depth')->unsigned()->nullable();
-            $table->string('description');
-            $table->string('condition');
-            $table->string('origin');
+            $table->text('description');
+            $table->text('condition');
+            $table->string('origin', 255);
             $table->string('artwork_image_path');
             $table->string('signature_image_path');
             $table->string('optional_image_path')->nullable();

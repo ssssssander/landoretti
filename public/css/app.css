@@ -30,6 +30,7 @@ input[type=submit] {
   border: none;
   vertical-align: middle;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -158,7 +159,7 @@ header #login input[type=password]:-ms-input-placeholder {
 }
 
 .search input[type=submit] {
-  background: url("/img/search.png");
+  background: url("/img/magnifying_glass.png");
   width: 18px;
   height: 18px;
   border: none;
@@ -221,7 +222,7 @@ header .header-personal li:first-of-type a {
 }
 
 header .header-personal .watchlist-icon {
-  background: url("/img/watchlist.png") left no-repeat;
+  background: url("/img/hamburger.png") left no-repeat;
   padding-left: 25px;
 }
 
@@ -230,7 +231,7 @@ header .header-personal .watchlist-icon a {
 }
 
 header .header-personal .profile-icon {
-  background: url("/img/profile.png") 25px no-repeat;
+  background: url("/img/person.png") 25px no-repeat;
 }
 
 header .header-personal .profile-icon a {
@@ -458,7 +459,7 @@ main form textarea {
   height: 120px;
 }
 
-main form input[type=submit] {
+main form input[type=submit]:not(.buyout):not(.add-to-watchlist) {
   background-color: #01a6a0;
   text-align: center;
   width: 200px;
@@ -468,7 +469,7 @@ main form input[type=submit] {
   font-size: 17px;
 }
 
-main form input[type=submit] + a {
+main form input[type=submit]:not(.buyout):not(.add-to-watchlist) + a {
   width: 200px;
   display: inline-block;
   text-align: center;
@@ -692,16 +693,141 @@ main form .row.cash input {
 }
 
 .auction-detail h1 + div .bids {
-  color: #0a1e75;
   padding-right: 20px;
-  background: url("/img/watchlist.png") right no-repeat;
+  background: url("/img/hamburger.png") right no-repeat;
 }
 
 .auction-detail .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 30px;
 }
 
-.auction-detail .slideshow-detail {
-  width: 60%;
+.auction-detail .top img {
+  width: 710px;
+  height: 502px;
+}
+
+.auction-detail .top .side {
+  width: 250px;
+  text-align: right;
+}
+
+.auction-detail .top .side div {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.auction-detail .top .side div * {
+  margin-bottom: 5px;
+}
+
+.auction-detail .top .side div.border-bottom {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.auction-detail .top .side div h2 {
+  color: #000000;
+  font-size: 27px;
+}
+
+.auction-detail .top .side div h2 + p {
+  color: #0a1e75;
+}
+
+.auction-detail .top .side div .remaining-time {
+  color: #01a6a0;
+}
+
+.auction-detail .top .side div .remaining-time + span {
+  color: #01a6a0;
+}
+
+.auction-detail .top .side .bid {
+  color: #0a1e75;
+  border: 1px solid #eaeaea;
+  padding-top: 20px;
+}
+
+.auction-detail .top .side .bid .padding {
+  padding: 0 20px;
+}
+
+.auction-detail .top .side .bid .estimated-price {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.auction-detail .top .side .bid .buyout {
+  color: #01a6a0;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.auction-detail .top .side .bid .bid-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.auction-detail .top .side .bid .bid-form .price-input {
+  width: 128px;
+  border: 10px solid #01a6a0;
+  vertical-align: middle;
+  outline: none;
+}
+
+.auction-detail .top .side .bid .bid-form .price-submit {
+  width: 120px;
+  display: inline-block;
+}
+
+.auction-detail .top .side .bid .add-to-watchlist-form {
+  text-align: center;
+}
+
+.auction-detail .top .side .bid .add-to-watchlist-form .add-to-watchlist {
+  color: #0a1e75;
+  padding-left: 20px;
+  text-decoration: underline;
+  background: url("/img/hamburger.png") left no-repeat;
+}
+
+.auction-detail .bottom {
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.auction-detail .bottom h3 {
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+.auction-detail .bottom p {
+  padding-right: 20px;
+}
+
+.auction-detail .bottom .auction-texts {
+  width: 750px;
+  border-right: 1px solid #eaeaea;
+}
+
+.auction-detail .bottom .auction-extra {
+  width: 200px;
 }
 

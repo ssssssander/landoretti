@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\AddAuction;
 use App\Auction;
+use App\Bid;
 use Auth;
 use App;
 use DateTime;
@@ -76,8 +77,37 @@ class PageController extends Controller
         return view('my_auctions');
     }
 
-    public function auctionDetail(Auction $auction, $auctionTitle = null) {
+    public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
         return view('auction_detail', compact('auction'));
+    }
+
+    public function auctionBuyout(Request $request, Auction $auction, $auctionTitle = null) {
+        if($auction->status == 'active') {
+            $auction->status = 'sold';
+            $auction->save();
+        }
+
+        return view('my_auctions');
+    }
+
+    public function addBid(Request $request, Auction $auction, $auctionTitle = null) {
+        $request->validate([
+            'price' => 'required|digits_between:1,8',
+        ]);
+
+        if($auction->status == 'active') {
+            Bid::create([
+                'user_id' => Auth::id(),
+                'auction_id' => $auction->id,
+                'price' => $request->price,
+            ]);
+        }
+
+        return redirect()->back();
+    }
+
+    public function addAuctionToWatchlist(Request $request, Auction $auction, $auctionTitle = null) {
+        return redirect()->back();
     }
 
     public function setLocale(Request $request, $locale) {

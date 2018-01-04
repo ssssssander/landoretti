@@ -5,7 +5,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-// require('./bootstrap');
+require('./bootstrap');
 
 window.Vue = require('vue');
 
@@ -27,4 +27,4 @@ var login = new Vue({
       this.clickedLoginBtn = true;
     }
   }
-})
+});

@@ -41,13 +41,13 @@
             <div class="row">
                 <div class="row-item full">
                     {!! Form::label('description', trans('new_auction.description')) !!}
-                    {!! Form::textarea('description', '', ['placeholder' => trans('new_auction.description_placeholder'), 'class' => $errors->has('description') ? 'has-error' : '', 'maxlength' => 4095]) !!}
+                    {!! Form::textarea('description', '', ['placeholder' => trans('new_auction.description_placeholder'), 'class' => $errors->has('description') ? 'has-error' : '', 'maxlength' => 10000]) !!}
                 </div>
             </div>
             <div class="row">
                 <div class="row-item full">
                     {!! Form::label('condition', trans('new_auction.condition')) !!}
-                    {!! Form::textarea('condition', '', ['placeholder' => trans('new_auction.condition_placeholder'), 'class' => $errors->has('condition') ? 'has-error' : '', 'maxlength' => 4095]) !!}
+                    {!! Form::textarea('condition', '', ['placeholder' => trans('new_auction.condition_placeholder'), 'class' => $errors->has('condition') ? 'has-error' : '', 'maxlength' => 10000]) !!}
                 </div>
             </div>
             <div class="row">

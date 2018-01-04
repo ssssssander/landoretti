@@ -28,6 +28,7 @@ input[type=submit] {
     border: none;
     vertical-align: middle;
     cursor: pointer;
+    background-color: $white;
 }
 @for $i from 1 through 6 {
     h#{$i} {
@@ -101,7 +102,7 @@ input[type=submit] {
         border-radius: 3px;
     }
     input[type=submit] {
-        background: url("/img/search.png");
+        background: url("/img/magnifying_glass.png");
         width: 18px;
         height: 18px;
         border: none;
@@ -150,7 +151,7 @@ header {
             padding-left: 0;
         }
         .watchlist-icon {
-            background: url("/img/watchlist.png") left no-repeat;
+            background: url("/img/hamburger.png") left no-repeat;
             padding-left: 25px;
 
             a {
@@ -158,7 +159,7 @@ header {
             }
         }
         .profile-icon {
-            background: url("/img/profile.png") 25px no-repeat;
+            background: url("/img/person.png") 25px no-repeat;
 
             a {
                 padding-left: 50px;
@@ -361,7 +362,7 @@ main {
             font-family: "Arimo", sans-serif;
             height: 120px;
         }
-        input[type=submit] {
+        input[type=submit]:not(.buyout):not(.add-to-watchlist) {
             background-color: $primary-link-color;
             text-align: center;
             width: 200px;
@@ -559,16 +560,118 @@ main {
             font-size: 14px;
 
             .bids {
-                color: $secondary-color;
                 padding-right: 20px;
-                background: url("/img/watchlist.png") right no-repeat;
+                background: url("/img/hamburger.png") right no-repeat;
             }
         }
     }
     .top {
+        display: flex;
+        justify-content: space-between;
         margin-top: 30px;
+
+        img {
+            width: 710px;
+            height: 502px;
+        }
+
+        .side {
+            width: 250px;
+            text-align: right;
+
+            div {
+                margin-bottom: 15px;
+                padding-bottom: 20px;
+
+                * {
+                    margin-bottom: 5px;
+                }
+                &.border-bottom {
+                    border-bottom: 1px solid $tertiary-color;
+                }
+                h2 {
+                    color: $black;
+                    font-size: 27px;
+
+                    &+p {
+                        color: $secondary-color;
+
+                    }
+                }
+                .remaining-time {
+                    color: $primary-link-color;
+
+                    &+span {
+                        color: $primary-link-color;
+                    }
+                }
+            }
+            .bid {
+                color: $secondary-color;
+                border: 1px solid $tertiary-color;
+                padding-top: 20px;
+
+                .padding {
+                    padding: 0 20px;
+                }
+                .estimated-price {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+                .buyout {
+                    color: $primary-link-color;
+                    text-decoration: underline;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .bid-form {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .price-input {
+                        width: 128px;
+                        border: 10px solid $primary-link-color;
+                        vertical-align: middle;
+                        outline: none;
+                    }
+                    .price-submit {
+                        width: 120px;
+                        display: inline-block;
+                    }
+                }
+                .add-to-watchlist-form {
+                    text-align: center;
+
+                    .add-to-watchlist {
+                        color: $secondary-color;
+                        padding-left: 20px;
+                        text-decoration: underline;
+                        background: url("/img/hamburger.png") left no-repeat;
+                    }
+                }
+            }
+        }
     }
-    .slideshow-detail {
-        width: 60%;
+    .bottom {
+        padding: 20px;
+        border: 1px solid $tertiary-color;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+        }
+        p {
+            padding-right: 20px;
+        }
+        .auction-texts {
+            width: 750px;
+            border-right: 1px solid $tertiary-color;
+        }
+        .auction-extra {
+            width: 200px;
+        }
     }
 }
