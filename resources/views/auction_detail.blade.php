@@ -12,11 +12,11 @@
                     <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
                     <span id="bids">
                         <a href="#" v-on:click.prevent="toggleBids" class="bids">
-                            ({{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }})
+                            ({{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }}, {{ trans('auction_detail.yours', ['bids' => $auction->bids->where('user_id', Auth::id())->count()]) }})
                         </a>
                         <ol v-if="clickedBidsBtn">
                             @forelse($auction->bids as $bid)
-                                <li>€ {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}</li>
+                                <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">€ {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}</li>
                             @empty
                                 <li>@lang('auction_detail.no_bids')</li>
                             @endforelse
@@ -50,12 +50,14 @@
                                 <p class="estimated-price">
                                     € {{ formatPrice($auction->min_price) }} - € {{ formatPrice($auction->max_price) }}
                                 </p>
-                                @if($auction->buyout_price)
+                                @isset($auction->buyout_price)
                                     {!! Form::open(['route' => ['auctionBuyout', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
                                     {!! Form::submit(trans('auction_detail.buy_now', ['buyout_price' => formatPrice($auction->buyout_price)]), ['class' => 'buyout']) !!}
                                     {!! Form::close() !!}
-                                @endif
-                                <span>{{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }}</span>
+                                @endisset
+                                <span>
+                                    {{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }} ({{ trans('auction_detail.yours', ['bids' => $auction->bids->where('user_id', Auth::id())->count()]) }})
+                                </span>
                             </div>
                             {!! Form::open(['route' => ['addBid', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'bid-form']) !!}
                             {!! Form::number('bid_price', '', ['class' => 'price-input ' . ($errors->has('bid_price') ? 'has-error' : ''), 'min' => 0, 'max' => 99999999]) !!}

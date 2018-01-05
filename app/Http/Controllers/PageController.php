@@ -7,9 +7,11 @@ use App\Http\Requests\AddAuction;
 use App\Http\Requests\AddBid;
 use App\Auction;
 use App\Bid;
+use App\Watchlist;
 use Auth;
 use App;
 use DateTime;
+use DB;
 
 class PageController extends Controller
 {
@@ -18,7 +20,12 @@ class PageController extends Controller
     }
 
     public function watchlist(Request $request) {
-        return view('watchlist');
+        $watchlistAuctions = DB::table('watchlists')
+            ->join('users', 'watchlists.user_id', 'users.id')
+                ->join('auctions', 'watchlists.auction_id', 'auctions.id')
+                    ->get();
+
+        return view('watchlist', compact('watchlistAuctions'));
     }
 
     public function profile(Request $request) {
@@ -108,6 +115,13 @@ class PageController extends Controller
     }
 
     public function addAuctionToWatchlist(Request $request, Auction $auction, $auctionTitle = null) {
+        if($auction->status == 'active') {
+            Watchlist::create([
+                'user_id' => Auth::id(),
+                'auction_id' => $auction->id,
+            ]);
+        }
+
         return redirect()->back();
     }
 

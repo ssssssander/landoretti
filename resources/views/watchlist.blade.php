@@ -20,26 +20,28 @@
                     <th>@lang('my_auctions.end_data')</th>
                     <th>@lang('my_auctions.remaining_time')</th>
                 </tr>
-                @forelse(Auth::user()->watchlist as $auction)
-                    <tr>
-                        <td class="image">
-                            <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
-                                <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
-                            </a>
-                        </td>
-                        <td class="title">
-                            <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">{{ $auction->title }}</a>
-                            <p>{{ $auction->year }}</p>
-                        </td>
-                        <td class="price">€ {{ formatPrice($auction->min_price) }}</td>
-                        <td class="end-date">{{ formatDate($auction->end_date) }}</td>
-                        <td class="remaining-time" data-end-date="{{ $auction->end_date }}"></td>
-                    </tr>
-                @empty
+                @if(count($watchlistAuctions) > 0)
+                    @for($i = 0; $i < count($watchlistAuctions); $i++)
+                        <tr>
+                            <td class="image">
+                                <a href="{{ route('auctionDetail', ['auction' => $watchlistAuctions[$i]->auction_id, 'auctionTitle' => clean($watchlistAuctions[$i]->title)]) }}">
+                                    <img src="{{ asset("storage/{$watchlistAuctions[$i]->artwork_image_path}") }}" alt="{{ $watchlistAuctions[$i]->title }}">
+                                </a>
+                            </td>
+                            <td class="title">
+                                <a href="{{ route('auctionDetail', ['auction' => $watchlistAuctions[$i]->auction_id, 'auctionTitle' => clean($watchlistAuctions[$i]->title)]) }}">{{ $watchlistAuctions[$i]->title }}</a>
+                                <p>{{ $watchlistAuctions[$i]->year }}</p>
+                            </td>
+                            <td class="price">€ {{ formatPrice($watchlistAuctions[$i]->min_price) }}</td>
+                            <td class="end-date">{{ formatDate($watchlistAuctions[$i]->end_date) }}</td>
+                            <td class="remaining-time" data-end-date="{{ $watchlistAuctions[$i]->end_date }}"></td>
+                        </tr>
+                    @endfor
+                @else
                     <tr>
                         <td>@lang('watchlist.no_auctions')</td>
                     </tr>
-                @endforelse
+                @endif
             </table>
         </main>
     </div>

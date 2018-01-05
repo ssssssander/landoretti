@@ -700,6 +700,10 @@ main form .row.cash input {
   border: 1px solid #eaeaea;
 }
 
+.auction-detail .title-info #bids .you {
+  background-color: #eaeaea;
+}
+
 .auction-detail .top {
   display: -webkit-box;
   display: -ms-flexbox;
