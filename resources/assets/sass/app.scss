@@ -90,6 +90,7 @@ input[type=submit] {
     float: right;
     margin-top: 30px;
     display: inline-block;
+    margin-left: 10px;
 }
 .input-placeholder-italic {
     &::-webkit-input-placeholder {
@@ -160,22 +161,16 @@ header {
         }
         li:first-of-type a {
             border-left: 0;
-            padding-left: 0;
         }
         .watchlist-icon {
             background: url("/img/hamburger.png") left no-repeat;
-            padding-left: 25px;
-
-            a {
-                padding-right: 25px;
-            }
         }
         .profile-icon {
             background: url("/img/person.png") 25px no-repeat;
-
-            a {
-                padding-left: 50px;
-            }
+            padding-left: 50px;
+        }
+        .register {
+            padding-left: 0;
         }
     }
     .logout {
@@ -508,7 +503,7 @@ main {
         }
     }
 }
-.my-auctions {
+.auction-list {
     width: 100%;
     border: 1px solid $tertiary-color;
     border-collapse: collapse;
@@ -690,6 +685,20 @@ main {
                 font-size: 17px;
                 margin-top: 50px;
             }
+        }
+    }
+}
+.watchlist-categories {
+    a {
+        color: $primary-color;
+        padding: 0 5px 2px 0;
+        border-right: 1px solid $primary-color;
+
+        &.active {
+            border-bottom: 3px solid $tertiary-color;
+        }
+        &:last-of-type {
+            border-right: 0;
         }
     }
 }

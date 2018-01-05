@@ -19,6 +19,7 @@ Route::get('/', 'PageController@home')->name('home');
 Route::get('isearch', 'PageController@isearch')->name('isearch');
 
 Route::middleware(['auth'])->group(function() {
+    Route::get('watchlist', 'PageController@watchlist')->name('watchlist');
     Route::get('profile', 'PageController@profile')->name('profile');
     Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
     Route::get('newauction', 'PageController@newAuction')->name('newAuction');

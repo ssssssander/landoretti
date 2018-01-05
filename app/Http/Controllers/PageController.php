@@ -17,16 +17,20 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function iSearch(Request $request) {
-        $query = $request->input('query');
-
-        return view('home', compact('query'));
+    public function watchlist(Request $request) {
+        return view('watchlist');
     }
 
     public function profile(Request $request) {
         $user = Auth::user();
 
         return view('profile', compact('user'));
+    }
+
+    public function iSearch(Request $request) {
+        $query = $request->input('query');
+
+        return view('home', compact('query'));
     }
 
     public function myAuctions(Request $request) {

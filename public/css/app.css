@@ -135,6 +135,7 @@ main form textarea {
   float: right;
   margin-top: 30px;
   display: inline-block;
+  margin-left: 10px;
 }
 
 .input-placeholder-italic::-webkit-input-placeholder,
@@ -232,24 +233,19 @@ header .header-personal a {
 
 header .header-personal li:first-of-type a {
   border-left: 0;
-  padding-left: 0;
 }
 
 header .header-personal .watchlist-icon {
   background: url("/img/hamburger.png") left no-repeat;
-  padding-left: 25px;
-}
-
-header .header-personal .watchlist-icon a {
-  padding-right: 25px;
 }
 
 header .header-personal .profile-icon {
   background: url("/img/person.png") 25px no-repeat;
+  padding-left: 50px;
 }
 
-header .header-personal .profile-icon a {
-  padding-left: 50px;
+header .header-personal .register {
+  padding-left: 0;
 }
 
 header .logout form {
@@ -631,56 +627,56 @@ main form .row.cash input {
   margin-bottom: 30px;
 }
 
-.my-auctions {
+.auction-list {
   width: 100%;
   border: 1px solid #eaeaea;
   border-collapse: collapse;
   margin: 30px 0 60px 0;
 }
 
-.my-auctions th {
+.auction-list th {
   background-color: #f8f8f8;
   padding: 10px 0;
   text-align: center;
   font-weight: normal;
 }
 
-.my-auctions td {
+.auction-list td {
   border: 1px solid #eaeaea;
   text-align: center;
   font-size: 20px;
 }
 
-.my-auctions img {
+.auction-list img {
   width: 100%;
   height: 100%;
 }
 
-.my-auctions .image {
+.auction-list .image {
   border-right: 0;
   width: 150px;
   height: 150px;
 }
 
-.my-auctions .title {
+.auction-list .title {
   border-left: 0;
   text-align: left;
   padding-left: 40px;
   font-size: 22px;
 }
 
-.my-auctions .title a {
+.auction-list .title a {
   color: #4e4e4e;
 }
 
-.my-auctions .title p {
+.auction-list .title p {
   color: #0a1e75;
   font-size: 18px;
 }
 
-.my-auctions .price,
-.my-auctions .end-date,
-.my-auctions .remaining-time {
+.auction-list .price,
+.auction-list .end-date,
+.auction-list .remaining-time {
   width: 17%;
 }
 
@@ -846,5 +842,19 @@ main form .row.cash input {
   display: block;
   font-size: 17px;
   margin-top: 50px;
+}
+
+.watchlist-categories a {
+  color: #4e4e4e;
+  padding: 0 5px 2px 0;
+  border-right: 1px solid #4e4e4e;
+}
+
+.watchlist-categories a.active {
+  border-bottom: 3px solid #eaeaea;
+}
+
+.watchlist-categories a:last-of-type {
+  border-right: 0;
 }
 
