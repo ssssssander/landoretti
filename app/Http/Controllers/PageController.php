@@ -22,8 +22,8 @@ class PageController extends Controller
     public function watchlist(Request $request) {
         $watchlistAuctions = DB::table('watchlists')
             ->join('users', 'watchlists.user_id', 'users.id')
-                ->join('auctions', 'watchlists.auction_id', 'auctions.id')
-                    ->get();
+            ->join('auctions', 'watchlists.auction_id', 'auctions.id')
+            ->get();
 
         return view('watchlist', compact('watchlistAuctions'));
     }
@@ -90,7 +90,10 @@ class PageController extends Controller
     }
 
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
-        return view('auction_detail', compact('auction'));
+        $isInWatchlist = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
+        $isInWatchlist = !$isInWatchlist->isEmpty();
+
+        return view('auction_detail', compact('auction', 'isInWatchlist'));
     }
 
     public function auctionBuyout(Request $request, Auction $auction, $auctionTitle = null) {

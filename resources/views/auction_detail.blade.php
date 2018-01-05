@@ -63,9 +63,15 @@
                             {!! Form::number('bid_price', '', ['class' => 'price-input ' . ($errors->has('bid_price') ? 'has-error' : ''), 'min' => 0, 'max' => 99999999]) !!}
                             {!! Form::submit(trans('auction_detail.bid_now'), ['class' => 'price-submit']) !!}
                             {!! Form::close() !!}
-                            {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'add-to-watchlist-form']) !!}
-                            {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
-                            {!! Form::close() !!}
+                            <span class="add-to-watchlist-container">
+                                @if(!$isInWatchlist)
+                                {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
+                                {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
+                                {!! Form::close() !!}
+                                @else
+                                    <p>@lang('auction_detail.in_watchlist')</p>
+                                @endif
+                            </span>
                         </div>
                     @endif
                 </div>

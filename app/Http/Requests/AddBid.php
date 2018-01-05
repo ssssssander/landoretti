@@ -52,22 +52,22 @@ class AddBid extends FormRequest
                     $this->latestBidPrice = $this->route('auction')->bids()->orderBy('created_at', 'desc')->first()->price;
                     if($this->bid_price <= $this->latestBidPrice) {
                         $validator->errors()->add('bid_price',
-                            trans('validation.custom.bid_price.higher_than_latest_bid_price',
-                                ['latest_bid_price' => formatPrice($this->latestBidPrice)]));
+                        trans('validation.custom.bid_price.higher_than_latest_bid_price',
+                        ['latest_bid_price' => formatPrice($this->latestBidPrice)]));
                     }
                 }
 
                 if($this->bid_price < $this->minPrice) {
                     $validator->errors()->add('bid_price',
                         trans('validation.custom.bid_price.higher_than_or_equal_to_min_price',
-                            ['min_price' => formatPrice($this->minPrice)]));
+                        ['min_price' => formatPrice($this->minPrice)]));
                 }
 
                 if($this->buyoutPrice) {
                     if($this->bid_price >= $this->buyoutPrice) {
                         $validator->errors()->add('bid_price',
-                            trans('validation.custom.bid_price.lower_than_buyout_price',
-                                ['buyout_price' => formatPrice($this->buyoutPrice)]));
+                        trans('validation.custom.bid_price.lower_than_buyout_price',
+                        ['buyout_price' => formatPrice($this->buyoutPrice)]));
                     }
                 }
             }

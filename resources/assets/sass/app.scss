@@ -645,8 +645,9 @@ main {
                         display: inline-block;
                     }
                 }
-                .add-to-watchlist-form {
+                .add-to-watchlist-container {
                     text-align: center;
+                    display: block;
 
                     .add-to-watchlist {
                         color: $secondary-color;
@@ -671,6 +672,7 @@ main {
         }
         p {
             padding-right: 20px;
+            margin-bottom: 20px;
         }
         .auction-texts {
             width: 750px;
@@ -678,20 +680,24 @@ main {
         }
         .auction-extra {
             width: 200px;
+            position: relative;
 
             .big-button {
                 background-color: $primary-color;
                 text-align: center;
                 padding: 15px;
                 color: $white;
-                display: block;
                 font-size: 17px;
                 margin-top: 50px;
+                position: absolute;
+                bottom: 0;
             }
         }
     }
 }
 .watchlist-categories {
+    height: 26px;
+
     a {
         color: $primary-color;
         padding: 0 5px 2px 0;

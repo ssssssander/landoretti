@@ -9,6 +9,7 @@ return [
     'buy_now' => 'Buy now for € :buyout_price',
     'bid_now' => 'BID NOW &gt;',
     'add_to_watchlist' => 'add to my watchlist',
+    'in_watchlist' => 'in your watchlist',
     'description' => 'Description',
     'condition' => 'Condition',
     'dimensions' => 'Dimensions',

@@ -57,16 +57,16 @@ class AddAuction extends FormRequest
             if($this->min_price && $this->max_price) {
                 if($this->max_price <= $this->min_price) {
                     $validator->errors()->add('max_price',
-                        trans('validation.custom.max_price.higher_than_min_price',
-                            ['min_price' => formatPrice($this->min_price)]));
+                    trans('validation.custom.max_price.higher_than_min_price',
+                    ['min_price' => formatPrice($this->min_price)]));
                 }
             }
 
             if($this->buyout_price) {
                 if($this->buyout_price <= $this->max_price) {
                     $validator->errors()->add('buyout_price',
-                        trans('validation.custom.buyout_price.higher_than_max_price',
-                            ['max_price' => formatPrice($this->max_price)]));
+                    trans('validation.custom.buyout_price.higher_than_max_price',
+                    ['max_price' => formatPrice($this->max_price)]));
                 }
             }
         });
