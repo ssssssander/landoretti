@@ -103,6 +103,17 @@ return [
         'agree_tac' => [
             'accepted' => 'You have to agree to the terms & conditions.',
         ],
+        'max_price' => [
+            'higher_than_min_price' => 'The maximum price must be higher than the minimum price (€ :min_price).',
+        ],
+        'buyout_price' => [
+            'higher_than_max_price' => 'The buyouy price must be higher than the maximum price (€ :max_price).',
+        ],
+        'bid_price' => [
+            'higher_than_latest_bid_price' => 'Your bid must be higher than the latest bid price (€ :latest_bid_price).',
+            'higher_than_or_equal_to_min_price' => 'Your bid must be higher than or equal to the minimum price (€ :min_price).',
+            'lower_than_buyout_price' => 'Your bid must be lower than the buyout price (€ :buyout_price).',
+        ],
     ],
 
     /*

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\AddAuction;
+use App\Http\Requests\AddBid;
 use App\Auction;
 use App\Bid;
 use Auth;
@@ -50,7 +51,7 @@ class PageController extends Controller
         }
 
 
-        if(!empty($request->optional_image) && $request->optional_image->isValid()) {
+        if($request->optional_image && $request->optional_image->isValid()) {
             $optionalImagePath = $request->optional_image->store('uploads/optional_images');
         }
 
@@ -90,16 +91,12 @@ class PageController extends Controller
         return view('my_auctions');
     }
 
-    public function addBid(Request $request, Auction $auction, $auctionTitle = null) {
-        $request->validate([
-            'price' => 'required|digits_between:1,8',
-        ]);
-
+    public function addBid(AddBid $request, Auction $auction, $auctionTitle = null) {
         if($auction->status == 'active') {
             Bid::create([
                 'user_id' => Auth::id(),
                 'auction_id' => $auction->id,
-                'price' => $request->price,
+                'price' => $request->bid_price,
             ]);
         }
 

@@ -26,16 +26,16 @@
             <div class="row">
                 <div class="row-item third">
                     {!! Form::label('width', trans('new_auction.width')) !!}
-                    {!! Form::number('width', '', ['class' => $errors->has('width') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
+                    {!! Form::number('width', '', ['class' => $errors->has('width') ? 'has-error' : '', 'min' => 0, 'max' => 99999999]) !!}
                 </div>
                 <div class="row-item third">
                     {!! Form::label('height', trans('new_auction.height')) !!}
-                    {!! Form::number('height', '', ['class' => $errors->has('height') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
+                    {!! Form::number('height', '', ['class' => $errors->has('height') ? 'has-error' : '', 'min' => 0, 'max' => 99999999]) !!}
                 </div>
                 <div class="row-item third optional">
                     {!! Form::label('depth', trans('new_auction.depth')) !!}
                     {!! Form::label('depth', trans('new_auction.optional')) !!}
-                    {!! Form::number('depth', '', ['class' => $errors->has('depth') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
+                    {!! Form::number('depth', '', ['class' => $errors->has('depth') ? 'has-error' : '', 'min' => 0, 'max' => 99999999]) !!}
                 </div>
             </div>
             <div class="row">
@@ -80,16 +80,16 @@
             <div class="row cash">
                 <div class="row-item third">
                     {!! Form::label('min_price', trans('new_auction.min_price')) !!}
-                    {!! Form::number('min_price', '', ['class' => $errors->has('min_price') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
+                    {!! Form::number('min_price', '', ['class' => $errors->has('min_price') ? 'has-error' : '', 'min' => 0, 'max' => 99999999]) !!}
                 </div>
                 <div class="row-item third">
                     {!! Form::label('max_price', trans('new_auction.max_price')) !!}
-                    {!! Form::number('max_price', '', ['class' => $errors->has('max_price') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
+                    {!! Form::number('max_price', '', ['class' => $errors->has('max_price') ? 'has-error' : '', 'min' => 0, 'max' => 99999999]) !!}
                 </div>
                 <div class="row-item third optional">
                     {!! Form::label('buyout_price', trans('new_auction.buyout_price')) !!}
                     {!! Form::label('buyout_price', trans('new_auction.optional')) !!}
-                    {!! Form::number('buyout_price', '', ['class' => $errors->has('buyout_price') ? 'has-error' : '', 'min' => 1, 'max' => 99999999]) !!}
+                    {!! Form::number('buyout_price', '', ['class' => $errors->has('buyout_price') ? 'has-error' : '', 'min' => 0, 'max' => 99999999]) !!}
                 </div>
             </div>
             <div class="row">

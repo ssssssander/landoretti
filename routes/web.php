@@ -25,7 +25,7 @@ Route::middleware(['auth'])->group(function() {
     Route::post('addauction', 'PageController@addAuction')->name('addAuction');
     Route::get('auction/{auction}/{auctionTitle?}', 'PageController@auctionDetail')->name('auctionDetail');
     Route::post('auction/{auction}/{auctionTitle?}/buyout', 'PageController@auctionBuyout')->name('auctionBuyout');
-    Route::post('auction/{auction}/{auctionTitle?}/bid', 'PageController@auctionBid')->name('addBid');
+    Route::post('auction/{auction}/{auctionTitle?}/bid', 'PageController@addBid')->name('addBid');
     Route::post('auction/{auction}/{auctionTitle?}/addtowatchlist', 'PageController@addAuctionToWatchlist')->name('addAuctionToWatchlist');
 });
 

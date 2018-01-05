@@ -5,7 +5,7 @@
 @section('content')
     <div class="wrapper">
         <main>
-            <a class="button" href="{{ route('newAuction') }}">@lang('my_auctions.add_auction')</a>
+            <a class="small-button" href="{{ route('newAuction') }}">@lang('my_auctions.add_auction')</a>
             <h1>@lang('my_auctions.my_auctions')</h1>
             <h2>@lang('my_auctions.active')</h2>
             <table class="my-auctions">
@@ -15,7 +15,7 @@
                     <th>@lang('my_auctions.end_data')</th>
                     <th>@lang('my_auctions.remaining_time')</th>
                 </tr>
-                @foreach(Auth::user()->auctions as $auction)
+                @forelse(Auth::user()->auctions as $auction)
                     <tr>
                         <td class="image">
                             <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
@@ -30,7 +30,11 @@
                         <td class="end-date">{{ formatDate($auction->end_date) }}</td>
                         <td class="remaining-time" data-end-date="{{ $auction->end_date }}"></td>
                     </tr>
-                @endforeach
+                @empty
+                    <tr>
+                        <td>@lang('my_auctions.no_auctions')</td>
+                    </tr>
+                @endforelse
             </table>
             <h2>@lang('my_auctions.expired')</h2>
             <h2>@lang('my_auctions.sold')</h2>

@@ -45,6 +45,9 @@ input[type=submit] {
 .stretch-bg {
     background-color: $tertiary-color;
 }
+.slideshow-home {
+    width: 100%;
+}
 .line {
     background-color: $primary-link-color;
     height: 4px;
@@ -78,6 +81,15 @@ input[type=submit] {
 .input {
     border: 1px solid $tertiary-color;
     background-color: $input-bg-color;
+}
+.small-button {
+    padding: 10px;
+    border: 1px solid $tertiary-color;
+    background-color: $input-bg-color;
+    font-weight: bold;
+    float: right;
+    margin-top: 30px;
+    display: inline-block;
 }
 .input-placeholder-italic {
     &::-webkit-input-placeholder {
@@ -203,9 +215,6 @@ header {
             text-align: right;
         }
     }
-}
-.slideshow-home {
-    width: 100%;
 }
 .block {
     h2 {
@@ -499,15 +508,6 @@ main {
         }
     }
 }
-.button {
-    padding: 10px;
-    border: 1px solid $tertiary-color;
-    background-color: $input-bg-color;
-    font-weight: bold;
-    float: right;
-    margin-top: 30px;
-    display: inline-block;
-}
 .my-auctions {
     width: 100%;
     border: 1px solid $tertiary-color;
@@ -555,13 +555,21 @@ main {
 .auction-detail {
     h1 {
         margin-bottom: 15px;
+    }
+    .title-info {
+        font-size: 14px;
 
-        &+div {
-            font-size: 14px;
-
+        #bids {
             .bids {
                 padding-right: 20px;
                 background: url("/img/hamburger.png") right no-repeat;
+                text-decoration: underline;
+            }
+
+            ol {
+                padding: 20px 30px;
+                margin-top: 30px;
+                border: 1px solid $tertiary-color;
             }
         }
     }
@@ -672,6 +680,16 @@ main {
         }
         .auction-extra {
             width: 200px;
+
+            .big-button {
+                background-color: $primary-color;
+                text-align: center;
+                padding: 15px;
+                color: $white;
+                display: block;
+                font-size: 17px;
+                margin-top: 50px;
+            }
         }
     }
 }

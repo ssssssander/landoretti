@@ -6,12 +6,24 @@
     <div class="wrapper">
         <main class="auction-detail">
             <h1>{{ $auction->title }}</h1>
-            <div>
-                <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
-                <a href="#">
-                    <span class="bids">({{ trans_choice('auction_detail.bids', 7, ['bids' => 7]) }})</span>
-                </a>
-            </div>
+            @include('includes.errors')
+            @if($auction->status == 'active')
+                <div class="title-info">
+                    <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
+                    <span id="bids">
+                        <a href="#" v-on:click.prevent="toggleBids" class="bids">
+                            ({{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }})
+                        </a>
+                        <ol v-if="clickedBidsBtn">
+                            @forelse($auction->bids as $bid)
+                                <li>€ {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}</li>
+                            @empty
+                                <li>@lang('auction_detail.no_bids')</li>
+                            @endforelse
+                        </ol>
+                    </span>
+                </div>
+            @endif
             <div class="top">
                 <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
                 <div class="side">
@@ -19,35 +31,41 @@
                         <h2>{{ $auction->title }}</h2>
                         <p>{{ $auction->year }}</p>
                     </div>
-                    <div class="border-bottom">
-                        <p>
-                            <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
-                            <span> @lang('auction_detail.left')</span>
-                        </p>
-                        <p>{{ formatDate($auction->end_date) }}</p>
-                    </div>
+                    @if($auction->status == 'active')
+                        <div class="border-bottom">
+                            <p>
+                                <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
+                                <span> @lang('auction_detail.left')</span>
+                            </p>
+                            <p>{{ formatDate($auction->end_date) }}</p>
+                        </div>
+                    @endif
                     <div>
                         <p>{{ $auction->origin }}</p>
                     </div>
-                    <div class="bid">
-                        <div class="padding">
-                            <p>@lang('auction_detail.estimated_price')</p>
-                            <p class="estimated-price">€ {{ formatPrice($auction->min_price) }} - € {{ formatPrice($auction->max_price) }}</p>
-                            @if($auction->buyout_price)
-                                {!! Form::open(['route' => ['auctionBuyout', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
-                                {!! Form::submit(trans('auction_detail.buy_now', ['buyout_price' => formatPrice($auction->buyout_price)]), ['class' => 'buyout']) !!}
-                                {!! Form::close() !!}
-                            @endif
-                            <span>{{ trans_choice('auction_detail.bids', 7, ['bids' => 7]) }}</span>
+                    @if($auction->status == 'active')
+                        <div class="bid">
+                            <div class="padding">
+                                <p>@lang('auction_detail.estimated_price')</p>
+                                <p class="estimated-price">
+                                    € {{ formatPrice($auction->min_price) }} - € {{ formatPrice($auction->max_price) }}
+                                </p>
+                                @if($auction->buyout_price)
+                                    {!! Form::open(['route' => ['auctionBuyout', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
+                                    {!! Form::submit(trans('auction_detail.buy_now', ['buyout_price' => formatPrice($auction->buyout_price)]), ['class' => 'buyout']) !!}
+                                    {!! Form::close() !!}
+                                @endif
+                                <span>{{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }}</span>
+                            </div>
+                            {!! Form::open(['route' => ['addBid', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'bid-form']) !!}
+                            {!! Form::number('bid_price', '', ['class' => 'price-input ' . ($errors->has('bid_price') ? 'has-error' : ''), 'min' => 0, 'max' => 99999999]) !!}
+                            {!! Form::submit(trans('auction_detail.bid_now'), ['class' => 'price-submit']) !!}
+                            {!! Form::close() !!}
+                            {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'add-to-watchlist-form']) !!}
+                            {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
+                            {!! Form::close() !!}
                         </div>
-                        {!! Form::open(['route' => ['addBid', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'bid-form']) !!}
-                        {!! Form::number('price', '', ['class' => 'price-input']) !!}
-                        {!! Form::submit(trans('auction_detail.bid_now'), ['class' => 'price-submit']) !!}
-                        {!! Form::close() !!}
-                        {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'add-to-watchlist-form']) !!}
-                        {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
-                        {!! Form::close() !!}
-                    </div>
+                    @endif
                 </div>
             </div>
             <div class="bottom">
@@ -60,7 +78,9 @@
                 <div class="auction-extra">
                     <h3>@lang('auction_detail.dimensions')</h3>
                     <p>{{ $auction->width }} x {{ $auction->height }} {{ $auction->depth ? 'x ' . $auction->depth : '' }} cm</p>
+                    <a href="#" class="big-button">@lang('auction_detail.ask_a_question')</a>
                 </div>
+
             </div>
         </main>
     </div>

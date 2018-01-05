@@ -72,6 +72,10 @@ h6 {
   background-color: #eaeaea;
 }
 
+.slideshow-home {
+  width: 100%;
+}
+
 .line {
   background-color: #01a6a0;
   height: 4px;
@@ -121,6 +125,16 @@ main form select,
 main form textarea {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
+}
+
+.small-button {
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  font-weight: bold;
+  float: right;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 .input-placeholder-italic::-webkit-input-placeholder,
@@ -271,10 +285,6 @@ header .logout form input[type=submit] {
 .header-nav .languages li {
   width: 36px;
   text-align: right;
-}
-
-.slideshow-home {
-  width: 100%;
 }
 
 .block h2,
@@ -621,16 +631,6 @@ main form .row.cash input {
   margin-bottom: 30px;
 }
 
-.button {
-  padding: 10px;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  font-weight: bold;
-  float: right;
-  margin-top: 30px;
-  display: inline-block;
-}
-
 .my-auctions {
   width: 100%;
   border: 1px solid #eaeaea;
@@ -688,13 +688,20 @@ main form .row.cash input {
   margin-bottom: 15px;
 }
 
-.auction-detail h1 + div {
+.auction-detail .title-info {
   font-size: 14px;
 }
 
-.auction-detail h1 + div .bids {
+.auction-detail .title-info #bids .bids {
   padding-right: 20px;
   background: url("/img/hamburger.png") right no-repeat;
+  text-decoration: underline;
+}
+
+.auction-detail .title-info #bids ol {
+  padding: 20px 30px;
+  margin-top: 30px;
+  border: 1px solid #eaeaea;
 }
 
 .auction-detail .top {
@@ -829,5 +836,15 @@ main form .row.cash input {
 
 .auction-detail .bottom .auction-extra {
   width: 200px;
+}
+
+.auction-detail .bottom .auction-extra .big-button {
+  background-color: #4e4e4e;
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  margin-top: 50px;
 }
 
