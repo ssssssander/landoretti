@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo:400,700");
 @import "variables";
+@import "compass/reset";
+@import "compass/utilities/sprites";
+@import "icons/*.png";
+@include all-icons-sprites;
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 ul {
@@ -17,6 +19,9 @@ a {
         text-decoration: underline;
         color: $primary-link-color;
     }
+}
+ol {
+    list-style-type: decimal;
 }
 body {
     font-family: "Arimo", sans-serif;
@@ -35,8 +40,15 @@ input[type=submit] {
         font-weight: normal;
     }
 }
+h2 {
+    font-size: 24px;
+}
 .active {
     font-weight: bold;
+}
+[class^=icons] {
+    display: inline-block;
+    vertical-align: -5%;
 }
 .wrapper {
     margin: 0 auto;
@@ -56,12 +68,6 @@ input[type=submit] {
     vertical-align: top;
     width: 250px;
     display: inline-block;
-}
-@each $contact in phone, mail {
-  .#{$contact}-icon {
-    background: url("/img/#{$contact}.png") left no-repeat;
-    padding-left: 20px;
-  }
 }
 .logo {
     box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
@@ -92,6 +98,40 @@ input[type=submit] {
     display: inline-block;
     margin-left: 10px;
 }
+.icons-arrow_down {
+    width: 28px;
+    height: 28px;
+}
+.icons-magnifying_glass {
+    width: 18px;
+    height: 18px;
+}
+.icons-phone {
+    width: 9px;
+    height: 12px;
+}
+.icons-mail {
+    width: 13px;
+    height: 9px;
+}
+.icons-hamburger {
+    width: 11px;
+    height: 10px;
+}
+.icons-person {
+    width: 13px;
+    height: 14px;
+}
+.icons-euro {
+    width: 16px;
+    height: 16px;
+}
+@each $social in facebook, twitter, youtube, plus {
+  .icons-#{$social} {
+    width: 32px;
+    height: 32px;
+  }
+}
 .input-placeholder-italic {
     &::-webkit-input-placeholder {
        font-style: italic;
@@ -115,9 +155,6 @@ input[type=submit] {
         border-radius: 3px;
     }
     input[type=submit] {
-        background: url("/img/magnifying_glass.png");
-        width: 18px;
-        height: 18px;
         border: none;
         vertical-align: middle;
         cursor: pointer;
@@ -154,23 +191,17 @@ header {
         @extend .header-item;
         font-size: 13px;
 
-        a {
+        li {
             border-left: 1px solid $secondary-color;
             color: $secondary-color;
             padding: 0 30px;
         }
-        li:first-of-type a {
+        li:first-of-type {
             border-left: 0;
-        }
-        .watchlist-icon {
-            background: url("/img/hamburger.png") left no-repeat;
-        }
-        .profile-icon {
-            background: url("/img/person.png") 25px no-repeat;
-            padding-left: 50px;
-        }
-        .register {
             padding-left: 0;
+        }
+        .icons-hamburger, .icons-person {
+            margin-right: 10px;
         }
     }
     .logout {
@@ -249,10 +280,6 @@ header {
     @extend .block;
 
     span {
-        background: url("/img/arrow_down.png");
-        width: 28px;
-        height: 28px;
-        display: inline-block;
         margin-left: 20px;
     }
     div {
@@ -304,9 +331,13 @@ footer {
         ul:first-of-type li {
             margin-bottom: 20px;
         }
-
         div {
             margin-top: 30px;
+
+            &.copyright {
+                margin-top: 86px;
+                font-size: 12px;
+            }
         }
     }
     .search {
@@ -316,21 +347,6 @@ footer {
     }
     .social {
         margin-top: 40px;
-
-        @each $social in facebook, twitter, youtube, plus {
-          .#{$social}-icon {
-            background: url("/img/#{$social}.png") no-repeat;
-          }
-        }
-        a {
-            width: 32px;
-            height: 32px;
-            display: inline-block;
-        }
-    }
-    .copyright {
-        margin-top: 86px;
-        font-size: 12px;
     }
 }
 main {
@@ -453,9 +469,16 @@ main {
                 }
             }
             &.cash {
+                .row-item {
+                    position: relative;
+                }
                 input {
                     padding-left: 30px;
-                    background: $input-bg-color url("/img/euro.png") 10px no-repeat;
+                }
+                .icons-euro {
+                    position: absolute;
+                    top: 44.5px;
+                    left: 10px;
                 }
             }
         }
@@ -555,12 +578,9 @@ main {
         font-size: 14px;
 
         #bids {
-            .bids {
-                padding-right: 20px;
-                background: url("/img/hamburger.png") right no-repeat;
-                text-decoration: underline;
+            .icons-hamburger {
+                margin-left: 5px;
             }
-
             ol {
                 padding: 20px 30px;
                 margin-top: 30px;
@@ -649,11 +669,13 @@ main {
                     text-align: center;
                     display: block;
 
+                    .icons-hamburger {
+                        margin-bottom: 0;
+                        vertical-align: baseline;
+                    }
                     .add-to-watchlist {
                         color: $secondary-color;
-                        padding-left: 20px;
                         text-decoration: underline;
-                        background: url("/img/hamburger.png") left no-repeat;
                     }
                 }
             }
@@ -665,6 +687,7 @@ main {
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
+        min-height: 300px;
 
         h3 {
             font-weight: bold;

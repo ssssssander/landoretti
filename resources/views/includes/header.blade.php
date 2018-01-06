@@ -5,7 +5,7 @@
                 <ul>
                     @guest
                         <li>
-                            <a class="register {{ Route::is('register') ? 'active' : null }}"  href="{{ route('register') }}">
+                            <a class="{{ Route::is('register') ? 'active' : '' }}"  href="{{ route('register') }}">
                                 @lang('header.register')
                             </a>
                         </li>
@@ -22,10 +22,16 @@
                     @endguest
                     @auth
                         <li>
-                            <a class="watchlist-icon {{ Route::is('watchlist') ? 'active' : null }}" href="{{ route('watchlist') }}">@lang('header.watchlist')</a>
+                            <span class="icons-hamburger"></span>
+                            <a class="{{ Route::is('watchlist') ? 'active' : '' }}" href="{{ route('watchlist') }}">
+                                @lang('header.watchlist')
+                            </a>
                         </li>
                         <li>
-                            <a class="profile-icon {{ Route::is('profile') ? 'active' : null }}" href="{{ route('profile') }}">@lang('header.profile')</a>
+                            <span class="icons-person"></span>
+                            <a class="{{ Route::is('profile') ? 'active' : '' }}" href="{{ route('profile') }}">
+                                @lang('header.profile')
+                            </a>
                         </li>
                         <li class="logout">
                             <a href="#">

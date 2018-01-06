@@ -11,9 +11,10 @@
                 <div class="title-info">
                     <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
                     <span id="bids">
-                        <a href="#" v-on:click.prevent="toggleBids" class="bids">
+                        <a href="#" v-on:click.prevent="toggleBids">
                             ({{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }}, {{ trans('auction_detail.yours', ['bids' => $auction->bids->where('user_id', Auth::id())->count()]) }})
                         </a>
+                        <span class="icons-hamburger"></span>
                         <ol v-if="clickedBidsBtn">
                             @forelse($auction->bids as $bid)
                                 <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">€ {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}</li>
@@ -66,6 +67,7 @@
                             <span class="add-to-watchlist-container">
                                 @if(!$isInWatchlist)
                                 {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
+                                <span class="icons-hamburger"></span>
                                 {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
                                 {!! Form::close() !!}
                                 @else

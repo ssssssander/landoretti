@@ -10,8 +10,14 @@
                 <h2>{{ $user->name }}</h2>
                 <div class="profile-info-col">
                     <div class="item">
-                        <p class="mail-icon"><a href="mailto:{{ $user->email }}">{{ $user->email }}</a></p>
-                        <p class="phone-icon">{{ $user->phone_number }}</p>
+                        <p>
+                            <span class="icons-mail"></span>
+                            <a href="mailto:{{ $user->email }}">{{ $user->email }}</a>
+                        </p>
+                        <p>
+                            <span class="icons-phone"></span>
+                            <span>{{ $user->phone_number }}</span>
+                        </p>
                     </div>
                     <div class="item">
                         <p>{{ $user->address }}</p>

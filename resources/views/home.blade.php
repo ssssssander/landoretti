@@ -16,7 +16,7 @@
     </div>
     <div class="stretch-bg">
         <div class="popular">
-            <h2>@lang('home.most_popular')<span></span></h2>
+            <h2>@lang('home.most_popular')<span class="icons-arrow_down"></span></h2>
             <div>
                 <a href="#"><img src="{{ asset('img/popular1.png') }}" alt="Popular 1"></a>
                 <a href="#"><img src="{{ asset('img/popular2.png') }}" alt="Popular 2"></a>

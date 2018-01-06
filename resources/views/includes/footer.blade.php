@@ -81,16 +81,22 @@
                 <li>@lang('footer.oostende')</li>
                 <li>
                     <div>
-                        <p class="phone-icon">@lang('footer.phone_number')</p>
-                        <p class="mail-icon"><a href="mailto:@lang('footer.email_address')">@lang('footer.email_address')</a></p>
+                        <p>
+                            <span class="icons-phone"></span>
+                            <span>@lang('footer.phone_number')</span>
+                        </p>
+                        <p>
+                            <span class="icons-mail"></span>
+                            <a href="mailto:@lang('footer.email_address')">@lang('footer.email_address')</a>
+                        </p>
                     </div>
                 </li>
             </ul>
             <div class="social">
-                <a class="facebook-icon" href="https://www.facebook.com"></a>
-                <a class="twitter-icon" href="https://www.twitter.com"></a>
-                <a class="youtube-icon" href="https://www.youtube.com"></a>
-                <a class="plus-icon" href="https://www.plus.google.com"></a>
+                <a class="icons-facebook" href="https://www.facebook.com"></a>
+                <a class="icons-twitter" href="https://www.twitter.com"></a>
+                <a class="icons-youtube" href="https://www.youtube.com"></a>
+                <a class="icons-plus" href="https://www.plus.google.com"></a>
             </div>
             <div class="copyright">@lang('footer.copyright')</div>
         </div>
