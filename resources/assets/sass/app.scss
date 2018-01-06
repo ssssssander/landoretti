@@ -555,7 +555,7 @@ main {
     .title {
         border-left: 0;
         text-align: left;
-        padding-left: 40px;
+        padding: 0 40px;
         font-size: 22px;
 
         a {
@@ -568,6 +568,7 @@ main {
     }
     .price, .end-date, .remaining-time {
         width: 17%;
+        padding: 0 5px;
     }
 }
 .auction-detail {

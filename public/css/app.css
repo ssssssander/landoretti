@@ -802,7 +802,7 @@ main form .row.cash .icons-euro {
 .auction-list .title {
   border-left: 0;
   text-align: left;
-  padding-left: 40px;
+  padding: 0 40px;
   font-size: 22px;
 }
 /* line 561, ../../resources/assets/sass/app.scss */
@@ -817,131 +817,132 @@ main form .row.cash .icons-euro {
 /* line 569, ../../resources/assets/sass/app.scss */
 .auction-list .price, .auction-list .end-date, .auction-list .remaining-time {
   width: 17%;
+  padding: 0 5px;
 }
 
-/* line 574, ../../resources/assets/sass/app.scss */
+/* line 575, ../../resources/assets/sass/app.scss */
 .auction-detail h1 {
   margin-bottom: 15px;
 }
-/* line 577, ../../resources/assets/sass/app.scss */
+/* line 578, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info {
   font-size: 14px;
 }
-/* line 581, ../../resources/assets/sass/app.scss */
+/* line 582, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .icons-hamburger {
   margin-left: 5px;
 }
-/* line 584, ../../resources/assets/sass/app.scss */
+/* line 585, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids ol {
   padding: 20px 30px;
   margin-top: 30px;
   border: 1px solid #eaeaea;
 }
-/* line 589, ../../resources/assets/sass/app.scss */
+/* line 590, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .you {
   background-color: #eaeaea;
 }
-/* line 594, ../../resources/assets/sass/app.scss */
+/* line 595, ../../resources/assets/sass/app.scss */
 .auction-detail .top {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-/* line 599, ../../resources/assets/sass/app.scss */
+/* line 600, ../../resources/assets/sass/app.scss */
 .auction-detail .top img {
   width: 710px;
   height: 502px;
 }
-/* line 604, ../../resources/assets/sass/app.scss */
+/* line 605, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side {
   width: 250px;
   text-align: right;
 }
-/* line 608, ../../resources/assets/sass/app.scss */
+/* line 609, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div {
   margin-bottom: 15px;
   padding-bottom: 20px;
 }
-/* line 612, ../../resources/assets/sass/app.scss */
+/* line 613, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div * {
   margin-bottom: 5px;
 }
-/* line 615, ../../resources/assets/sass/app.scss */
+/* line 616, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div.border-bottom {
   border-bottom: 1px solid #eaeaea;
 }
-/* line 618, ../../resources/assets/sass/app.scss */
+/* line 619, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 {
   color: #000000;
   font-size: 27px;
 }
-/* line 622, ../../resources/assets/sass/app.scss */
+/* line 623, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 + p {
   color: #0a1e75;
 }
-/* line 627, ../../resources/assets/sass/app.scss */
+/* line 628, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time {
   color: #01a6a0;
 }
-/* line 630, ../../resources/assets/sass/app.scss */
+/* line 631, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time + span {
   color: #01a6a0;
 }
-/* line 635, ../../resources/assets/sass/app.scss */
+/* line 636, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid {
   color: #0a1e75;
   border: 1px solid #eaeaea;
   padding-top: 20px;
 }
-/* line 640, ../../resources/assets/sass/app.scss */
+/* line 641, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .padding {
   padding: 0 20px;
 }
-/* line 643, ../../resources/assets/sass/app.scss */
+/* line 644, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .estimated-price {
   font-size: 25px;
   font-weight: bold;
 }
-/* line 647, ../../resources/assets/sass/app.scss */
+/* line 648, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .buyout {
   color: #01a6a0;
   text-decoration: underline;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 653, ../../resources/assets/sass/app.scss */
+/* line 654, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form {
   display: flex;
   justify-content: flex-end;
 }
-/* line 657, ../../resources/assets/sass/app.scss */
+/* line 658, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-input {
   width: 128px;
   border: 10px solid #01a6a0;
   vertical-align: middle;
   outline: none;
 }
-/* line 663, ../../resources/assets/sass/app.scss */
+/* line 664, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-submit {
   width: 120px;
   display: inline-block;
 }
-/* line 668, ../../resources/assets/sass/app.scss */
+/* line 669, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container {
   text-align: center;
   display: block;
 }
-/* line 672, ../../resources/assets/sass/app.scss */
+/* line 673, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .icons-hamburger {
   margin-bottom: 0;
   vertical-align: baseline;
 }
-/* line 676, ../../resources/assets/sass/app.scss */
+/* line 677, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .add-to-watchlist {
   color: #0a1e75;
   text-decoration: underline;
 }
-/* line 684, ../../resources/assets/sass/app.scss */
+/* line 685, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom {
   padding: 20px;
   border: 1px solid #eaeaea;
@@ -950,27 +951,27 @@ main form .row.cash .icons-euro {
   justify-content: space-between;
   min-height: 300px;
 }
-/* line 692, ../../resources/assets/sass/app.scss */
+/* line 693, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom h3 {
   font-weight: bold;
   margin: 20px 0 10px 0;
 }
-/* line 696, ../../resources/assets/sass/app.scss */
+/* line 697, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom p {
   padding-right: 20px;
   margin-bottom: 20px;
 }
-/* line 700, ../../resources/assets/sass/app.scss */
+/* line 701, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-texts {
   width: 750px;
   border-right: 1px solid #eaeaea;
 }
-/* line 704, ../../resources/assets/sass/app.scss */
+/* line 705, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra {
   width: 200px;
   position: relative;
 }
-/* line 708, ../../resources/assets/sass/app.scss */
+/* line 709, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra .big-button {
   background-color: #4e4e4e;
   text-align: center;
@@ -982,21 +983,21 @@ main form .row.cash .icons-euro {
   bottom: 0;
 }
 
-/* line 721, ../../resources/assets/sass/app.scss */
+/* line 722, ../../resources/assets/sass/app.scss */
 .watchlist-categories {
   height: 26px;
 }
-/* line 724, ../../resources/assets/sass/app.scss */
+/* line 725, ../../resources/assets/sass/app.scss */
 .watchlist-categories a {
   color: #4e4e4e;
   padding: 0 5px 2px 0;
   border-right: 1px solid #4e4e4e;
 }
-/* line 729, ../../resources/assets/sass/app.scss */
+/* line 730, ../../resources/assets/sass/app.scss */
 .watchlist-categories a.active {
   border-bottom: 3px solid #eaeaea;
 }
-/* line 732, ../../resources/assets/sass/app.scss */
+/* line 733, ../../resources/assets/sass/app.scss */
 .watchlist-categories a:last-of-type {
   border-right: 0;
 }

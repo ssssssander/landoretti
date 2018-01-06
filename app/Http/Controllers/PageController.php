@@ -92,8 +92,10 @@ class PageController extends Controller
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
         $isInWatchlist = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
         $isInWatchlist = !$isInWatchlist->isEmpty();
+        $amountOfBids = $auction->bids->count();
+        $amountOfBidsByCurrentUser = $auction->bids->where('user_id', Auth::id())->count();
 
-        return view('auction_detail', compact('auction', 'isInWatchlist'));
+        return view('auction_detail', compact('auction', 'isInWatchlist', 'amountOfBids', 'amountOfBidsByCurrentUser'));
     }
 
     public function auctionBuyout(Request $request, Auction $auction, $auctionTitle = null) {

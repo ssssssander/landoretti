@@ -12,7 +12,7 @@
                     <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
                     <span id="bids">
                         <a href="#" v-on:click.prevent="toggleBids">
-                            ({{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }}, {{ trans('auction_detail.yours', ['bids' => $auction->bids->where('user_id', Auth::id())->count()]) }})
+                            ({{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }}, {{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }})
                         </a>
                         <span class="icons-hamburger"></span>
                         <ol v-if="clickedBidsBtn">
@@ -57,7 +57,7 @@
                                     {!! Form::close() !!}
                                 @endisset
                                 <span>
-                                    {{ trans_choice('auction_detail.bids', $auction->bids->count(), ['bids' => $auction->bids->count()]) }} ({{ trans('auction_detail.yours', ['bids' => $auction->bids->where('user_id', Auth::id())->count()]) }})
+                                    {{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }} ({{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }})
                                 </span>
                             </div>
                             {!! Form::open(['route' => ['addBid', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'bid-form']) !!}
