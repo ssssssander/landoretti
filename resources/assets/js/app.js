@@ -6,23 +6,23 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 var login = new Vue({
   el: '#login',
   data: {
-    clickedLoginBtn: false
+    clickedLoginBtn: false,
   },
   methods: {
     showLoginInputs: function () {
       this.clickedLoginBtn = true;
-    }
-  }
+    },
+  },
 });
 
 var bids = new Vue({
   el: '#bids',
   data: {
-    clickedBidsBtn: false
+    clickedBidsBtn: false,
   },
   methods: {
     toggleBids: function () {
       this.clickedBidsBtn = !this.clickedBidsBtn;
-    }
-  }
+    },
+  },
 });

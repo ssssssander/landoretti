@@ -10,9 +10,11 @@
                             </a>
                         </li>
                         <li id="login">
-                            <a href="#" v-on:click.prevent="showLoginInputs" v-if="!clickedLoginBtn">
-                                @lang('header.login')
-                            </a>
+                            <div v-if="!clickedLoginBtn">
+                                <a href="#" v-on:click.prevent="showLoginInputs">
+                                    @lang('header.login')
+                                </a>
+                            </div>
                             {!! Form::open(['route' => 'login', 'v-if' => 'clickedLoginBtn']) !!}
                             {!! Form::email('email', '', ['placeholder' => trans('header.email')]) !!}
                             {!! Form::password('password', ['placeholder' => trans('header.password')]) !!}
