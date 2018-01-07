@@ -11,7 +11,6 @@ use App\Watchlist;
 use Auth;
 use App;
 use DateTime;
-use DB;
 
 class PageController extends Controller
 {
@@ -33,12 +32,23 @@ class PageController extends Controller
     }
 
     public function deleteSelectedWatchlistAuctions(Request $request) {
-        // if authorized
+        $auctionIds = $request->input('auctions.*');
+
+        for($i = 0; $i < count($auctionIds); $i++) {
+            $watchlistItem = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auctionIds[$i]]]);
+            $isInWatchlist = !$watchlistItem->get()->isEmpty();
+
+            if($isInWatchlist) {
+                $watchlistItem->delete();
+            }
+        }
+
         return redirect()->back();
     }
 
     public function clearWatchlist(Request $request) {
-        // if authorized
+        Watchlist::where('user_id', Auth::id())->delete();
+
         return redirect()->back();
     }
 
@@ -108,8 +118,8 @@ class PageController extends Controller
     }
 
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
-        $isInWatchlist = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
-        $isInWatchlist = !$isInWatchlist->isEmpty();
+        $watchlistItem = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
+        $isInWatchlist = !$watchlistItem->isEmpty();
         $amountOfBids = $auction->bids->count();
         $amountOfBidsByCurrentUser = $auction->bids->where('user_id', Auth::id())->count();
 

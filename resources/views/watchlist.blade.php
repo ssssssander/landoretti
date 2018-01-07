@@ -6,10 +6,10 @@
     <div class="wrapper">
         <main>
             <div id="watchlist-categories">
-                {!! Form::open(['route' => 'clearWatchlist']) !!}
+                {!! Form::open(['route' => 'clearWatchlist', 'method' => 'delete']) !!}
                 {!! Form::submit(trans('watchlist.clear_watchlist'), ['class' => 'small-button']) !!}
                 {!! Form::close() !!}
-                {!! Form::open(['route' => 'deleteSelectedWatchlistAuctions']) !!}
+                {!! Form::open(['route' => 'deleteSelectedWatchlistAuctions', 'method' => 'delete']) !!}
                 {!! Form::submit(trans('watchlist.delete_selected'), ['class' => 'small-button']) !!}
                 <h1>@lang('watchlist.watchlist')</h1>
                 <p class="watchlist-categories">
@@ -18,10 +18,10 @@
                     <a href="#" v-on:click.prevent="showExpired" v-bind:class="{ active: expiredAreShown }">@lang('watchlist.expired')({{ count($expiredWatchlistAuctions) }})</a>
                     <a href="#" v-on:click.prevent="showSold" v-bind:class="{ active: soldAreShown }">@lang('watchlist.sold')({{ count($soldWatchlistAuctions) }})</a>
                 </p>
-                <div v-if="allAreShown">@include('includes.auction_table', ['auctions' => $watchlistAuctions])</div>
-                <div v-if="activeAreShown">@include('includes.auction_table', ['auctions' => $activeWatchlistAuctions])</div>
-                <div v-if="expiredAreShown">@include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions])</div>
-                <div v-if="soldAreShown">@include('includes.auction_table', ['auctions' => $soldWatchlistAuctions])</div>
+                <div v-if="allAreShown">@include('includes.auction_table', ['auctions' => $watchlistAuctions, 'watchlist' => true])</div>
+                <div v-if="activeAreShown">@include('includes.auction_table', ['auctions' => $activeWatchlistAuctions, 'watchlist' => true])</div>
+                <div v-if="expiredAreShown">@include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions, 'watchlist' => true])</div>
+                <div v-if="soldAreShown">@include('includes.auction_table', ['auctions' => $soldWatchlistAuctions, 'watchlist' => true])</div>
                 {!! Form::close() !!}
             </div>
         </main>

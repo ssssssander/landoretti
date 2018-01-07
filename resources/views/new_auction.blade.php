@@ -110,7 +110,7 @@
             @include('includes.agree_tac')
             <div class="row">
                 <div class="row-item">
-                    {!! Form::submit(trans('new_auction.add_auction')) !!}
+                    {!! Form::submit(trans('new_auction.add_auction'), ['class' => 'big-button']) !!}
                     <a href="#">@lang('new_auction.ask_a_question')</a>
                 </div>
             </div>

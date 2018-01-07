@@ -78,7 +78,7 @@
             @include('includes.agree_tac')
             <div class="row">
                 <div class="row-item">
-                    {!! Form::submit(trans('register.register_submit')) !!}
+                    {!! Form::submit(trans('register.register_submit'), ['class' => 'big-button']) !!}
                 </div>
             </div>
             {!! Form::close() !!}

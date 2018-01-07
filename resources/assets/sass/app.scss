@@ -31,10 +31,11 @@ body {
     position: relative;
 }
 input[type=submit] {
-    border: none;
     vertical-align: middle;
     cursor: pointer;
-    background-color: $white;
+}
+input[type=checkbox] {
+    cursor: pointer;
 }
 @for $i from 1 through 6 {
     h#{$i} {
@@ -44,12 +45,12 @@ input[type=submit] {
 h2 {
     font-size: 24px;
 }
-.active {
-    font-weight: bold;
-}
 [class^=icons] {
     display: inline-block;
     vertical-align: -5%;
+}
+.active {
+    font-weight: bold;
 }
 .wrapper {
     margin: 0 auto;
@@ -70,6 +71,27 @@ h2 {
     width: 250px;
     display: inline-block;
 }
+.small-button {
+    padding: 10px;
+    border: 1px solid $tertiary-color;
+    background-color: $input-bg-color;
+    font-weight: bold;
+    float: right;
+    margin-top: 30px;
+    display: inline-block;
+    margin-left: 10px;
+    color: $secondary-color;
+}
+.big-button {
+    background-color: $primary-link-color;
+    text-align: center;
+    width: 200px;
+    padding: 15px;
+    color: $white;
+    display: block;
+    font-size: 17px;
+    border: 0;
+}
 .logo {
     box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
     position: absolute;
@@ -88,16 +110,6 @@ h2 {
 .input {
     border: 1px solid $tertiary-color;
     background-color: $input-bg-color;
-}
-.small-button {
-    padding: 10px;
-    border: 1px solid $tertiary-color;
-    background-color: $input-bg-color;
-    font-weight: bold;
-    float: right;
-    margin-top: 30px;
-    display: inline-block;
-    margin-left: 10px;
 }
 .icons-arrow_down {
     width: 28px;
@@ -160,6 +172,7 @@ h2 {
         vertical-align: middle;
         cursor: pointer;
         margin-left: 5px;
+        background-color: $white;
     }
 }
 .header-item {
@@ -193,6 +206,7 @@ header {
             width: 23px;
             height: 23px;
             background-color: $tertiary-color;
+            border: 0;
         }
     }
     .header-personal {
@@ -219,6 +233,7 @@ header {
             input[type=submit] {
                 background-color: $white;
                 color: $secondary-color;
+                border: 0;
             }
         }
     }
@@ -390,23 +405,13 @@ main {
             font-family: "Arimo", sans-serif;
             height: 120px;
         }
-        input[type=submit]:not(.buyout):not(.add-to-watchlist) {
-            background-color: $primary-link-color;
-            text-align: center;
+        input[type=submit]+a {
             width: 200px;
-            padding: 15px;
-            color: $white;
-            display: block;
-            font-size: 17px;
-
-            &+a {
-                width: 200px;
-                display: inline-block;
-                text-align: center;
-                color: $primary-link-color;
-                margin-top: 20px;
-                font-size: 13px;
-            }
+            display: inline-block;
+            text-align: center;
+            color: $primary-link-color;
+            margin-top: 20px;
+            font-size: 13px;
         }
         .upload {
             background-color: $primary-color;
@@ -672,6 +677,8 @@ main {
                     text-decoration: underline;
                     font-size: 16px;
                     font-weight: bold;
+                    border: 0;
+                    background-color: $white;
                 }
                 .bid-form {
                     display: flex;
@@ -684,6 +691,7 @@ main {
                         outline: none;
                     }
                     .price-submit {
+                        @extend .big-button;
                         width: 120px;
                         display: inline-block;
                     }

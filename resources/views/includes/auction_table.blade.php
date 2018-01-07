@@ -8,7 +8,7 @@
     @forelse($auctions as $auction)
         <tr>
             <td class="image">
-                {!! Form::checkbox('auction' . $auction->id, 'yes') !!}
+                @isset($watchlist) {!! Form::checkbox("auctions[{$loop->index}]", $auction->id) !!} @endisset
                 <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
                     <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
                 </a>
