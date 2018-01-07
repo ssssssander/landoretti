@@ -8,6 +8,6 @@ return [
     'all' => 'all',
     'active' => 'active',
     'expired' => 'expired',
-    'no_auctions' => 'You have no auctions in your watchlist in this category',
+    'sold' => 'sold',
 
 ];

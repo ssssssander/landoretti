@@ -15,7 +15,7 @@
                             ({{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }}, {{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }})
                         </a>
                         <span class="icons-hamburger"></span>
-                        <ol v-if="clickedBidsBtn">
+                        <ol v-if="bidsAreShown">
                             @forelse($auction->bids as $bid)
                                 <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">€ {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}</li>
                             @empty
@@ -66,15 +66,17 @@
                             {!! Form::close() !!}
                             <span class="add-to-watchlist-container">
                                 @if(!$isInWatchlist)
-                                {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
-                                <span class="icons-hamburger"></span>
-                                {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
-                                {!! Form::close() !!}
+                                    {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
+                                    <span class="icons-hamburger"></span>
+                                    {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
+                                    {!! Form::close() !!}
                                 @else
                                     <p>@lang('auction_detail.in_watchlist')</p>
                                 @endif
                             </span>
                         </div>
+                    @else
+                        <p class="sold">@lang('auction_detail.sold')</p>
                     @endif
                 </div>
             </div>

@@ -5,44 +5,25 @@
 @section('content')
     <div class="wrapper">
         <main>
-            <a class="small-button" href="#">@lang('watchlist.delete_selected')</a>
-            <a class="small-button" href="#">@lang('watchlist.clear_watchlist')</a>
-            <h1>@lang('watchlist.watchlist')</h1>
-            <p class="watchlist-categories">
-                <a href="#" class="active">@lang('watchlist.all')()</a>
-                <a href="#">@lang('watchlist.active')()</a>
-                <a href="#">@lang('watchlist.expired')()</a>
-            </p>
-            <table class="auction-list">
-                <tr>
-                    <th colspan="2">@lang('my_auctions.auction_details')</th>
-                    <th>@lang('my_auctions.estimated_price')</th>
-                    <th>@lang('my_auctions.end_data')</th>
-                    <th>@lang('my_auctions.remaining_time')</th>
-                </tr>
-                @if(count($watchlistAuctions) > 0)
-                    @for($i = 0; $i < count($watchlistAuctions); $i++)
-                        <tr>
-                            <td class="image">
-                                <a href="{{ route('auctionDetail', ['auction' => $watchlistAuctions[$i]->auction_id, 'auctionTitle' => clean($watchlistAuctions[$i]->title)]) }}">
-                                    <img src="{{ asset("storage/{$watchlistAuctions[$i]->artwork_image_path}") }}" alt="{{ $watchlistAuctions[$i]->title }}">
-                                </a>
-                            </td>
-                            <td class="title">
-                                <a href="{{ route('auctionDetail', ['auction' => $watchlistAuctions[$i]->auction_id, 'auctionTitle' => clean($watchlistAuctions[$i]->title)]) }}">{{ $watchlistAuctions[$i]->title }}</a>
-                                <p>{{ $watchlistAuctions[$i]->year }}</p>
-                            </td>
-                            <td class="price">€ {{ formatPrice($watchlistAuctions[$i]->min_price) }}</td>
-                            <td class="end-date">{{ formatDate($watchlistAuctions[$i]->end_date) }}</td>
-                            <td class="remaining-time" data-end-date="{{ $watchlistAuctions[$i]->end_date }}"></td>
-                        </tr>
-                    @endfor
-                @else
-                    <tr>
-                        <td>@lang('watchlist.no_auctions')</td>
-                    </tr>
-                @endif
-            </table>
+            <div id="watchlist-categories">
+                {!! Form::open(['route' => 'clearWatchlist']) !!}
+                {!! Form::submit(trans('watchlist.clear_watchlist'), ['class' => 'small-button']) !!}
+                {!! Form::close() !!}
+                {!! Form::open(['route' => 'deleteSelectedWatchlistAuctions']) !!}
+                {!! Form::submit(trans('watchlist.delete_selected'), ['class' => 'small-button']) !!}
+                <h1>@lang('watchlist.watchlist')</h1>
+                <p class="watchlist-categories">
+                    <a href="#" v-on:click.prevent="showAll" v-bind:class="{ active: allAreShown }">@lang('watchlist.all')({{ count($watchlistAuctions) }})</a>
+                    <a href="#" v-on:click.prevent="showActive" v-bind:class="{ active: activeAreShown }">@lang('watchlist.active')({{ count($activeWatchlistAuctions) }})</a>
+                    <a href="#" v-on:click.prevent="showExpired" v-bind:class="{ active: expiredAreShown }">@lang('watchlist.expired')({{ count($expiredWatchlistAuctions) }})</a>
+                    <a href="#" v-on:click.prevent="showSold" v-bind:class="{ active: soldAreShown }">@lang('watchlist.sold')({{ count($soldWatchlistAuctions) }})</a>
+                </p>
+                <div v-if="allAreShown">@include('includes.auction_table', ['auctions' => $watchlistAuctions])</div>
+                <div v-if="activeAreShown">@include('includes.auction_table', ['auctions' => $activeWatchlistAuctions])</div>
+                <div v-if="expiredAreShown">@include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions])</div>
+                <div v-if="soldAreShown">@include('includes.auction_table', ['auctions' => $soldWatchlistAuctions])</div>
+                {!! Form::close() !!}
+            </div>
         </main>
     </div>
     @include('includes.scripts.remaining_time')

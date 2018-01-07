@@ -962,8 +962,7 @@ module.exports = Cancel;
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(10);
-module.exports = __webpack_require__(42);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
@@ -978,11 +977,11 @@ Vue.component('example-component', __webpack_require__(38));
 var login = new Vue({
   el: '#login',
   data: {
-    clickedLoginBtn: false
+    loginFormIsShown: false
   },
   methods: {
-    showLoginInputs: function showLoginInputs() {
-      this.clickedLoginBtn = true;
+    showLoginForm: function showLoginForm() {
+      this.loginFormIsShown = true;
     }
   }
 });
@@ -990,11 +989,47 @@ var login = new Vue({
 var bids = new Vue({
   el: '#bids',
   data: {
-    clickedBidsBtn: false
+    bidsAreShown: false
   },
   methods: {
     toggleBids: function toggleBids() {
-      this.clickedBidsBtn = !this.clickedBidsBtn;
+      this.bidsAreShown = !this.bidsAreShown;
+    }
+  }
+});
+
+var watchlistCategories = new Vue({
+  el: '#watchlist-categories',
+  data: {
+    allAreShown: true,
+    activeAreShown: false,
+    expiredAreShown: false,
+    soldAreShown: false
+  },
+  methods: {
+    showAll: function showAll() {
+      this.allAreShown = true;
+      this.activeAreShown = false;
+      this.expiredAreShown = false;
+      this.soldAreShown = false;
+    },
+    showActive: function showActive() {
+      this.allAreShown = false;
+      this.activeAreShown = true;
+      this.expiredAreShown = false;
+      this.soldAreShown = false;
+    },
+    showExpired: function showExpired() {
+      this.allAreShown = false;
+      this.activeAreShown = false;
+      this.expiredAreShown = true;
+      this.soldAreShown = false;
+    },
+    showSold: function showSold() {
+      this.allAreShown = false;
+      this.activeAreShown = false;
+      this.expiredAreShown = false;
+      this.soldAreShown = true;
     }
   }
 });
@@ -42917,12 +42952,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-0ca92eac", module.exports)
   }
 }
-
-/***/ }),
-/* 42 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -20,12 +20,26 @@ class PageController extends Controller
     }
 
     public function watchlist(Request $request) {
-        $watchlistAuctions = DB::table('watchlists')
-            ->join('users', 'watchlists.user_id', 'users.id')
+        $watchlistAuctions = Watchlist
+            ::join('users', 'watchlists.user_id', 'users.id')
             ->join('auctions', 'watchlists.auction_id', 'auctions.id')
             ->get();
 
-        return view('watchlist', compact('watchlistAuctions'));
+        $activeWatchlistAuctions = $watchlistAuctions->where('status', 'active');
+        $expiredWatchlistAuctions = $watchlistAuctions->where('status', 'expired');
+        $soldWatchlistAuctions = $watchlistAuctions->where('status', 'sold');
+
+        return view('watchlist', compact('watchlistAuctions', 'activeWatchlistAuctions', 'expiredWatchlistAuctions', 'soldWatchlistAuctions'));
+    }
+
+    public function deleteSelectedWatchlistAuctions(Request $request) {
+        // if authorized
+        return redirect()->back();
+    }
+
+    public function clearWatchlist(Request $request) {
+        // if authorized
+        return redirect()->back();
     }
 
     public function profile(Request $request) {
@@ -41,7 +55,11 @@ class PageController extends Controller
     }
 
     public function myAuctions(Request $request) {
-        return view('my_auctions');
+        $activeAuctions = Auth::user()->auctions->where('status', 'active');
+        $expiredAuctions = Auth::user()->auctions->where('status', 'expired');
+        $soldAuctions = Auth::user()->auctions->where('status', 'sold');
+
+        return view('my_auctions', compact('activeAuctions', 'expiredAuctions', 'soldAuctions'));
     }
 
     public function newAuction(Request $request) {
@@ -86,7 +104,7 @@ class PageController extends Controller
             'end_date' => $formattedEndDate,
         ]);
 
-        return view('my_auctions');
+        return redirect()->route('myAuctions');
     }
 
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
@@ -104,7 +122,7 @@ class PageController extends Controller
             $auction->save();
         }
 
-        return view('my_auctions');
+        return view('thank_you');
     }
 
     public function addBid(AddBid $request, Auction $auction, $auctionTitle = null) {

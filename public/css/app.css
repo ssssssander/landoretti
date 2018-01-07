@@ -128,30 +128,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 8, ../../resources/assets/sass/app.scss */
 * {
   box-sizing: border-box;
+  word-wrap: break-word;
 }
 
-/* line 11, ../../resources/assets/sass/app.scss */
+/* line 12, ../../resources/assets/sass/app.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 14, ../../resources/assets/sass/app.scss */
+/* line 15, ../../resources/assets/sass/app.scss */
 a {
   text-decoration: none;
   color: #0a1e75;
 }
-/* line 18, ../../resources/assets/sass/app.scss */
+/* line 19, ../../resources/assets/sass/app.scss */
 a[href^=mailto] {
   text-decoration: underline;
   color: #01a6a0;
 }
 
-/* line 23, ../../resources/assets/sass/app.scss */
+/* line 24, ../../resources/assets/sass/app.scss */
 ol {
   list-style-type: decimal;
 }
 
-/* line 26, ../../resources/assets/sass/app.scss */
+/* line 27, ../../resources/assets/sass/app.scss */
 body {
   font-family: "Arimo", sans-serif;
   font-size: 15px;
@@ -159,7 +160,7 @@ body {
   position: relative;
 }
 
-/* line 32, ../../resources/assets/sass/app.scss */
+/* line 33, ../../resources/assets/sass/app.scss */
 input[type=submit] {
   border: none;
   vertical-align: middle;
@@ -167,82 +168,82 @@ input[type=submit] {
   background-color: #ffffff;
 }
 
-/* line 39, ../../resources/assets/sass/app.scss */
+/* line 40, ../../resources/assets/sass/app.scss */
 h1 {
   font-weight: normal;
 }
 
-/* line 39, ../../resources/assets/sass/app.scss */
+/* line 40, ../../resources/assets/sass/app.scss */
 h2 {
   font-weight: normal;
 }
 
-/* line 39, ../../resources/assets/sass/app.scss */
+/* line 40, ../../resources/assets/sass/app.scss */
 h3 {
   font-weight: normal;
 }
 
-/* line 39, ../../resources/assets/sass/app.scss */
+/* line 40, ../../resources/assets/sass/app.scss */
 h4 {
   font-weight: normal;
 }
 
-/* line 39, ../../resources/assets/sass/app.scss */
+/* line 40, ../../resources/assets/sass/app.scss */
 h5 {
   font-weight: normal;
 }
 
-/* line 39, ../../resources/assets/sass/app.scss */
+/* line 40, ../../resources/assets/sass/app.scss */
 h6 {
   font-weight: normal;
 }
 
-/* line 43, ../../resources/assets/sass/app.scss */
+/* line 44, ../../resources/assets/sass/app.scss */
 h2 {
   font-size: 24px;
 }
 
-/* line 46, ../../resources/assets/sass/app.scss */
+/* line 47, ../../resources/assets/sass/app.scss */
 .active {
   font-weight: bold;
 }
 
-/* line 49, ../../resources/assets/sass/app.scss */
+/* line 50, ../../resources/assets/sass/app.scss */
 [class^=icons] {
   display: inline-block;
   vertical-align: -5%;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
+/* line 54, ../../resources/assets/sass/app.scss */
 .wrapper, .info, .popular {
   margin: 0 auto;
   width: 1024px;
 }
 
-/* line 57, ../../resources/assets/sass/app.scss */
+/* line 58, ../../resources/assets/sass/app.scss */
 .stretch-bg {
   background-color: #eaeaea;
 }
 
-/* line 60, ../../resources/assets/sass/app.scss */
+/* line 61, ../../resources/assets/sass/app.scss */
 .slideshow-home {
   width: 100%;
 }
 
-/* line 63, ../../resources/assets/sass/app.scss */
+/* line 64, ../../resources/assets/sass/app.scss */
 .line {
   background-color: #01a6a0;
   height: 4px;
 }
 
-/* line 67, ../../resources/assets/sass/app.scss */
+/* line 68, ../../resources/assets/sass/app.scss */
 .col, .profile .profile-info .profile-info-col {
   vertical-align: top;
   width: 250px;
   display: inline-block;
 }
 
-/* line 72, ../../resources/assets/sass/app.scss */
+/* line 73, ../../resources/assets/sass/app.scss */
 .logo, .logo-top, .logo-bottom {
   box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
   position: absolute;
@@ -251,23 +252,23 @@ h2 {
   height: 140px;
 }
 
-/* line 79, ../../resources/assets/sass/app.scss */
+/* line 80, ../../resources/assets/sass/app.scss */
 .logo-top {
   top: 0;
 }
 
-/* line 83, ../../resources/assets/sass/app.scss */
+/* line 84, ../../resources/assets/sass/app.scss */
 .logo-bottom {
   bottom: 0;
 }
 
-/* line 87, ../../resources/assets/sass/app.scss */
+/* line 88, ../../resources/assets/sass/app.scss */
 .input, header #login input[type=email], header #login input[type=password], main form input:not([type=submit]):not([type=checkbox]), main form select, main form textarea {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
 }
 
-/* line 91, ../../resources/assets/sass/app.scss */
+/* line 92, ../../resources/assets/sass/app.scss */
 .small-button {
   padding: 10px;
   border: 1px solid #eaeaea;
@@ -279,97 +280,97 @@ h2 {
   margin-left: 10px;
 }
 
-/* line 101, ../../resources/assets/sass/app.scss */
+/* line 102, ../../resources/assets/sass/app.scss */
 .icons-arrow_down {
   width: 28px;
   height: 28px;
 }
 
-/* line 105, ../../resources/assets/sass/app.scss */
+/* line 106, ../../resources/assets/sass/app.scss */
 .icons-magnifying_glass {
   width: 18px;
   height: 18px;
 }
 
-/* line 109, ../../resources/assets/sass/app.scss */
+/* line 110, ../../resources/assets/sass/app.scss */
 .icons-phone {
   width: 9px;
   height: 12px;
 }
 
-/* line 113, ../../resources/assets/sass/app.scss */
+/* line 114, ../../resources/assets/sass/app.scss */
 .icons-mail {
   width: 13px;
   height: 9px;
 }
 
-/* line 117, ../../resources/assets/sass/app.scss */
+/* line 118, ../../resources/assets/sass/app.scss */
 .icons-hamburger {
   width: 11px;
   height: 10px;
 }
 
-/* line 121, ../../resources/assets/sass/app.scss */
+/* line 122, ../../resources/assets/sass/app.scss */
 .icons-person {
   width: 13px;
   height: 14px;
 }
 
-/* line 125, ../../resources/assets/sass/app.scss */
+/* line 126, ../../resources/assets/sass/app.scss */
 .icons-euro {
   width: 16px;
   height: 16px;
 }
 
-/* line 130, ../../resources/assets/sass/app.scss */
+/* line 131, ../../resources/assets/sass/app.scss */
 .icons-facebook {
   width: 32px;
   height: 32px;
 }
 
-/* line 130, ../../resources/assets/sass/app.scss */
+/* line 131, ../../resources/assets/sass/app.scss */
 .icons-twitter {
   width: 32px;
   height: 32px;
 }
 
-/* line 130, ../../resources/assets/sass/app.scss */
+/* line 131, ../../resources/assets/sass/app.scss */
 .icons-youtube {
   width: 32px;
   height: 32px;
 }
 
-/* line 130, ../../resources/assets/sass/app.scss */
+/* line 131, ../../resources/assets/sass/app.scss */
 .icons-plus {
   width: 32px;
   height: 32px;
 }
 
-/* line 136, ../../resources/assets/sass/app.scss */
+/* line 137, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic::-webkit-input-placeholder, .search input[type=search]::-webkit-input-placeholder, header #login input[type=email]::-webkit-input-placeholder, header #login input[type=password]::-webkit-input-placeholder {
   font-style: italic;
 }
-/* line 139, ../../resources/assets/sass/app.scss */
+/* line 140, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic:-moz-placeholder, .search input[type=search]:-moz-placeholder, header #login input[type=email]:-moz-placeholder, header #login input[type=password]:-moz-placeholder {
   font-style: italic;
 }
-/* line 142, ../../resources/assets/sass/app.scss */
+/* line 143, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic::-moz-placeholder, .search input[type=search]::-moz-placeholder, header #login input[type=email]::-moz-placeholder, header #login input[type=password]::-moz-placeholder {
   font-style: italic;
 }
-/* line 145, ../../resources/assets/sass/app.scss */
+/* line 146, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic:-ms-input-placeholder, .search input[type=search]:-ms-input-placeholder, header #login input[type=email]:-ms-input-placeholder, header #login input[type=password]:-ms-input-placeholder {
   font-style: italic;
 }
 
-/* line 150, ../../resources/assets/sass/app.scss */
+/* line 151, ../../resources/assets/sass/app.scss */
 .search input[type=search] {
   border: 1px solid #eaeaea;
   width: 207px;
   padding: 5px 0 5px 25px;
   border-radius: 3px;
 }
-/* line 157, ../../resources/assets/sass/app.scss */
+/* line 158, ../../resources/assets/sass/app.scss */
 .search input[type=submit] {
   border: none;
   vertical-align: middle;
@@ -377,7 +378,7 @@ h2 {
   margin-left: 5px;
 }
 
-/* line 164, ../../resources/assets/sass/app.scss */
+/* line 165, ../../resources/assets/sass/app.scss */
 .header-item, header .header-personal, .header-nav {
   margin-left: 170px;
   padding: 14px 0;
@@ -385,90 +386,90 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-/* line 171, ../../resources/assets/sass/app.scss */
+/* line 172, ../../resources/assets/sass/app.scss */
 .header-item nav, header .header-personal nav, .header-nav nav, .header-item li, header .header-personal li, .header-nav li {
   display: inline-block;
 }
 
-/* line 176, ../../resources/assets/sass/app.scss */
+/* line 177, ../../resources/assets/sass/app.scss */
 header #login {
   border-left: 0;
   padding: 0;
 }
-/* line 180, ../../resources/assets/sass/app.scss */
+/* line 181, ../../resources/assets/sass/app.scss */
 header #login div {
   border-left: 1px solid #0a1e75;
   padding: 0 30px;
 }
-/* line 184, ../../resources/assets/sass/app.scss */
+/* line 185, ../../resources/assets/sass/app.scss */
 header #login input[type=email], header #login input[type=password] {
   padding: 2px 0 2px 5px;
   margin-right: 20px;
   width: 100px;
 }
-/* line 191, ../../resources/assets/sass/app.scss */
+/* line 192, ../../resources/assets/sass/app.scss */
 header #login input[type=submit] {
   width: 23px;
   height: 23px;
   background-color: #eaeaea;
 }
-/* line 197, ../../resources/assets/sass/app.scss */
+/* line 198, ../../resources/assets/sass/app.scss */
 header .header-personal {
   font-size: 13px;
 }
-/* line 201, ../../resources/assets/sass/app.scss */
+/* line 202, ../../resources/assets/sass/app.scss */
 header .header-personal li {
   border-left: 1px solid #0a1e75;
   color: #0a1e75;
   padding: 0 30px;
 }
-/* line 206, ../../resources/assets/sass/app.scss */
+/* line 207, ../../resources/assets/sass/app.scss */
 header .header-personal li:first-of-type {
   border-left: 0;
   padding-left: 0;
 }
-/* line 210, ../../resources/assets/sass/app.scss */
+/* line 211, ../../resources/assets/sass/app.scss */
 header .header-personal .icons-hamburger, header .header-personal .icons-person {
   margin-right: 10px;
 }
-/* line 215, ../../resources/assets/sass/app.scss */
+/* line 216, ../../resources/assets/sass/app.scss */
 header .logout form {
   display: inline-block;
 }
-/* line 218, ../../resources/assets/sass/app.scss */
+/* line 219, ../../resources/assets/sass/app.scss */
 header .logout form input[type=submit] {
   background-color: #ffffff;
   color: #0a1e75;
 }
 
-/* line 228, ../../resources/assets/sass/app.scss */
+/* line 229, ../../resources/assets/sass/app.scss */
 .header-nav nav {
   font-weight: bold;
 }
-/* line 231, ../../resources/assets/sass/app.scss */
+/* line 232, ../../resources/assets/sass/app.scss */
 .header-nav nav li {
   padding: 0 15px;
 }
-/* line 234, ../../resources/assets/sass/app.scss */
+/* line 235, ../../resources/assets/sass/app.scss */
 .header-nav nav li a {
   color: #4e4e4e;
 }
-/* line 237, ../../resources/assets/sass/app.scss */
+/* line 238, ../../resources/assets/sass/app.scss */
 .header-nav nav li:first-of-type {
   padding-left: 0;
 }
-/* line 242, ../../resources/assets/sass/app.scss */
+/* line 243, ../../resources/assets/sass/app.scss */
 .header-nav .languages {
   color: #0a1e75;
   font-size: 13px;
 }
-/* line 246, ../../resources/assets/sass/app.scss */
+/* line 247, ../../resources/assets/sass/app.scss */
 .header-nav .languages li {
   width: 36px;
   text-align: right;
 }
 
-/* line 253, ../../resources/assets/sass/app.scss */
+/* line 254, ../../resources/assets/sass/app.scss */
 .block h2, .info h2, .popular h2 {
   font-size: 40px;
   color: #0a1e75;
@@ -476,11 +477,11 @@ header .logout form input[type=submit] {
   padding: 50px 0;
 }
 
-/* line 260, ../../resources/assets/sass/app.scss */
+/* line 261, ../../resources/assets/sass/app.scss */
 .info {
   margin-bottom: 50px;
 }
-/* line 265, ../../resources/assets/sass/app.scss */
+/* line 266, ../../resources/assets/sass/app.scss */
 .info div {
   width: 300px;
   padding: 0 55px;
@@ -488,138 +489,138 @@ header .logout form input[type=submit] {
   display: inline-block;
   text-align: center;
 }
-/* line 272, ../../resources/assets/sass/app.scss */
+/* line 273, ../../resources/assets/sass/app.scss */
 .info div:last-of-type {
   margin-right: 0;
 }
-/* line 275, ../../resources/assets/sass/app.scss */
+/* line 276, ../../resources/assets/sass/app.scss */
 .info div h3 {
   font-size: 25px;
   padding: 30px 0 12px 0;
 }
 
-/* line 281, ../../resources/assets/sass/app.scss */
+/* line 282, ../../resources/assets/sass/app.scss */
 .info + .stretch-bg {
   padding-bottom: 100px;
   margin-bottom: 100px;
 }
 
-/* line 289, ../../resources/assets/sass/app.scss */
+/* line 290, ../../resources/assets/sass/app.scss */
 .popular span {
   margin-left: 20px;
 }
-/* line 292, ../../resources/assets/sass/app.scss */
+/* line 293, ../../resources/assets/sass/app.scss */
 .popular div {
   width: 314px;
   display: inline-block;
 }
-/* line 296, ../../resources/assets/sass/app.scss */
+/* line 297, ../../resources/assets/sass/app.scss */
 .popular img {
   cursor: pointer;
   transition: .3s;
 }
-/* line 300, ../../resources/assets/sass/app.scss */
+/* line 301, ../../resources/assets/sass/app.scss */
 .popular img:hover {
   filter: brightness(50%);
 }
 
-/* line 305, ../../resources/assets/sass/app.scss */
+/* line 306, ../../resources/assets/sass/app.scss */
 footer {
   border-top: 1px solid #eaeaea;
 }
-/* line 308, ../../resources/assets/sass/app.scss */
+/* line 309, ../../resources/assets/sass/app.scss */
 footer ul {
   margin-bottom: 22px;
 }
-/* line 311, ../../resources/assets/sass/app.scss */
+/* line 312, ../../resources/assets/sass/app.scss */
 footer ul li {
   font-size: 14px;
 }
-/* line 314, ../../resources/assets/sass/app.scss */
+/* line 315, ../../resources/assets/sass/app.scss */
 footer ul li:first-of-type {
   color: #000000;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 319, ../../resources/assets/sass/app.scss */
+/* line 320, ../../resources/assets/sass/app.scss */
 footer ul li a {
   color: #01a6a0;
 }
-/* line 324, ../../resources/assets/sass/app.scss */
+/* line 325, ../../resources/assets/sass/app.scss */
 footer .footer-item, footer .sitemap, footer .contact {
   padding-top: 40px;
   display: inline-block;
 }
-/* line 328, ../../resources/assets/sass/app.scss */
+/* line 329, ../../resources/assets/sass/app.scss */
 footer .sitemap {
   border-right: 1px solid #eaeaea;
   padding-bottom: 65px;
 }
-/* line 333, ../../resources/assets/sass/app.scss */
+/* line 334, ../../resources/assets/sass/app.scss */
 footer .contact {
   vertical-align: top;
   padding-left: 30px;
 }
-/* line 338, ../../resources/assets/sass/app.scss */
+/* line 339, ../../resources/assets/sass/app.scss */
 footer .contact ul:first-of-type li {
   margin-bottom: 20px;
 }
-/* line 341, ../../resources/assets/sass/app.scss */
+/* line 342, ../../resources/assets/sass/app.scss */
 footer .contact div {
   margin-top: 30px;
 }
-/* line 344, ../../resources/assets/sass/app.scss */
+/* line 345, ../../resources/assets/sass/app.scss */
 footer .contact div.copyright {
   margin-top: 86px;
   font-size: 12px;
 }
-/* line 351, ../../resources/assets/sass/app.scss */
+/* line 352, ../../resources/assets/sass/app.scss */
 footer .search input[type=search] {
   width: 183px;
 }
-/* line 355, ../../resources/assets/sass/app.scss */
+/* line 356, ../../resources/assets/sass/app.scss */
 footer .social {
   margin-top: 40px;
 }
 
-/* line 359, ../../resources/assets/sass/app.scss */
+/* line 360, ../../resources/assets/sass/app.scss */
 main {
   margin: 80px 0 60px 0;
 }
-/* line 362, ../../resources/assets/sass/app.scss */
+/* line 363, ../../resources/assets/sass/app.scss */
 main.new-auction {
   width: 750px;
 }
-/* line 365, ../../resources/assets/sass/app.scss */
+/* line 366, ../../resources/assets/sass/app.scss */
 main h1 {
   font-size: 45px;
   margin-bottom: 40px;
 }
-/* line 370, ../../resources/assets/sass/app.scss */
+/* line 371, ../../resources/assets/sass/app.scss */
 main form label {
   color: #0a1e75;
   font-size: 20px;
   margin-bottom: 10px;
   display: block;
 }
-/* line 376, ../../resources/assets/sass/app.scss */
+/* line 377, ../../resources/assets/sass/app.scss */
 main form input:not([type=submit]):not([type=checkbox]), main form select, main form textarea {
   padding: 15px;
   width: 100%;
   height: 47px;
   color: #4e4e4e;
 }
-/* line 383, ../../resources/assets/sass/app.scss */
+/* line 384, ../../resources/assets/sass/app.scss */
 main form input:not([type=submit]):not([type=checkbox]).has-error, main form select.has-error, main form textarea.has-error {
   background-color: #fff1f1;
   border-color: #fd0100;
 }
-/* line 388, ../../resources/assets/sass/app.scss */
+/* line 389, ../../resources/assets/sass/app.scss */
 main form textarea {
   font-family: "Arimo", sans-serif;
   height: 120px;
 }
-/* line 392, ../../resources/assets/sass/app.scss */
+/* line 393, ../../resources/assets/sass/app.scss */
 main form input[type=submit]:not(.buyout):not(.add-to-watchlist) {
   background-color: #01a6a0;
   text-align: center;
@@ -629,7 +630,7 @@ main form input[type=submit]:not(.buyout):not(.add-to-watchlist) {
   display: block;
   font-size: 17px;
 }
-/* line 401, ../../resources/assets/sass/app.scss */
+/* line 402, ../../resources/assets/sass/app.scss */
 main form input[type=submit]:not(.buyout):not(.add-to-watchlist) + a {
   width: 200px;
   display: inline-block;
@@ -638,7 +639,7 @@ main form input[type=submit]:not(.buyout):not(.add-to-watchlist) + a {
   margin-top: 20px;
   font-size: 13px;
 }
-/* line 410, ../../resources/assets/sass/app.scss */
+/* line 411, ../../resources/assets/sass/app.scss */
 main form .upload {
   background-color: #4e4e4e;
   color: #ffffff;
@@ -653,306 +654,322 @@ main form .upload {
   font-size: 14px;
   cursor: pointer;
 }
-/* line 424, ../../resources/assets/sass/app.scss */
+/* line 425, ../../resources/assets/sass/app.scss */
 main form p {
   font-size: 14px;
 }
-/* line 427, ../../resources/assets/sass/app.scss */
+/* line 428, ../../resources/assets/sass/app.scss */
 main form .agree-tac {
   margin-top: 80px;
 }
-/* line 430, ../../resources/assets/sass/app.scss */
+/* line 431, ../../resources/assets/sass/app.scss */
 main form .agree-tac input[type=checkbox] + label {
   color: #4e4e4e;
   font-size: 15px;
   display: initial;
   margin-left: 10px;
 }
-/* line 436, ../../resources/assets/sass/app.scss */
+/* line 437, ../../resources/assets/sass/app.scss */
 main form .agree-tac input[type=checkbox] + label + a {
   text-decoration: underline;
   color: #01a6a0;
 }
-/* line 442, ../../resources/assets/sass/app.scss */
+/* line 443, ../../resources/assets/sass/app.scss */
 main form .row {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
-/* line 447, ../../resources/assets/sass/app.scss */
+/* line 448, ../../resources/assets/sass/app.scss */
 main form .row .row-item {
   width: 48%;
   display: inline-block;
 }
-/* line 451, ../../resources/assets/sass/app.scss */
+/* line 452, ../../resources/assets/sass/app.scss */
 main form .row .row-item.has-error {
   border: 1px solid #fd0100;
 }
-/* line 455, ../../resources/assets/sass/app.scss */
+/* line 456, ../../resources/assets/sass/app.scss */
 main form .row .half {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-/* line 460, ../../resources/assets/sass/app.scss */
+/* line 461, ../../resources/assets/sass/app.scss */
 main form .row .full {
   width: 100%;
 }
-/* line 463, ../../resources/assets/sass/app.scss */
+/* line 464, ../../resources/assets/sass/app.scss */
 main form .row .third {
   width: 32%;
 }
-/* line 466, ../../resources/assets/sass/app.scss */
+/* line 467, ../../resources/assets/sass/app.scss */
 main form .row .two-third {
   width: 64%;
 }
-/* line 470, ../../resources/assets/sass/app.scss */
+/* line 471, ../../resources/assets/sass/app.scss */
 main form .row .optional label {
   display: inline-block;
 }
-/* line 473, ../../resources/assets/sass/app.scss */
+/* line 474, ../../resources/assets/sass/app.scss */
 main form .row .optional label:last-of-type {
   font-size: 15px;
 }
-/* line 479, ../../resources/assets/sass/app.scss */
+/* line 480, ../../resources/assets/sass/app.scss */
 main form .row.cash .row-item {
   position: relative;
 }
-/* line 482, ../../resources/assets/sass/app.scss */
+/* line 483, ../../resources/assets/sass/app.scss */
 main form .row.cash input {
   padding-left: 30px;
 }
-/* line 485, ../../resources/assets/sass/app.scss */
+/* line 486, ../../resources/assets/sass/app.scss */
 main form .row.cash .icons-euro {
   position: absolute;
   top: 44.5px;
   left: 10px;
 }
 
-/* line 494, ../../resources/assets/sass/app.scss */
+/* line 495, ../../resources/assets/sass/app.scss */
 .errors {
   padding: 30px 50px;
   margin: 60px 0 40px 0;
   color: #fd0100;
   background-color: #fff1f1;
 }
-/* line 500, ../../resources/assets/sass/app.scss */
+/* line 501, ../../resources/assets/sass/app.scss */
 .errors ul {
   list-style-type: initial;
 }
 
-/* line 505, ../../resources/assets/sass/app.scss */
+/* line 506, ../../resources/assets/sass/app.scss */
 .profile .profile-info {
   padding: 20px 45px;
   border: 1px solid #eaeaea;
 }
-/* line 509, ../../resources/assets/sass/app.scss */
+/* line 510, ../../resources/assets/sass/app.scss */
 .profile .profile-info h2 {
   margin-bottom: 30px;
 }
-/* line 512, ../../resources/assets/sass/app.scss */
+/* line 513, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col {
   border-right: 1px solid #eaeaea;
   margin-left: 45px;
 }
-/* line 517, ../../resources/assets/sass/app.scss */
+/* line 518, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col:first-of-type {
   margin-left: 0;
 }
-/* line 520, ../../resources/assets/sass/app.scss */
+/* line 521, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col:last-of-type {
   border-right: 0;
 }
-/* line 523, ../../resources/assets/sass/app.scss */
+/* line 524, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col p {
   margin-bottom: 2px;
 }
-/* line 526, ../../resources/assets/sass/app.scss */
+/* line 527, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col .sub-title {
   color: #0a1e75;
   font-weight: bold;
 }
-/* line 530, ../../resources/assets/sass/app.scss */
+/* line 531, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col .item:first-of-type {
   margin-bottom: 30px;
 }
 
-/* line 536, ../../resources/assets/sass/app.scss */
-.auction-list {
+/* line 537, ../../resources/assets/sass/app.scss */
+.auction-table {
   width: 100%;
   border: 1px solid #eaeaea;
   border-collapse: collapse;
   margin: 30px 0 60px 0;
 }
-/* line 542, ../../resources/assets/sass/app.scss */
-.auction-list th {
+/* line 543, ../../resources/assets/sass/app.scss */
+.auction-table th {
   background-color: #f8f8f8;
   padding: 10px 0;
   text-align: center;
   font-weight: normal;
 }
-/* line 548, ../../resources/assets/sass/app.scss */
-.auction-list td {
+/* line 549, ../../resources/assets/sass/app.scss */
+.auction-table td {
   border: 1px solid #eaeaea;
   text-align: center;
   font-size: 20px;
 }
-/* line 553, ../../resources/assets/sass/app.scss */
-.auction-list img {
+/* line 554, ../../resources/assets/sass/app.scss */
+.auction-table img {
   width: 100%;
   height: 100%;
 }
-/* line 557, ../../resources/assets/sass/app.scss */
-.auction-list .image {
+/* line 558, ../../resources/assets/sass/app.scss */
+.auction-table .none {
+  padding: 40px;
+}
+/* line 561, ../../resources/assets/sass/app.scss */
+.auction-table .image {
   border-right: 0;
   width: 150px;
   height: 150px;
+  position: relative;
 }
-/* line 562, ../../resources/assets/sass/app.scss */
-.auction-list .title {
+/* line 567, ../../resources/assets/sass/app.scss */
+.auction-table .image input[type=checkbox] {
+  position: absolute;
+  top: 60px;
+  left: -40px;
+}
+/* line 573, ../../resources/assets/sass/app.scss */
+.auction-table .title {
   border-left: 0;
   text-align: left;
   padding: 0 40px;
   font-size: 22px;
 }
-/* line 568, ../../resources/assets/sass/app.scss */
-.auction-list .title a {
+/* line 579, ../../resources/assets/sass/app.scss */
+.auction-table .title a {
   color: #4e4e4e;
 }
-/* line 571, ../../resources/assets/sass/app.scss */
-.auction-list .title p {
+/* line 582, ../../resources/assets/sass/app.scss */
+.auction-table .title p {
   color: #0a1e75;
   font-size: 18px;
 }
-/* line 576, ../../resources/assets/sass/app.scss */
-.auction-list .price, .auction-list .end-date, .auction-list .remaining-time {
+/* line 587, ../../resources/assets/sass/app.scss */
+.auction-table .price, .auction-table .end-date, .auction-table .remaining-time {
   width: 17%;
   padding: 0 5px;
 }
 
-/* line 582, ../../resources/assets/sass/app.scss */
+/* line 593, ../../resources/assets/sass/app.scss */
 .auction-detail h1 {
   margin-bottom: 15px;
 }
-/* line 585, ../../resources/assets/sass/app.scss */
+/* line 596, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info {
   font-size: 14px;
 }
-/* line 589, ../../resources/assets/sass/app.scss */
+/* line 600, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .icons-hamburger {
   margin-left: 5px;
 }
-/* line 592, ../../resources/assets/sass/app.scss */
+/* line 603, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids ol {
   padding: 20px 30px;
   margin-top: 30px;
   border: 1px solid #eaeaea;
 }
-/* line 597, ../../resources/assets/sass/app.scss */
+/* line 608, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .you {
   background-color: #eaeaea;
 }
-/* line 602, ../../resources/assets/sass/app.scss */
+/* line 613, ../../resources/assets/sass/app.scss */
 .auction-detail .top {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-/* line 607, ../../resources/assets/sass/app.scss */
+/* line 618, ../../resources/assets/sass/app.scss */
 .auction-detail .top img {
   width: 710px;
   height: 502px;
 }
-/* line 612, ../../resources/assets/sass/app.scss */
+/* line 623, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side {
   width: 250px;
   text-align: right;
 }
-/* line 616, ../../resources/assets/sass/app.scss */
+/* line 627, ../../resources/assets/sass/app.scss */
+.auction-detail .top .side .sold {
+  font-size: 60px;
+  font-weight: bold;
+}
+/* line 631, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div {
   margin-bottom: 15px;
   padding-bottom: 20px;
 }
-/* line 620, ../../resources/assets/sass/app.scss */
+/* line 635, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div * {
   margin-bottom: 5px;
 }
-/* line 623, ../../resources/assets/sass/app.scss */
+/* line 638, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div.border-bottom {
   border-bottom: 1px solid #eaeaea;
 }
-/* line 626, ../../resources/assets/sass/app.scss */
+/* line 641, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 {
   color: #000000;
   font-size: 27px;
 }
-/* line 630, ../../resources/assets/sass/app.scss */
+/* line 645, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 + p {
   color: #0a1e75;
 }
-/* line 635, ../../resources/assets/sass/app.scss */
+/* line 650, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time {
   color: #01a6a0;
 }
-/* line 638, ../../resources/assets/sass/app.scss */
+/* line 653, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time + span {
   color: #01a6a0;
 }
-/* line 643, ../../resources/assets/sass/app.scss */
+/* line 658, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid {
   color: #0a1e75;
   border: 1px solid #eaeaea;
   padding-top: 20px;
 }
-/* line 648, ../../resources/assets/sass/app.scss */
+/* line 663, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .padding {
   padding: 0 20px;
 }
-/* line 651, ../../resources/assets/sass/app.scss */
+/* line 666, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .estimated-price {
   font-size: 25px;
   font-weight: bold;
 }
-/* line 655, ../../resources/assets/sass/app.scss */
+/* line 670, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .buyout {
   color: #01a6a0;
   text-decoration: underline;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 661, ../../resources/assets/sass/app.scss */
+/* line 676, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form {
   display: flex;
   justify-content: flex-end;
 }
-/* line 665, ../../resources/assets/sass/app.scss */
+/* line 680, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-input {
   width: 128px;
   border: 10px solid #01a6a0;
   vertical-align: middle;
   outline: none;
 }
-/* line 671, ../../resources/assets/sass/app.scss */
+/* line 686, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-submit {
   width: 120px;
   display: inline-block;
 }
-/* line 676, ../../resources/assets/sass/app.scss */
+/* line 691, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container {
   text-align: center;
   display: block;
 }
-/* line 680, ../../resources/assets/sass/app.scss */
+/* line 695, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .icons-hamburger {
   margin-bottom: 0;
   vertical-align: baseline;
 }
-/* line 684, ../../resources/assets/sass/app.scss */
+/* line 699, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .add-to-watchlist {
   color: #0a1e75;
   text-decoration: underline;
 }
-/* line 692, ../../resources/assets/sass/app.scss */
+/* line 707, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom {
   padding: 20px;
   border: 1px solid #eaeaea;
@@ -961,27 +978,27 @@ main form .row.cash .icons-euro {
   justify-content: space-between;
   min-height: 300px;
 }
-/* line 700, ../../resources/assets/sass/app.scss */
+/* line 715, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom h3 {
   font-weight: bold;
   margin: 20px 0 10px 0;
 }
-/* line 704, ../../resources/assets/sass/app.scss */
+/* line 719, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom p {
   padding-right: 20px;
   margin-bottom: 20px;
 }
-/* line 708, ../../resources/assets/sass/app.scss */
+/* line 723, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-texts {
   width: 750px;
   border-right: 1px solid #eaeaea;
 }
-/* line 712, ../../resources/assets/sass/app.scss */
+/* line 727, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra {
   width: 200px;
   position: relative;
 }
-/* line 716, ../../resources/assets/sass/app.scss */
+/* line 731, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra .big-button {
   background-color: #4e4e4e;
   text-align: center;
@@ -993,21 +1010,21 @@ main form .row.cash .icons-euro {
   bottom: 0;
 }
 
-/* line 729, ../../resources/assets/sass/app.scss */
+/* line 744, ../../resources/assets/sass/app.scss */
 .watchlist-categories {
   height: 26px;
 }
-/* line 732, ../../resources/assets/sass/app.scss */
+/* line 747, ../../resources/assets/sass/app.scss */
 .watchlist-categories a {
   color: #4e4e4e;
   padding: 0 5px 2px 0;
   border-right: 1px solid #4e4e4e;
 }
-/* line 737, ../../resources/assets/sass/app.scss */
+/* line 752, ../../resources/assets/sass/app.scss */
 .watchlist-categories a.active {
   border-bottom: 3px solid #eaeaea;
 }
-/* line 740, ../../resources/assets/sass/app.scss */
+/* line 755, ../../resources/assets/sass/app.scss */
 .watchlist-categories a:last-of-type {
   border-right: 0;
 }

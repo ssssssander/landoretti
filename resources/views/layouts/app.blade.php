@@ -18,9 +18,9 @@
     <meta name="description" content="@lang('header.description')">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link type="image/x-icon" href="{{ asset('favicon.ico') }}" rel="icon">
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://static.sander.borret.mtantwerp.eu" rel="dns-prefetch">
-    <title>{{ config('app.name') }} | @yield('title')</title>
+    <title>@yield('title') | {{ config('app.name') }}</title>
 </head>
 <body>
     @include('includes.logo', ['position' => 'top'])
