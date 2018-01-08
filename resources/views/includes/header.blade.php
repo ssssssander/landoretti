@@ -9,12 +9,10 @@
                                 @lang('header.register')
                             </a>
                         </li>
-                        <li id="login">
-                            <div v-if="!loginFormIsShown">
-                                <a href="#" v-on:click.prevent="showLoginForm">
-                                    @lang('header.login')
-                                </a>
-                            </div>
+                        <li id="login" v-bind:style="{ borderLeft: borderLeft, paddingLeft: paddingLeft}">
+                            <a href="#" v-on:click.prevent="showLoginForm" v-if="!loginFormIsShown">
+                                @lang('header.login')
+                            </a>
                             {!! Form::open(['route' => 'login', 'v-if' => 'loginFormIsShown']) !!}
                             {!! Form::email('email', '', ['placeholder' => trans('header.email')]) !!}
                             {!! Form::password('password', ['placeholder' => trans('header.password')]) !!}

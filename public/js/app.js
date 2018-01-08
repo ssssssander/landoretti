@@ -977,11 +977,15 @@ Vue.component('example-component', __webpack_require__(38));
 var login = new Vue({
   el: '#login',
   data: {
-    loginFormIsShown: false
+    loginFormIsShown: false,
+    borderLeft: true,
+    paddingLeft: true
   },
   methods: {
     showLoginForm: function showLoginForm() {
       this.loginFormIsShown = true;
+      this.borderLeft = '0';
+      this.paddingLeft = '0';
     }
   }
 });

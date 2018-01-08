@@ -20,9 +20,11 @@ class PageController extends Controller
 
     public function watchlist(Request $request) {
         $watchlistAuctions = Watchlist
-            ::join('users', 'watchlists.user_id', 'users.id')
-            ->join('auctions', 'watchlists.auction_id', 'auctions.id')
-            ->get();
+            ::join('users', function($join) {
+                $join->on('watchlists.user_id', 'users.id')
+                ->where('watchlists.user_id', Auth::id());
+            })
+            ->join('auctions', 'watchlists.auction_id', 'auctions.id')->get();
 
         $activeWatchlistAuctions = $watchlistAuctions->where('status', 'active');
         $expiredWatchlistAuctions = $watchlistAuctions->where('status', 'expired');
@@ -35,11 +37,11 @@ class PageController extends Controller
         $auctionIds = $request->input('auctions.*');
 
         for($i = 0; $i < count($auctionIds); $i++) {
-            $watchlistItem = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auctionIds[$i]]]);
-            $isInWatchlist = !$watchlistItem->get()->isEmpty();
+            $watchlistAuction = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auctionIds[$i]]]);
+            $isInWatchlist = !$watchlistAuction->get()->isEmpty();
 
             if($isInWatchlist) {
-                $watchlistItem->delete();
+                $watchlistAuction->delete();
             }
         }
 
@@ -118,8 +120,8 @@ class PageController extends Controller
     }
 
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
-        $watchlistItem = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
-        $isInWatchlist = !$watchlistItem->isEmpty();
+        $watchlistAuction = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
+        $isInWatchlist = !$watchlistAuction->isEmpty();
         $amountOfBids = $auction->bids->count();
         $amountOfBidsByCurrentUser = $auction->bids->where('user_id', Auth::id())->count();
 

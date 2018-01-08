@@ -188,13 +188,6 @@ h2 {
 }
 header {
     #login {
-        border-left: 0;
-        padding: 0;
-
-        div {
-            border-left: 1px solid $secondary-color;
-            padding: 0 30px;
-        }
         input[type=email], input[type=password] {
             @extend .input;
             @extend .input-placeholder-italic;
@@ -707,6 +700,8 @@ main {
                     .add-to-watchlist {
                         color: $secondary-color;
                         text-decoration: underline;
+                        border: 0;
+                        background-color: $white;
                     }
                 }
             }
