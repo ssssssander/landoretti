@@ -1,9 +1,9 @@
 <table class="auction-table">
     <tr>
-        <th colspan="2">@lang('my_auctions.auction_details')</th>
-        <th>@lang('my_auctions.estimated_price')</th>
-        <th>@lang('my_auctions.end_data')</th>
-        <th>@lang('my_auctions.remaining_time')</th>
+        <th colspan="2">@lang('auction_table.auction_details')</th>
+        <th>@lang('auction_table.estimated_price')</th>
+        <th>@lang('auction_table.end_data')</th>
+        <th>@lang('auction_table.remaining_time')</th>
     </tr>
     @forelse($auctions as $auction)
         <tr>
@@ -18,15 +18,22 @@
                 <p>{{ $auction->year }}</p>
             </td>
             <td class="price">€ {{ formatPrice($auction->min_price) }}</td>
-            @if($auction->status == 'active')
-                <td class="end-date">{{ formatDate($auction->end_date) }}</td>
-                <td class="remaining-time" data-end-date="{{ $auction->end_date }}"></td>
-            @endif
+            <td class="end-date">
+                @if($auction->status == 'active') {{ formatDate($auction->end_date) }} @endif
+                @if($auction->status == 'expired') @lang('auction_table.expired') @endif
+                @if($auction->status == 'sold') @lang('auction_table.sold') @endif
+            </td>
+            <td class="remaining-time" @if($auction->status == 'active') data-end-date="{{ $auction->end_date }}" @endif>
+                @if($auction->status == 'expired') @lang('auction_table.expired') @endif
+                @if($auction->status == 'sold') @lang('auction_table.sold') @endif
+            </td>
         </tr>
     @empty
         <tr>
-            <td class="none" colspan="5">@lang('my_auctions.no_auctions')</td>
+            <td class="none" colspan="5">@lang('auction_table.no_auctions')</td>
         </tr>
     @endforelse
 </table>
-@include('includes.scripts.remaining_time')
+@unless(isset($watchlist))
+    @include('includes.scripts.remaining_time')
+@endunless

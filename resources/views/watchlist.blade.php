@@ -18,12 +18,21 @@
                     <a href="#" v-on:click.prevent="showExpired" v-bind:class="{ active: expiredAreShown }">@lang('watchlist.expired')({{ count($expiredWatchlistAuctions) }})</a>
                     <a href="#" v-on:click.prevent="showSold" v-bind:class="{ active: soldAreShown }">@lang('watchlist.sold')({{ count($soldWatchlistAuctions) }})</a>
                 </p>
-                <div v-if="allAreShown">@include('includes.auction_table', ['auctions' => $watchlistAuctions, 'watchlist' => true])</div>
-                <div v-if="activeAreShown">@include('includes.auction_table', ['auctions' => $activeWatchlistAuctions, 'watchlist' => true])</div>
-                <div v-if="expiredAreShown">@include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions, 'watchlist' => true])</div>
-                <div v-if="soldAreShown">@include('includes.auction_table', ['auctions' => $soldWatchlistAuctions, 'watchlist' => true])</div>
+                <div v-if="allAreShown">
+                    @include('includes.auction_table', ['auctions' => $watchlistAuctions, 'watchlist' => true])
+                </div>
+                <div v-if="activeAreShown">
+                    @include('includes.auction_table', ['auctions' => $activeWatchlistAuctions, 'watchlist' => true])
+                </div>
+                <div v-if="expiredAreShown">
+                    @include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions, 'watchlist' => true])
+                </div>
+                <div v-if="soldAreShown">
+                    @include('includes.auction_table', ['auctions' => $soldWatchlistAuctions, 'watchlist' => true])
+                </div>
                 {!! Form::close() !!}
             </div>
         </main>
     </div>
+    @include('includes.scripts.remaining_time')
 @endsection

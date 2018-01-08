@@ -3,6 +3,11 @@
 
     for(let i = 0; i < remainingTimeElems.length; i++) {
         let countDownDate = new Date(remainingTimeElems[i].getAttribute('data-end-date')).getTime();
+
+        if(!countDownDate) {
+            continue;
+        }
+
         let now = new Date().getTime();
         let distance = countDownDate - now;
 
