@@ -17,6 +17,7 @@ Route::get('login', 'PageController@redirectHome');
 Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
 Route::get('/', 'PageController@home')->name('home');
 Route::get('isearch', 'PageController@isearch')->name('iSearch');
+Route::get('auction/{auction}/{auctionTitle?}', 'PageController@auctionDetail')->name('auctionDetail');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('watchlist', 'PageController@watchlist')->name('watchlist');
@@ -26,7 +27,6 @@ Route::middleware(['auth'])->group(function() {
     Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
     Route::get('newauction', 'PageController@newAuction')->name('newAuction');
     Route::post('addauction', 'PageController@addAuction')->name('addAuction');
-    Route::get('auction/{auction}/{auctionTitle?}', 'PageController@auctionDetail')->name('auctionDetail');
     Route::post('auction/{auction}/{auctionTitle?}/buyout', 'PageController@auctionBuyout')->name('auctionBuyout');
     Route::post('auction/{auction}/{auctionTitle?}/bid', 'PageController@addBid')->name('addBid');
     Route::post('auction/{auction}/{auctionTitle?}/addtowatchlist', 'PageController@addAuctionToWatchlist')->name('addAuctionToWatchlist');

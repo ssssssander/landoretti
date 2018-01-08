@@ -18,11 +18,7 @@
                 <p>{{ $auction->year }}</p>
             </td>
             <td class="price">€ {{ formatPrice($auction->min_price) }}</td>
-            <td class="end-date">
-                @if($auction->status == 'active') {{ formatDate($auction->end_date) }} @endif
-                @if($auction->status == 'expired') @lang('auction_table.expired') @endif
-                @if($auction->status == 'sold') @lang('auction_table.sold') @endif
-            </td>
+            <td class="end-date">{{ formatDate($auction->end_date) }}</td>
             <td class="remaining-time" @if($auction->status == 'active') data-end-date="{{ $auction->end_date }}" @endif>
                 @if($auction->status == 'expired') @lang('auction_table.expired') @endif
                 @if($auction->status == 'sold') @lang('auction_table.sold') @endif

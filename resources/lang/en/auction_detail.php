@@ -15,6 +15,7 @@ return [
     'dimensions' => 'Dimensions',
     'ask_a_question' => 'ASK A QUESTION ABOUT THIS AUCTION',
     'no_bids' => 'There are no bids for this auction yet',
-    'sold' => 'SOLD',
+    'sold' => 'Sold',
+    'no_auth' => 'Please log in or make an account to bid'
 
 ];

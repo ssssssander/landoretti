@@ -44,6 +44,7 @@
                     <div>
                         <p>{{ $auction->origin }}</p>
                     </div>
+                    @auth
                     @if($auction->status == 'active')
                         <div class="bid">
                             <div class="padding">
@@ -78,6 +79,10 @@
                     @else
                         <p class="sold">@lang('auction_detail.sold')</p>
                     @endif
+                    @endauth
+                    @guest
+                        <p>@lang('auction_detail.no_auth')</p>
+                    @endguest
                 </div>
             </div>
             <div class="bottom">
