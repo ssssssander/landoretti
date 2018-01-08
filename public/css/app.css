@@ -1031,3 +1031,12 @@ main form .row.cash .icons-euro {
 .watchlist-categories a:last-of-type {
   border-right: 0;
 }
+
+/* line 765, ../../resources/assets/sass/app.scss */
+.isearch .search input[type=search] {
+  width: 996px;
+}
+/* line 769, ../../resources/assets/sass/app.scss */
+.isearch h2 {
+  margin-top: 40px;
+}

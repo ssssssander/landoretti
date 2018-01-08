@@ -34,6 +34,3 @@
         </tr>
     @endforelse
 </table>
-@unless(isset($watchlist))
-    @include('includes.scripts.remaining_time')
-@endunless

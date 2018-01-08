@@ -15,4 +15,5 @@
             @include('includes.auction_table', ['auctions' => $soldAuctions])
         </main>
     </div>
+    @include('includes.scripts.remaining_time')
 @endsection

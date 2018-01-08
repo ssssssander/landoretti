@@ -64,6 +64,10 @@ class PageController extends Controller
         $query = $request->input('query');
         $searchResults = Auction::where('title', 'like', "%{$query}%")->get();
 
+        if(!$query) {
+            $searchResults = array();
+        }
+
         return view('isearch', compact('searchResults'));
     }
 
