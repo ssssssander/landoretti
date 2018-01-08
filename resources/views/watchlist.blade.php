@@ -26,5 +26,4 @@
             </div>
         </main>
     </div>
-    @include('includes.scripts.remaining_time')
 @endsection

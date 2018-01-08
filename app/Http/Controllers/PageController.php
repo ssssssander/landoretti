@@ -62,8 +62,9 @@ class PageController extends Controller
 
     public function iSearch(Request $request) {
         $query = $request->input('query');
+        $searchResults = Auction::where('title', 'like', "%{$query}%")->get();
 
-        return view('home', compact('query'));
+        return view('isearch', compact('searchResults'));
     }
 
     public function myAuctions(Request $request) {

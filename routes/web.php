@@ -16,7 +16,7 @@ Route::get('login', 'PageController@redirectHome');
 
 Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
 Route::get('/', 'PageController@home')->name('home');
-Route::get('isearch', 'PageController@isearch')->name('isearch');
+Route::get('isearch', 'PageController@isearch')->name('iSearch');
 
 Route::middleware(['auth'])->group(function() {
     Route::get('watchlist', 'PageController@watchlist')->name('watchlist');
