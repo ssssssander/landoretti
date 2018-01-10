@@ -25,7 +25,7 @@
 <body>
     @include('includes.logo', ['position' => 'top'])
     @include('includes.header')
-    @yield('content')
+    @yield('main')
     @include('includes.footer')
     @include('includes.logo', ['position' => 'bottom'])
     <script src="{{ mix('js/app.js') }}"></script>

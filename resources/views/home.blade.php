@@ -2,7 +2,7 @@
 
 @section('title', trans('home.home'))
 
-@section('content')
+@section('main')
     <img src="{{ asset('img/slideshow_home.png') }}" alt="Slideshow" class="slideshow-home">
     <div class="info">
         <h2>@lang('home.how_does_it_work')</h2>

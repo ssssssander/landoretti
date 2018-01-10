@@ -1,11 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('title', '404')
 
 @section('content')
-    <div class="wrapper">
-        <main>
-            <h1>404</h1>
-        </main>
-    </div>
+    <h1>404</h1>
 @endsection

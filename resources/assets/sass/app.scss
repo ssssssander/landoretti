@@ -364,12 +364,12 @@ footer {
         margin-top: 40px;
     }
 }
+.new-auction {
+    width: 750px;
+}
 main {
     margin: 80px 0 60px 0;
 
-    &.new-auction {
-        width: 750px;
-    }
     h1 {
         font-size: 45px;
         margin-bottom: 40px;
@@ -499,35 +499,33 @@ main {
         list-style-type: initial;
     }
 }
-.profile {
-    .profile-info {
-        padding: 20px 45px;
-        border: 1px solid $tertiary-color;
+.profile-info {
+    padding: 20px 45px;
+    border: 1px solid $tertiary-color;
 
-        h2 {
-            margin-bottom: 30px;
+    h2 {
+        margin-bottom: 30px;
+    }
+    .profile-info-col {
+        @extend .col;
+        border-right: 1px solid $tertiary-color;
+        margin-left: 45px;
+
+        &:first-of-type {
+            margin-left: 0;
         }
-        .profile-info-col {
-            @extend .col;
-            border-right: 1px solid $tertiary-color;
-            margin-left: 45px;
-
-            &:first-of-type {
-                margin-left: 0;
-            }
-            &:last-of-type {
-                border-right: 0;
-            }
-            p {
-                margin-bottom: 2px;
-            }
-            .sub-title {
-                color: $secondary-color;
-                font-weight: bold;
-            }
-            .item:first-of-type {
-                margin-bottom: 30px;
-            }
+        &:last-of-type {
+            border-right: 0;
+        }
+        p {
+            margin-bottom: 2px;
+        }
+        .sub-title {
+            color: $secondary-color;
+            font-weight: bold;
+        }
+        .item:first-of-type {
+            margin-bottom: 30px;
         }
     }
 }
@@ -551,6 +549,11 @@ main {
     img {
         width: 100%;
         height: 100%;
+        transition: .3s;
+
+        &:hover {
+            filter: brightness(50%);
+        }
     }
     .none {
         padding: 40px;
