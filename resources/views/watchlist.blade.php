@@ -19,16 +19,16 @@
                     <a href="#" v-on:click.prevent="showSold" v-bind:class="{ active: soldAreShown }">@lang('watchlist.sold')({{ count($soldWatchlistAuctions) }})</a>
                 </p>
                 <div v-if="allAreShown">
-                    @include('includes.auction_table', ['auctions' => $watchlistAuctions, 'watchlist' => true])
+                    @include('includes.auction_table', ['auctions' => $watchlistAuctions])
                 </div>
                 <div v-if="activeAreShown">
-                    @include('includes.auction_table', ['auctions' => $activeWatchlistAuctions, 'watchlist' => true])
+                    @include('includes.auction_table', ['auctions' => $activeWatchlistAuctions])
                 </div>
                 <div v-if="expiredAreShown">
-                    @include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions, 'watchlist' => true])
+                    @include('includes.auction_table', ['auctions' => $expiredWatchlistAuctions])
                 </div>
                 <div v-if="soldAreShown">
-                    @include('includes.auction_table', ['auctions' => $soldWatchlistAuctions, 'watchlist' => true])
+                    @include('includes.auction_table', ['auctions' => $soldWatchlistAuctions])
                 </div>
                 {!! Form::close() !!}
             </div>

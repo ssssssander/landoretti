@@ -18,6 +18,12 @@ class PageController extends Controller
         return view('home');
     }
 
+    public function art(Request $request) {
+        $auctions = Auction::where('status', 'active')->paginate(12);
+
+        return view('art', compact('request', 'auctions'));
+    }
+
     public function watchlist(Request $request) {
         $watchlistAuctions = Watchlist
             ::join('users', function($join) {
@@ -62,13 +68,9 @@ class PageController extends Controller
 
     public function iSearch(Request $request) {
         $query = $request->input('query');
-        $searchResults = Auction::where('title', 'like', "%{$query}%")->get();
+        $searchResults = Auction::where('title', 'like', "%{$query}%")->paginate(8);
 
-        if(!$query) {
-            $searchResults = array();
-        }
-
-        return view('isearch', compact('searchResults'));
+        return view('isearch', compact('request', 'searchResults'));
     }
 
     public function myAuctions(Request $request) {

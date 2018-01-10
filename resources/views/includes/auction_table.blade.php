@@ -1,3 +1,4 @@
+@if(Route::currentRouteName() == 'isearch') {!! $auctions->appends($request->except(['page']))->links() !!} @endif
 <table class="auction-table">
     <tr>
         <th colspan="2">@lang('auction_table.auction_details')</th>
@@ -8,7 +9,7 @@
     @forelse($auctions as $auction)
         <tr>
             <td class="image">
-                @isset($watchlist) {!! Form::checkbox("auctions[{$loop->index}]", $auction->id) !!} @endisset
+                @if(Route::currentRouteName() == 'watchlist') {!! Form::checkbox("auctions[{$loop->index}]", $auction->id) !!} @endif
                 <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
                     <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
                 </a>
@@ -30,3 +31,4 @@
         </tr>
     @endforelse
 </table>
+@if(Route::currentRouteName() == 'isearch') {!! $auctions->appends($request->except(['page']))->links() !!} @endif

@@ -16,6 +16,7 @@ Route::get('login', 'PageController@redirectHome');
 
 Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
 Route::get('/', 'PageController@home')->name('home');
+Route::get('art', 'PageController@art')->name('art');
 Route::get('isearch', 'PageController@isearch')->name('iSearch');
 Route::get('auction/{auction}/{auctionTitle?}', 'PageController@auctionDetail')->name('auctionDetail');
 

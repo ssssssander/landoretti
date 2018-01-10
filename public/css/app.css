@@ -525,111 +525,110 @@ header .logout form input[type=submit] {
 }
 /* line 305, ../../resources/assets/sass/app.scss */
 .popular img {
-  cursor: pointer;
   transition: .3s;
 }
-/* line 309, ../../resources/assets/sass/app.scss */
+/* line 308, ../../resources/assets/sass/app.scss */
 .popular img:hover {
   filter: brightness(50%);
 }
 
-/* line 314, ../../resources/assets/sass/app.scss */
+/* line 313, ../../resources/assets/sass/app.scss */
 footer {
   border-top: 1px solid #eaeaea;
 }
-/* line 317, ../../resources/assets/sass/app.scss */
+/* line 316, ../../resources/assets/sass/app.scss */
 footer ul {
   margin-bottom: 22px;
 }
-/* line 320, ../../resources/assets/sass/app.scss */
+/* line 319, ../../resources/assets/sass/app.scss */
 footer ul li {
   font-size: 14px;
 }
-/* line 323, ../../resources/assets/sass/app.scss */
+/* line 322, ../../resources/assets/sass/app.scss */
 footer ul li:first-of-type {
   color: #000000;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 328, ../../resources/assets/sass/app.scss */
+/* line 327, ../../resources/assets/sass/app.scss */
 footer ul li a {
   color: #01a6a0;
 }
-/* line 333, ../../resources/assets/sass/app.scss */
+/* line 332, ../../resources/assets/sass/app.scss */
 footer .footer-item, footer .sitemap, footer .contact {
   padding-top: 40px;
   display: inline-block;
 }
-/* line 337, ../../resources/assets/sass/app.scss */
+/* line 336, ../../resources/assets/sass/app.scss */
 footer .sitemap {
   border-right: 1px solid #eaeaea;
   padding-bottom: 65px;
 }
-/* line 342, ../../resources/assets/sass/app.scss */
+/* line 341, ../../resources/assets/sass/app.scss */
 footer .contact {
   vertical-align: top;
   padding-left: 30px;
 }
-/* line 347, ../../resources/assets/sass/app.scss */
+/* line 346, ../../resources/assets/sass/app.scss */
 footer .contact ul:first-of-type li {
   margin-bottom: 20px;
 }
-/* line 350, ../../resources/assets/sass/app.scss */
+/* line 349, ../../resources/assets/sass/app.scss */
 footer .contact div {
   margin-top: 30px;
 }
-/* line 353, ../../resources/assets/sass/app.scss */
+/* line 352, ../../resources/assets/sass/app.scss */
 footer .contact div.copyright {
   margin-top: 86px;
   font-size: 12px;
 }
-/* line 360, ../../resources/assets/sass/app.scss */
+/* line 359, ../../resources/assets/sass/app.scss */
 footer .search input[type=search] {
   width: 183px;
 }
-/* line 364, ../../resources/assets/sass/app.scss */
+/* line 363, ../../resources/assets/sass/app.scss */
 footer .social {
   margin-top: 40px;
 }
 
-/* line 368, ../../resources/assets/sass/app.scss */
+/* line 367, ../../resources/assets/sass/app.scss */
 main {
   margin: 80px 0 60px 0;
 }
-/* line 371, ../../resources/assets/sass/app.scss */
+/* line 370, ../../resources/assets/sass/app.scss */
 main.new-auction {
   width: 750px;
 }
-/* line 374, ../../resources/assets/sass/app.scss */
+/* line 373, ../../resources/assets/sass/app.scss */
 main h1 {
   font-size: 45px;
   margin-bottom: 40px;
 }
-/* line 379, ../../resources/assets/sass/app.scss */
+/* line 378, ../../resources/assets/sass/app.scss */
 main form label {
   color: #0a1e75;
   font-size: 20px;
   margin-bottom: 10px;
   display: block;
 }
-/* line 385, ../../resources/assets/sass/app.scss */
+/* line 384, ../../resources/assets/sass/app.scss */
 main form input:not([type=submit]):not([type=checkbox]), main form select, main form textarea {
   padding: 15px;
   width: 100%;
   height: 47px;
   color: #4e4e4e;
 }
-/* line 392, ../../resources/assets/sass/app.scss */
+/* line 391, ../../resources/assets/sass/app.scss */
 main form input:not([type=submit]):not([type=checkbox]).has-error, main form select.has-error, main form textarea.has-error {
   background-color: #fff1f1;
   border-color: #fd0100;
 }
-/* line 397, ../../resources/assets/sass/app.scss */
+/* line 396, ../../resources/assets/sass/app.scss */
 main form textarea {
   font-family: "Arimo", sans-serif;
   height: 120px;
 }
-/* line 401, ../../resources/assets/sass/app.scss */
+/* line 400, ../../resources/assets/sass/app.scss */
 main form input[type=submit] + a {
   width: 200px;
   display: inline-block;
@@ -638,7 +637,7 @@ main form input[type=submit] + a {
   margin-top: 20px;
   font-size: 13px;
 }
-/* line 409, ../../resources/assets/sass/app.scss */
+/* line 408, ../../resources/assets/sass/app.scss */
 main form .upload {
   background-color: #4e4e4e;
   color: #ffffff;
@@ -653,283 +652,283 @@ main form .upload {
   font-size: 14px;
   cursor: pointer;
 }
-/* line 423, ../../resources/assets/sass/app.scss */
+/* line 422, ../../resources/assets/sass/app.scss */
 main form p {
   font-size: 14px;
 }
-/* line 426, ../../resources/assets/sass/app.scss */
+/* line 425, ../../resources/assets/sass/app.scss */
 main form .agree-tac {
   margin-top: 80px;
 }
-/* line 429, ../../resources/assets/sass/app.scss */
+/* line 428, ../../resources/assets/sass/app.scss */
 main form .agree-tac input[type=checkbox] + label {
   color: #4e4e4e;
   font-size: 15px;
   display: initial;
   margin-left: 10px;
 }
-/* line 435, ../../resources/assets/sass/app.scss */
+/* line 434, ../../resources/assets/sass/app.scss */
 main form .agree-tac input[type=checkbox] + label + a {
   text-decoration: underline;
   color: #01a6a0;
 }
-/* line 441, ../../resources/assets/sass/app.scss */
+/* line 440, ../../resources/assets/sass/app.scss */
 main form .row {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
-/* line 446, ../../resources/assets/sass/app.scss */
+/* line 445, ../../resources/assets/sass/app.scss */
 main form .row .row-item {
   width: 48%;
   display: inline-block;
 }
-/* line 450, ../../resources/assets/sass/app.scss */
+/* line 449, ../../resources/assets/sass/app.scss */
 main form .row .row-item.has-error {
   border: 1px solid #fd0100;
 }
-/* line 454, ../../resources/assets/sass/app.scss */
+/* line 453, ../../resources/assets/sass/app.scss */
 main form .row .half {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-/* line 459, ../../resources/assets/sass/app.scss */
+/* line 458, ../../resources/assets/sass/app.scss */
 main form .row .full {
   width: 100%;
 }
-/* line 462, ../../resources/assets/sass/app.scss */
+/* line 461, ../../resources/assets/sass/app.scss */
 main form .row .third {
   width: 32%;
 }
-/* line 465, ../../resources/assets/sass/app.scss */
+/* line 464, ../../resources/assets/sass/app.scss */
 main form .row .two-third {
   width: 64%;
 }
-/* line 469, ../../resources/assets/sass/app.scss */
+/* line 468, ../../resources/assets/sass/app.scss */
 main form .row .optional label {
   display: inline-block;
 }
-/* line 472, ../../resources/assets/sass/app.scss */
+/* line 471, ../../resources/assets/sass/app.scss */
 main form .row .optional label:last-of-type {
   font-size: 15px;
 }
-/* line 478, ../../resources/assets/sass/app.scss */
+/* line 477, ../../resources/assets/sass/app.scss */
 main form .row.cash .row-item {
   position: relative;
 }
-/* line 481, ../../resources/assets/sass/app.scss */
+/* line 480, ../../resources/assets/sass/app.scss */
 main form .row.cash input {
   padding-left: 30px;
 }
-/* line 484, ../../resources/assets/sass/app.scss */
+/* line 483, ../../resources/assets/sass/app.scss */
 main form .row.cash .icons-euro {
   position: absolute;
   top: 44.5px;
   left: 10px;
 }
 
-/* line 493, ../../resources/assets/sass/app.scss */
+/* line 492, ../../resources/assets/sass/app.scss */
 .errors {
   padding: 30px 50px;
   margin: 60px 0 40px 0;
   color: #fd0100;
   background-color: #fff1f1;
 }
-/* line 499, ../../resources/assets/sass/app.scss */
+/* line 498, ../../resources/assets/sass/app.scss */
 .errors ul {
   list-style-type: initial;
 }
 
-/* line 504, ../../resources/assets/sass/app.scss */
+/* line 503, ../../resources/assets/sass/app.scss */
 .profile .profile-info {
   padding: 20px 45px;
   border: 1px solid #eaeaea;
 }
-/* line 508, ../../resources/assets/sass/app.scss */
+/* line 507, ../../resources/assets/sass/app.scss */
 .profile .profile-info h2 {
   margin-bottom: 30px;
 }
-/* line 511, ../../resources/assets/sass/app.scss */
+/* line 510, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col {
   border-right: 1px solid #eaeaea;
   margin-left: 45px;
 }
-/* line 516, ../../resources/assets/sass/app.scss */
+/* line 515, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col:first-of-type {
   margin-left: 0;
 }
-/* line 519, ../../resources/assets/sass/app.scss */
+/* line 518, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col:last-of-type {
   border-right: 0;
 }
-/* line 522, ../../resources/assets/sass/app.scss */
+/* line 521, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col p {
   margin-bottom: 2px;
 }
-/* line 525, ../../resources/assets/sass/app.scss */
+/* line 524, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col .sub-title {
   color: #0a1e75;
   font-weight: bold;
 }
-/* line 529, ../../resources/assets/sass/app.scss */
+/* line 528, ../../resources/assets/sass/app.scss */
 .profile .profile-info .profile-info-col .item:first-of-type {
   margin-bottom: 30px;
 }
 
-/* line 535, ../../resources/assets/sass/app.scss */
+/* line 534, ../../resources/assets/sass/app.scss */
 .auction-table {
   width: 100%;
   border: 1px solid #eaeaea;
   border-collapse: collapse;
   margin: 30px 0 60px 0;
 }
-/* line 541, ../../resources/assets/sass/app.scss */
+/* line 540, ../../resources/assets/sass/app.scss */
 .auction-table th {
   background-color: #f8f8f8;
   padding: 10px 0;
   text-align: center;
   font-weight: normal;
 }
-/* line 547, ../../resources/assets/sass/app.scss */
+/* line 546, ../../resources/assets/sass/app.scss */
 .auction-table td {
   border: 1px solid #eaeaea;
   text-align: center;
   font-size: 20px;
 }
-/* line 552, ../../resources/assets/sass/app.scss */
+/* line 551, ../../resources/assets/sass/app.scss */
 .auction-table img {
   width: 100%;
   height: 100%;
 }
-/* line 556, ../../resources/assets/sass/app.scss */
+/* line 555, ../../resources/assets/sass/app.scss */
 .auction-table .none {
   padding: 40px;
 }
-/* line 559, ../../resources/assets/sass/app.scss */
+/* line 558, ../../resources/assets/sass/app.scss */
 .auction-table .image {
   border-right: 0;
   width: 150px;
   height: 150px;
   position: relative;
 }
-/* line 565, ../../resources/assets/sass/app.scss */
+/* line 564, ../../resources/assets/sass/app.scss */
 .auction-table .image input[type=checkbox] {
   position: absolute;
   top: 60px;
   left: -40px;
 }
-/* line 571, ../../resources/assets/sass/app.scss */
+/* line 570, ../../resources/assets/sass/app.scss */
 .auction-table .title {
   border-left: 0;
   text-align: left;
   padding: 0 40px;
   font-size: 22px;
 }
-/* line 577, ../../resources/assets/sass/app.scss */
+/* line 576, ../../resources/assets/sass/app.scss */
 .auction-table .title a {
   color: #4e4e4e;
 }
-/* line 580, ../../resources/assets/sass/app.scss */
+/* line 579, ../../resources/assets/sass/app.scss */
 .auction-table .title p {
   color: #0a1e75;
   font-size: 18px;
 }
-/* line 585, ../../resources/assets/sass/app.scss */
+/* line 584, ../../resources/assets/sass/app.scss */
 .auction-table .price, .auction-table .end-date, .auction-table .remaining-time {
   width: 17%;
   padding: 0 5px;
 }
 
-/* line 591, ../../resources/assets/sass/app.scss */
+/* line 590, ../../resources/assets/sass/app.scss */
 .auction-detail h1 {
   margin-bottom: 15px;
 }
-/* line 594, ../../resources/assets/sass/app.scss */
+/* line 593, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info {
   font-size: 14px;
 }
-/* line 598, ../../resources/assets/sass/app.scss */
+/* line 597, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .icons-hamburger {
   margin-left: 5px;
 }
-/* line 601, ../../resources/assets/sass/app.scss */
+/* line 600, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids ol {
   padding: 20px 30px;
   margin-top: 30px;
   border: 1px solid #eaeaea;
 }
-/* line 606, ../../resources/assets/sass/app.scss */
+/* line 605, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .you {
   background-color: #eaeaea;
 }
-/* line 611, ../../resources/assets/sass/app.scss */
+/* line 610, ../../resources/assets/sass/app.scss */
 .auction-detail .top {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-/* line 616, ../../resources/assets/sass/app.scss */
+/* line 615, ../../resources/assets/sass/app.scss */
 .auction-detail .top img {
   width: 710px;
   height: 502px;
 }
-/* line 621, ../../resources/assets/sass/app.scss */
+/* line 620, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side {
   width: 250px;
   text-align: right;
 }
-/* line 625, ../../resources/assets/sass/app.scss */
+/* line 624, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .sold {
   font-size: 60px;
   font-weight: bold;
 }
-/* line 629, ../../resources/assets/sass/app.scss */
+/* line 628, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div {
   margin-bottom: 15px;
   padding-bottom: 20px;
 }
-/* line 633, ../../resources/assets/sass/app.scss */
+/* line 632, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div * {
   margin-bottom: 5px;
 }
-/* line 636, ../../resources/assets/sass/app.scss */
+/* line 635, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div.border-bottom {
   border-bottom: 1px solid #eaeaea;
 }
-/* line 639, ../../resources/assets/sass/app.scss */
+/* line 638, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 {
   color: #000000;
   font-size: 27px;
 }
-/* line 643, ../../resources/assets/sass/app.scss */
+/* line 642, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 + p {
   color: #0a1e75;
 }
-/* line 648, ../../resources/assets/sass/app.scss */
+/* line 647, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time {
   color: #01a6a0;
 }
-/* line 651, ../../resources/assets/sass/app.scss */
+/* line 650, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time + span {
   color: #01a6a0;
 }
-/* line 656, ../../resources/assets/sass/app.scss */
+/* line 655, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid {
   color: #0a1e75;
   border: 1px solid #eaeaea;
   padding-top: 20px;
 }
-/* line 661, ../../resources/assets/sass/app.scss */
+/* line 660, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .padding {
   padding: 0 20px;
 }
-/* line 664, ../../resources/assets/sass/app.scss */
+/* line 663, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .estimated-price {
   font-size: 25px;
   font-weight: bold;
 }
-/* line 668, ../../resources/assets/sass/app.scss */
+/* line 667, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .buyout {
   color: #01a6a0;
   text-decoration: underline;
@@ -938,41 +937,41 @@ main form .row.cash .icons-euro {
   border: 0;
   background-color: #ffffff;
 }
-/* line 676, ../../resources/assets/sass/app.scss */
+/* line 675, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form {
   display: flex;
   justify-content: flex-end;
 }
-/* line 680, ../../resources/assets/sass/app.scss */
+/* line 679, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-input {
   width: 128px;
   border: 10px solid #01a6a0;
   vertical-align: middle;
   outline: none;
 }
-/* line 686, ../../resources/assets/sass/app.scss */
+/* line 685, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-submit {
   width: 120px;
   display: inline-block;
 }
-/* line 692, ../../resources/assets/sass/app.scss */
+/* line 691, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container {
   text-align: center;
   display: block;
 }
-/* line 696, ../../resources/assets/sass/app.scss */
+/* line 695, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .icons-hamburger {
   margin-bottom: 0;
   vertical-align: baseline;
 }
-/* line 700, ../../resources/assets/sass/app.scss */
+/* line 699, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .add-to-watchlist {
   color: #0a1e75;
   text-decoration: underline;
   border: 0;
   background-color: #ffffff;
 }
-/* line 710, ../../resources/assets/sass/app.scss */
+/* line 709, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom {
   padding: 20px;
   border: 1px solid #eaeaea;
@@ -981,27 +980,27 @@ main form .row.cash .icons-euro {
   justify-content: space-between;
   min-height: 300px;
 }
-/* line 718, ../../resources/assets/sass/app.scss */
+/* line 717, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom h3 {
   font-weight: bold;
   margin: 20px 0 10px 0;
 }
-/* line 722, ../../resources/assets/sass/app.scss */
+/* line 721, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom p {
   padding-right: 20px;
   margin-bottom: 20px;
 }
-/* line 726, ../../resources/assets/sass/app.scss */
+/* line 725, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-texts {
   width: 750px;
   border-right: 1px solid #eaeaea;
 }
-/* line 730, ../../resources/assets/sass/app.scss */
+/* line 729, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra {
   width: 200px;
   position: relative;
 }
-/* line 734, ../../resources/assets/sass/app.scss */
+/* line 733, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra .big-button, .auction-detail .bottom .auction-extra .top .side .bid .bid-form .price-submit, .auction-detail .top .side .bid .bid-form .bottom .auction-extra .price-submit {
   background-color: #4e4e4e;
   text-align: center;
@@ -1013,30 +1012,87 @@ main form .row.cash .icons-euro {
   bottom: 0;
 }
 
-/* line 747, ../../resources/assets/sass/app.scss */
+/* line 746, ../../resources/assets/sass/app.scss */
 .watchlist-categories {
   height: 26px;
 }
-/* line 750, ../../resources/assets/sass/app.scss */
+/* line 749, ../../resources/assets/sass/app.scss */
 .watchlist-categories a {
   color: #4e4e4e;
   padding: 0 5px 2px 0;
   border-right: 1px solid #4e4e4e;
 }
-/* line 755, ../../resources/assets/sass/app.scss */
+/* line 754, ../../resources/assets/sass/app.scss */
 .watchlist-categories a.active {
   border-bottom: 3px solid #eaeaea;
 }
-/* line 758, ../../resources/assets/sass/app.scss */
+/* line 757, ../../resources/assets/sass/app.scss */
 .watchlist-categories a:last-of-type {
   border-right: 0;
 }
 
-/* line 765, ../../resources/assets/sass/app.scss */
+/* line 764, ../../resources/assets/sass/app.scss */
 .isearch .search input[type=search] {
   width: 996px;
 }
-/* line 769, ../../resources/assets/sass/app.scss */
+/* line 768, ../../resources/assets/sass/app.scss */
 .isearch h2 {
   margin-top: 40px;
+}
+
+/* line 772, ../../resources/assets/sass/app.scss */
+.auction-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 776, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-info {
+  padding: 20px;
+}
+/* line 779, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card {
+  width: 250px;
+  margin: 0 3px 50px 3px;
+  max-height: 400px;
+  overflow: auto;
+}
+/* line 785, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card img {
+  width: 100%;
+  height: 180px;
+  transition: .3s;
+}
+/* line 790, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card img:hover {
+  filter: brightness(50%);
+}
+/* line 794, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card .small-button {
+  margin: 0;
+}
+/* line 797, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card .title {
+  font-size: 20px;
+}
+/* line 800, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card .title a {
+  color: #4e4e4e;
+}
+/* line 804, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card .year {
+  color: #0a1e75;
+}
+/* line 807, ../../resources/assets/sass/app.scss */
+.auction-cards .auction-card .remaining-time {
+  line-height: 2.5;
+  font-size: 14px;
+}
+
+/* line 813, ../../resources/assets/sass/app.scss */
+.pagination {
+  text-align: right;
+}
+/* line 816, ../../resources/assets/sass/app.scss */
+.pagination li {
+  display: inline-block;
 }
