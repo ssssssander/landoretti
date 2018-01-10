@@ -1,8 +1,6 @@
 require('./bootstrap');
 window.Vue = require('vue');
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
 var login = new Vue({
   el: '#login',
   data: {
