@@ -25,6 +25,7 @@ class CreateAuctionsTable extends Migration
             $table->text('description');
             $table->text('condition');
             $table->string('origin', 255);
+            $table->string('artist', 255);
             $table->string('artwork_image_path');
             $table->string('signature_image_path');
             $table->string('optional_image_path')->nullable();

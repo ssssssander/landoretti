@@ -16,7 +16,7 @@
             </td>
             <td class="title">
                 <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">{{ $auction->title }}</a>
-                <p>{{ $auction->year }}</p>
+                <p>{{ $auction->year }}, {{ $auction->artist }}</p>
             </td>
             <td class="price">€ {{ formatPrice($auction->min_price) }}</td>
             <td class="end-date">{{ formatDate($auction->end_date) }}</td>

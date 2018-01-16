@@ -34,6 +34,7 @@ class AddAuction extends FormRequest
             'description' => 'required|string|max:10000',
             'condition' => 'required|string|max:10000',
             'origin' => 'required|string|max:255',
+            'artist' => 'required|string|max:255',
             'artwork_image' => 'required|image|max:10000',
             'signature_image' => 'required|image|max:10000',
             'optional_image' => 'nullable|image|max:10000',

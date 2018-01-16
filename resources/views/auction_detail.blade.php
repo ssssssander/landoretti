@@ -29,7 +29,7 @@
             <div class="side">
                 <div class="border-bottom">
                     <h2>{{ $auction->title }}</h2>
-                    <p>{{ $auction->year }}</p>
+                    <p>{{ $auction->year }}, {{ $auction->artist }}</p>
                 </div>
                 @if($auction->status == 'active')
                     <div class="border-bottom">
@@ -44,40 +44,40 @@
                     <p>{{ $auction->origin }}</p>
                 </div>
                 @auth
-                @if($auction->status == 'active')
-                    <div class="bid">
-                        <div class="padding">
-                            <p>@lang('auction_detail.estimated_price')</p>
-                            <p class="estimated-price">
-                                € {{ formatPrice($auction->min_price) }} - € {{ formatPrice($auction->max_price) }}
-                            </p>
-                            @isset($auction->buyout_price)
-                                {!! Form::open(['route' => ['auctionBuyout', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
-                                {!! Form::submit(trans('auction_detail.buy_now', ['buyout_price' => formatPrice($auction->buyout_price)]), ['class' => 'buyout']) !!}
-                                {!! Form::close() !!}
-                            @endisset
-                            <span>
-                                {{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }} ({{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }})
+                    @if($auction->status == 'active')
+                        <div class="bid">
+                            <div class="padding">
+                                <p>@lang('auction_detail.estimated_price')</p>
+                                <p class="estimated-price">
+                                    € {{ formatPrice($auction->min_price) }} - € {{ formatPrice($auction->max_price) }}
+                                </p>
+                                @isset($auction->buyout_price)
+                                    {!! Form::open(['route' => ['auctionBuyout', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
+                                    {!! Form::submit(trans('auction_detail.buy_now', ['buyout_price' => formatPrice($auction->buyout_price)]), ['class' => 'buyout']) !!}
+                                    {!! Form::close() !!}
+                                @endisset
+                                <span>
+                                    {{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }} ({{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }})
+                                </span>
+                            </div>
+                            {!! Form::open(['route' => ['addBid', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'bid-form']) !!}
+                            {!! Form::number('bid_price', '', ['class' => 'price-input ' . ($errors->has('bid_price') ? 'has-error' : ''), 'min' => 0, 'max' => 99999999]) !!}
+                            {!! Form::submit(trans('auction_detail.bid_now'), ['class' => 'price-submit']) !!}
+                            {!! Form::close() !!}
+                            <span class="add-to-watchlist-container">
+                                @if(!$isInWatchlist)
+                                    {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
+                                    <span class="icons-hamburger"></span>
+                                    {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
+                                    {!! Form::close() !!}
+                                @else
+                                    <p>@lang('auction_detail.in_watchlist')</p>
+                                @endif
                             </span>
                         </div>
-                        {!! Form::open(['route' => ['addBid', 'auction' => $auction, 'auctionTitle' => clean($auction->title)], 'class' => 'bid-form']) !!}
-                        {!! Form::number('bid_price', '', ['class' => 'price-input ' . ($errors->has('bid_price') ? 'has-error' : ''), 'min' => 0, 'max' => 99999999]) !!}
-                        {!! Form::submit(trans('auction_detail.bid_now'), ['class' => 'price-submit']) !!}
-                        {!! Form::close() !!}
-                        <span class="add-to-watchlist-container">
-                            @if(!$isInWatchlist)
-                                {!! Form::open(['route' => ['addAuctionToWatchlist', 'auction' => $auction, 'auctionTitle' => clean($auction->title)]]) !!}
-                                <span class="icons-hamburger"></span>
-                                {!! Form::submit(trans('auction_detail.add_to_watchlist'), ['class' => 'add-to-watchlist']) !!}
-                                {!! Form::close() !!}
-                            @else
-                                <p>@lang('auction_detail.in_watchlist')</p>
-                            @endif
-                        </span>
-                    </div>
-                @else
-                    <p class="sold">@lang('auction_detail.sold')</p>
-                @endif
+                    @else
+                        <p class="sold">@lang('auction_detail.sold')</p>
+                    @endif
                 @endauth
                 @guest
                     <p>@lang('auction_detail.no_auth')</p>
@@ -92,6 +92,8 @@
                 <p>{{ $auction->condition }}</p>
             </div>
             <div class="auction-extra">
+                <h3>@lang('auction_detail.artist')</h3>
+                <p>{{ $auction->artist }}</p>
                 <h3>@lang('auction_detail.dimensions')</h3>
                 <p>{{ $auction->width }} x {{ $auction->height }} {{ $auction->depth ? 'x ' . $auction->depth : '' }} cm</p>
                 <a href="#" class="big-button">@lang('auction_detail.ask_a_question')</a>

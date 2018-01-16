@@ -149,6 +149,7 @@ return [
         'description' => trans('new_auction.description'),
         'condition' => trans('new_auction.condition'),
         'origin' => trans('new_auction.origin'),
+        'artist' => trans('new_auction.artist'),
         'condition' => trans('new_auction.condition'),
         'min_price' => trans('new_auction.min_price'),
         'max_price' => trans('new_auction.max_price'),

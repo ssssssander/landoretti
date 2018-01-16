@@ -3,6 +3,7 @@
 return [
 
     'new_auction' => 'Add a new auction',
+
     'style' => 'Style',
     'title' => 'Auction title',
     'year' => 'Year',
@@ -16,6 +17,8 @@ return [
     'condition_placeholder' => 'What\'s the condition of the artwork?',
     'origin' => 'Origin',
     'origin_placeholder' => 'What\'s the origin of the artwork?',
+    'artist' => 'Artist',
+    'artist_placeholder' => 'Who\'s the artist that made the artwork?',
     'photos' => 'Photos',
     'photos_texts' => [
         'photos_text1' => 'Please upload one picture with the signature of the artwork and one picture of the artwork.',

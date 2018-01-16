@@ -11,9 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
+// $ npm run watch
 mix.js('resources/assets/js/app.js', 'public/js');
 
-// Compass compiles Sass
+// Compass compiles Sass ($ compass watch)
 // mix.sass('resources/assets/sass/app.scss', 'public/css');
 
 if(mix.inProduction()) {

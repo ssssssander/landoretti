@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWatchlistsTable extends Migration
+class CreateWatchlistItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateWatchlistsTable extends Migration
      */
     public function up()
     {
-        Schema::create('watchlists', function (Blueprint $table) {
+        Schema::create('watchlist_items', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('auction_id')->unsigned();
@@ -31,6 +31,6 @@ class CreateWatchlistsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('watchlists');
+        Schema::dropIfExists('watchlist_items');
     }
 }

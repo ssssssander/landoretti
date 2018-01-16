@@ -57,6 +57,12 @@
         </div>
         <div class="row">
             <div class="row-item full">
+                {!! Form::label('artist', trans('new_auction.artist')) !!}
+                {!! Form::text('artist', '', ['placeholder' => trans('new_auction.artist_placeholder'),'class' => $errors->has('artist') ? 'has-error' : '', 'maxlength' => 255]) !!}
+            </div>
+        </div>
+        <div class="row">
+            <div class="row-item full">
                 {!! Form::label('photos', trans('new_auction.photos')) !!}
                 @foreach(trans('new_auction.photos_texts') as $photos_text)
                     <p>{{ $photos_text }}</p>

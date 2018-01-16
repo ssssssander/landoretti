@@ -12,6 +12,7 @@ return [
     'in_watchlist' => 'in your watchlist',
     'description' => 'Description',
     'condition' => 'Condition',
+    'artist' => 'Artist',
     'dimensions' => 'Dimensions',
     'ask_a_question' => 'ASK A QUESTION ABOUT THIS AUCTION',
     'no_bids' => 'There are no bids for this auction yet',

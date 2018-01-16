@@ -7,9 +7,8 @@ use App\Http\Requests\AddAuction;
 use App\Http\Requests\AddBid;
 use App\Auction;
 use App\Bid;
-use App\Watchlist;
+use App\WatchlistItem;
 use Auth;
-use App;
 use DateTime;
 
 class PageController extends Controller
@@ -25,12 +24,12 @@ class PageController extends Controller
     }
 
     public function watchlist(Request $request) {
-        $watchlistAuctions = Watchlist
+        $watchlistAuctions = WatchlistItem
             ::join('users', function($join) {
-                $join->on('watchlists.user_id', 'users.id')
-                ->where('watchlists.user_id', Auth::id());
+                $join->on('watchlist_items.user_id', 'users.id')
+                ->where('watchlist_items.user_id', Auth::id());
             })
-            ->join('auctions', 'watchlists.auction_id', 'auctions.id')->get();
+            ->join('auctions', 'watchlist_items.auction_id', 'auctions.id')->get();
 
         $activeWatchlistAuctions = $watchlistAuctions->where('status', 'active');
         $expiredWatchlistAuctions = $watchlistAuctions->where('status', 'expired');
@@ -43,7 +42,7 @@ class PageController extends Controller
         $auctionIds = $request->input('auctions.*');
 
         for($i = 0; $i < count($auctionIds); $i++) {
-            $watchlistAuction = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auctionIds[$i]]]);
+            $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auctionIds[$i]]]);
             $isInWatchlist = !$watchlistAuction->get()->isEmpty();
 
             if($isInWatchlist) {
@@ -55,7 +54,7 @@ class PageController extends Controller
     }
 
     public function clearWatchlist(Request $request) {
-        Watchlist::where('user_id', Auth::id())->delete();
+        WatchlistItem::where('user_id', Auth::id())->delete();
 
         return redirect()->back();
     }
@@ -114,6 +113,7 @@ class PageController extends Controller
             'description' => $request->description,
             'condition' => $request->condition,
             'origin' => $request->origin,
+            'artist' => $request->artist,
             'artwork_image_path' => $artworkImagePath,
             'signature_image_path' => $signatureImagePath,
             'optional_image_path' => $optionalImagePath,
@@ -127,7 +127,7 @@ class PageController extends Controller
     }
 
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
-        $watchlistAuction = Watchlist::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
+        $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
         $isInWatchlist = !$watchlistAuction->isEmpty();
         $amountOfBids = $auction->bids->count();
         $amountOfBidsByCurrentUser = $auction->bids->where('user_id', Auth::id())->count();
@@ -157,8 +157,11 @@ class PageController extends Controller
     }
 
     public function addAuctionToWatchlist(Request $request, Auction $auction, $auctionTitle = null) {
-        if($auction->status == 'active') {
-            Watchlist::create([
+        $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
+        $isInWatchlist = !$watchlistAuction->isEmpty();
+
+        if($auction->status == 'active' && !$isInWatchlist) {
+            WatchlistItem::create([
                 'user_id' => Auth::id(),
                 'auction_id' => $auction->id,
             ]);

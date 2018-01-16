@@ -731,7 +731,6 @@ main {
         }
         .auction-extra {
             width: 200px;
-            position: relative;
 
             .big-button {
                 background-color: $primary-color;
@@ -740,8 +739,6 @@ main {
                 color: $white;
                 font-size: 17px;
                 margin-top: 50px;
-                position: absolute;
-                bottom: 0;
             }
         }
     }

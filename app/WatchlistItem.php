@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Watchlist extends Model
+class WatchlistItem extends Model
 {
     protected $fillable = [
         'user_id', 'auction_id',
