@@ -1,5 +1,10 @@
 <?php
 
+Breadcrumbs::register('errors.404', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('404');
+});
+
 Breadcrumbs::register('home', function ($breadcrumbs) {
     $breadcrumbs->push(trans('home.home'), route('home'));
 });
