@@ -9,7 +9,10 @@
     @forelse($auctions as $auction)
         <tr>
             <td class="image">
-                @if(Route::currentRouteName() == 'watchlist') {!! Form::checkbox("auctions[{$loop->index}]", $auction->id) !!} @endif
+                @if(Route::currentRouteName() == 'watchlist')
+                    {!! Form::checkbox("auctions[{$loop->index}]", $auction->id, '', ['id' => "auctions[{$loop->index}]"]) !!}
+                    <label for="{{ "auctions[{$loop->index}]" }}"><span></span></label>
+                @endif
                 <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
                     <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
                 </a>

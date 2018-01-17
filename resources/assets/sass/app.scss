@@ -39,7 +39,19 @@ input[type=submit] {
     cursor: pointer;
 }
 input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + label span {
+    @extend .icons-checkbox_unchecked;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
     cursor: pointer;
+    margin-right: 10px;
+}
+input[type=checkbox]:checked + label span {
+    @extend .icons-checkbox_checked;
 }
 @for $i from 1 through 6 {
     h#{$i} {
@@ -436,7 +448,6 @@ main {
                 color: $primary-color;
                 font-size: 15px;
                 display: initial;
-                margin-left: 10px;
 
                 &+a {
                     text-decoration: underline;
@@ -571,10 +582,15 @@ main {
         height: 150px;
         position: relative;
 
-        input[type=checkbox] {
-            position: absolute;
-            top: 60px;
-            left: -40px;
+        input[type=checkbox] + label {
+            display: initial;
+            margin: 0;
+
+            span {
+                position: absolute;
+                top: 60px;
+                left: -40px;
+            }
         }
     }
     .title {
