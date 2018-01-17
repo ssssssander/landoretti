@@ -17,6 +17,7 @@
                             {!! Form::email('email', '', ['placeholder' => trans('header.email')]) !!}
                             {!! Form::password('password', ['placeholder' => trans('header.password')]) !!}
                             {!! Form::submit('&gt;') !!}
+                            <a href="{{ route('password.request') }}">@lang('header.forgot_password')</a>
                             {!! Form::close() !!}
                         </li>
                     @endguest

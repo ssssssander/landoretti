@@ -11,7 +11,7 @@
                 <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
                 <span id="bids">
                     <a href="#" v-on:click.prevent="toggleBids">
-                        ({{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }}, {{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }})
+                        ({{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }}@auth, {{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }}@endauth)
                     </a>
                     <span class="icons-hamburger"></span>
                     <ol v-if="bidsAreShown">

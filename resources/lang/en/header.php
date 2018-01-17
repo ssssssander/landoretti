@@ -4,6 +4,7 @@ return [
 
     'register' => 'REGISTER',
     'login' => 'LOGIN',
+    'forgot_password' => 'Forgot password?',
     'search' => 'Search',
     'email' => 'Email',
     'password' => 'Password',

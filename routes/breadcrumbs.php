@@ -25,6 +25,16 @@ Breadcrumbs::register('register', function ($breadcrumbs) {
     $breadcrumbs->push(trans('register.register'), route('register'));
 });
 
+Breadcrumbs::register('password.request', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push(trans('header.forgot_password'), route('password.request'));
+});
+
+Breadcrumbs::register('password.reset', function ($breadcrumbs, $token) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push(trans('passwords.reset_password'), route('password.reset', ['token' => $token]));
+});
+
 Breadcrumbs::register('profile', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push(Auth::user()->name, route('profile'));
