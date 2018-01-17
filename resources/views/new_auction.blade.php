@@ -5,7 +5,7 @@
 @section('content')
     <div class="new-auction">
         <h1>@lang('new_auction.new_auction')</h1>
-        @include('includes.errors')
+        @include('partials.errors')
         {!! Form::open(['route' => 'addAuction', 'files' => true]) !!}
         <div class="row">
             <div class="row-item two-third">
@@ -112,7 +112,7 @@
                 @endforeach
             </div>
         </div>
-        @include('includes.agree_tac')
+        @include('partials.agree_tac')
         <div class="row">
             <div class="row-item">
                 {!! Form::submit(trans('new_auction.add_auction'), ['class' => 'big-button']) !!}

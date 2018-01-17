@@ -18,4 +18,4 @@
     @endforeach
 </div>
 {!! $auctions->appends($request->except(['page']))->links() !!}
-@include('includes.scripts.remaining_time')
+@include('partials.scripts.remaining_time')

@@ -5,9 +5,9 @@
 @section('content')
     <div class="isearch">
         <h1>{{ trans('isearch.isearch') }}</h1>
-        @include('includes.search')
+        @include('partials.search')
         <h2>{{ trans('isearch.overview') }}</h2>
-        @include('includes.auction_table', ['auctions' => $searchResults])
+        @include('partials.auction_table', ['auctions' => $searchResults])
     </div>
-    @include('includes.scripts.remaining_time')
+    @include('partials.scripts.remaining_time')
 @endsection

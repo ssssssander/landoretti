@@ -23,6 +23,10 @@ a {
 }
 ol {
     list-style-type: decimal;
+
+    li {
+        padding: 5px;
+    }
 }
 body {
     font-family: "Arimo", sans-serif;

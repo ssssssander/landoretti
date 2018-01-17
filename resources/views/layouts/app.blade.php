@@ -23,11 +23,11 @@
     <title>@yield('title') | {{ config('app.name') }}</title>
 </head>
 <body>
-    @include('includes.logo', ['position' => 'top'])
-    @include('includes.header')
+    @include('partials.logo', ['position' => 'top'])
+    @include('partials.header')
     @yield('main')
-    @include('includes.footer')
-    @include('includes.logo', ['position' => 'bottom'])
+    @include('partials.footer')
+    @include('partials.logo', ['position' => 'bottom'])
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

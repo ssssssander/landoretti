@@ -72,7 +72,7 @@
         <div class="contact">
             <ul>
                 <li>@lang('footer.find_what_you_need')</li>
-                <li>@include('includes.search')</li>
+                <li>@include('partials.search')</li>
             </ul>
             <ul>
                 <li>@lang('footer.contact')</li>
@@ -102,4 +102,4 @@
         </div>
     </div>
 </footer>
-@include('includes.header_nav')
+@include('partials.header_nav')

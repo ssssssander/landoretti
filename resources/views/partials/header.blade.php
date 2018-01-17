@@ -43,8 +43,8 @@
                     @endauth
                 </ul>
             </nav>
-            @include('includes.search')
+            @include('partials.search')
         </div>
     </div>
-    @include('includes.header_nav')
+    @include('partials.header_nav')
 </header>

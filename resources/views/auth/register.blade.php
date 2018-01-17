@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>@lang('register.register')</h1>
-    @include('includes.errors')
+    @include('partials.errors')
     {!! Form::open(['route' => 'register']) !!}
     <div class="row">
         <div class="row-item">
@@ -73,7 +73,7 @@
             {!! Form::text('alt_payment', '', ['class' => $errors->has('alt_payment') ? 'has-error' : '', 'maxlength' => 255]) !!}
         </div>
     </div>
-    @include('includes.agree_tac')
+    @include('partials.agree_tac')
     <div class="row">
         <div class="row-item">
             {!! Form::submit(trans('register.register_submit'), ['class' => 'big-button']) !!}

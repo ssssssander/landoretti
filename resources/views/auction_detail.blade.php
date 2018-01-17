@@ -5,7 +5,7 @@
 @section('content')
     <div class="auction-detail">
         <h1>{{ $auction->title }}</h1>
-        @include('includes.errors')
+        @include('partials.errors')
         @if($auction->status == 'active')
             <div class="title-info">
                 <span class="remaining-time" data-end-date="{{ $auction->end_date }}"></span>
@@ -100,5 +100,5 @@
             </div>
         </div>
     </div>
-    @include('includes.scripts.remaining_time')
+    @include('partials.scripts.remaining_time')
 @endsection
