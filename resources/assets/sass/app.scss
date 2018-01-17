@@ -424,6 +424,9 @@ main {
             margin-top: 20px;
             font-size: 13px;
         }
+        input[type=file] {
+            display: none;
+        }
         .upload {
             background-color: $primary-color;
             color: $white;
