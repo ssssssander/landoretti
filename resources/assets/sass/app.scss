@@ -821,3 +821,13 @@ main {
         display: inline-block;
     }
 }
+.breadcrumb {
+    margin-bottom: 40px;
+    li {
+        display: inline-block;
+
+        a {
+            color: $primary-link-color;
+        }
+    }
+}

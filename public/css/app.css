@@ -1103,3 +1103,16 @@ main form .row.cash .icons-euro {
 .pagination li {
   display: inline-block;
 }
+
+/* line 824, ../../resources/assets/sass/app.scss */
+.breadcrumb {
+  margin-bottom: 40px;
+}
+/* line 826, ../../resources/assets/sass/app.scss */
+.breadcrumb li {
+  display: inline-block;
+}
+/* line 829, ../../resources/assets/sass/app.scss */
+.breadcrumb li a {
+  color: #01a6a0;
+}

@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="new-auction">
-        <h1>@lang('new_auction.new_auction')</h1>
+        <h1>@lang('new_auction.add_new_auction')</h1>
         @include('partials.errors')
         {!! Form::open(['route' => 'addAuction', 'files' => true]) !!}
         <div class="row">

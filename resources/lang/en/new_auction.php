@@ -2,8 +2,8 @@
 
 return [
 
-    'new_auction' => 'Add a new auction',
-
+    'new_auction' => 'New auction',
+    'add_new_auction' => 'Add a new auction',
     'style' => 'Style',
     'title' => 'Auction title',
     'year' => 'Year',
