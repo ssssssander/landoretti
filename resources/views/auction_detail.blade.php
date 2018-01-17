@@ -14,18 +14,24 @@
                         ({{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }}@auth, {{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }}@endauth)
                     </a>
                     <span class="icons-hamburger"></span>
-                    <ol v-if="bidsAreShown">
-                        @forelse($auction->bids as $bid)
-                            <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">€ {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}</li>
-                        @empty
-                            <li>@lang('auction_detail.no_bids')</li>
-                        @endforelse
-                    </ol>
+                    <div v-if="bidsAreShown">
+                        @if(count($auction->bids))
+                            <ol>
+                                @foreach($auction->bids as $bid)
+                                    <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">
+                                        € {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}
+                                    </li>
+                                @endforeach
+                            </ol>
+                        @else
+                            <p>@lang('auction_detail.no_bids')</p>
+                        @endif
+                    </div>
                 </span>
             </div>
         @endif
         <div class="top">
-            <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
+            <img src="{{ asset($auction->artwork_image_path) }}" alt="{{ $auction->title }}">
             <div class="side">
                 <div class="border-bottom">
                     <h2>{{ $auction->title }}</h2>

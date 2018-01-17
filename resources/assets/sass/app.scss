@@ -23,10 +23,6 @@ a {
 }
 ol {
     list-style-type: decimal;
-
-    li {
-        padding: 5px;
-    }
 }
 body {
     font-family: "Arimo", sans-serif;
@@ -424,9 +420,6 @@ main {
             margin-top: 20px;
             font-size: 13px;
         }
-        input[type=file] {
-            display: none;
-        }
         .upload {
             background-color: $primary-color;
             color: $white;
@@ -627,10 +620,14 @@ main {
             .icons-hamburger {
                 margin-left: 5px;
             }
-            ol {
+            div {
                 padding: 20px 30px;
                 margin-top: 30px;
                 border: 1px solid $tertiary-color;
+
+                li {
+                    padding: 5px;
+                }
             }
             .you {
                 background-color: $tertiary-color;
@@ -803,8 +800,10 @@ main {
 
     .auction-info {
         padding: 20px;
+        line-height: 1.2;
     }
     .auction-card {
+
         width: 250px;
         margin: 0 3px 50px 3px;
         max-height: 400px;
@@ -822,6 +821,8 @@ main {
         }
         .small-button {
             margin: 0;
+            padding: 3px;
+            float: initial;
         }
         .title {
             font-size: 20px;
@@ -834,8 +835,9 @@ main {
             color: $secondary-color;
         }
         .remaining-time {
-            line-height: 2.5;
             font-size: 14px;
+            padding-bottom: 3.7px;
+            border-bottom: 1px solid $tertiary-color;
         }
     }
 }

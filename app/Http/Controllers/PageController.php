@@ -10,6 +10,7 @@ use App\Bid;
 use App\WatchlistItem;
 use Auth;
 use DateTime;
+use Image;
 
 class PageController extends Controller
 {
@@ -88,10 +89,14 @@ class PageController extends Controller
         $optionalImagePath = null;
         $endDate = DateTime::createFromFormat('d/m/y', $request->end_date);
         $formattedEndDate = $endDate->format('Y-m-d');
+        $imageQuality = 60;
 
         if($request->artwork_image->isValid() && $request->signature_image->isValid()) {
-            $artworkImagePath = $request->artwork_image->store('uploads/artwork_images');
-            $signatureImagePath = $request->signature_image->store('uploads/signature_images');
+            $artworkImagePath = 'storage/uploads/artwork_images/' . $request->artwork_image->hashName();
+            $signatureImagePath = 'storage/uploads/signature_images/' . $request->signature_image->hashName();
+
+            Image::make($request->artwork_image)->save($artworkImagePath, $imageQuality);
+            Image::make($request->signature_image)->save($signatureImagePath, $imageQuality);
         }
         else {
             return redirect()->back();
@@ -99,7 +104,9 @@ class PageController extends Controller
 
 
         if($request->optional_image && $request->optional_image->isValid()) {
-            $optionalImagePath = $request->optional_image->store('uploads/optional_images');
+            $optionalImagePath = 'storage/uploads/optional_images/' . $request->optional_image->hashName();
+
+            Image::make($request->optional_image)->save($optionalImagePath, $imageQuality);
         }
 
         Auction::create([

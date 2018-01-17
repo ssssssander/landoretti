@@ -14,7 +14,7 @@
                     <label for="{{ "auctions[{$loop->index}]" }}"><span></span></label>
                 @endif
                 <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
-                    <img src="{{ asset("storage/{$auction->artwork_image_path}") }}" alt="{{ $auction->title }}">
+                    <img src="{{ asset($auction->artwork_image_path) }}" alt="{{ $auction->title }}">
                 </a>
             </td>
             <td class="title">
