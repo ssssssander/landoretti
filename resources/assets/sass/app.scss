@@ -571,6 +571,7 @@ main {
         width: 100%;
         height: 100%;
         transition: .3s;
+        object-fit: cover;
 
         &:hover {
             filter: brightness(50%);
@@ -644,6 +645,7 @@ main {
         img {
             width: 710px;
             height: 502px;
+            object-fit: cover;
         }
 
         .side {
@@ -812,6 +814,7 @@ main {
             width: 100%;
             height: 180px;
             transition: .3s;
+            object-fit: cover;
 
             &:hover {
                 filter: brightness(50%);
