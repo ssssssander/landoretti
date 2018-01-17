@@ -2,11 +2,16 @@
 
 Breadcrumbs::register('errors.404', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('404');
+    $breadcrumbs->push('404', '#');
 });
 
 Breadcrumbs::register('home', function ($breadcrumbs) {
     $breadcrumbs->push(trans('home.home'), route('home'));
+});
+
+Breadcrumbs::register('auctionBuyout', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push(trans('thank_you.thank_you'), '#');
 });
 
 Breadcrumbs::register('art', function ($breadcrumbs) {
