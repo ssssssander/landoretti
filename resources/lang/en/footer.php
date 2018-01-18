@@ -70,6 +70,6 @@ return [
     'oostende' => '8400, Oostende',
     'phone_number' => '+32 486 98 76 54',
     'email_address' => 'info@landorettiart.com',
-    'copyright' => '© 2017 Studio6, Inc. All rights reserved.',
+    'copyright' => '© 2018 Studio6, Inc. All rights reserved.',
 
 ];

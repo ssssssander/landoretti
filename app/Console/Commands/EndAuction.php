@@ -43,10 +43,10 @@ class EndAuction extends Command
      */
     public function handle()
     {
-        $now = Carbon::now()->toDateString();
+        $today = Carbon::now()->toDateString();
         $endedAuctionsUsers = [];
 
-        $endedAuctionsWithoutBids = Auction::where([['end_date', $now], ['status', 'active']]);
+        $endedAuctionsWithoutBids = Auction::where([['end_date', $today], ['status', 'active']]);
         $endedAuctionsWithoutBids = $endedAuctionsWithoutBids->whereDoesntHave('bids')->get();
 
         foreach($endedAuctionsWithoutBids as $endedAuctionWithoutBids) {
@@ -54,7 +54,7 @@ class EndAuction extends Command
             $endedAuctionWithoutBids->save();
         }
 
-        $endedAuctions = Auction::where([['end_date', $now], ['status', 'active']]);
+        $endedAuctions = Auction::where([['end_date', $today], ['status', 'active']]);
         $endedAuctions = $endedAuctions->whereHas('bids')->get();
 
         if(!$endedAuctions->isEmpty()) {

@@ -976,8 +976,8 @@ var login = new Vue({
   el: '#login',
   data: {
     loginFormIsShown: false,
-    borderLeft: true,
-    paddingLeft: true
+    borderLeft: '',
+    paddingLeft: ''
   },
   methods: {
     showLoginForm: function showLoginForm() {

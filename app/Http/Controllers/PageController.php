@@ -43,11 +43,8 @@ class PageController extends Controller
         $auctionIds = $request->input('auctions.*');
 
         for($i = 0; $i < count($auctionIds); $i++) {
-            $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auctionIds[$i]]]);
-            $isInWatchlist = !$watchlistAuction->get()->isEmpty();
-
-            if($isInWatchlist) {
-                $watchlistAuction->delete();
+            if($this->getWatchlistAuctionInfo($auctionIds[$i])['isInWatchlist']) {
+                $this->getWatchlistAuctionInfo($auctionIds[$i])['watchlistAuction']->delete();
             }
         }
 
@@ -134,8 +131,7 @@ class PageController extends Controller
     }
 
     public function auctionDetail(Request $request, Auction $auction, $auctionTitle = null) {
-        $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
-        $isInWatchlist = !$watchlistAuction->isEmpty();
+        $isInWatchlist = $this->getWatchlistAuctionInfo($auction->id)['isInWatchlist'];
         $amountOfBids = $auction->bids->count();
         $amountOfBidsByCurrentUser = $auction->bids->where('user_id', Auth::id())->count();
 
@@ -164,8 +160,7 @@ class PageController extends Controller
     }
 
     public function addAuctionToWatchlist(Request $request, Auction $auction, $auctionTitle = null) {
-        $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auction->id]])->get();
-        $isInWatchlist = !$watchlistAuction->isEmpty();
+        $isInWatchlist = $this->getWatchlistAuctionInfo($auction->id)['isInWatchlist'];
 
         if($auction->status == 'active' && !$isInWatchlist) {
             WatchlistItem::create([
@@ -189,5 +184,14 @@ class PageController extends Controller
 
     public function redirectHome(Request $request) {
         return redirect()->route('home');
+    }
+
+
+    // Helper function
+    public function getWatchlistAuctionInfo($auctionId) {
+        $watchlistAuction = WatchlistItem::where([['user_id', Auth::id()], ['auction_id', $auctionId]]);
+        $isInWatchlist = !$watchlistAuction->get()->isEmpty();
+
+        return ['isInWatchlist' => $isInWatchlist, 'watchlistAuction' => $watchlistAuction];
     }
 }

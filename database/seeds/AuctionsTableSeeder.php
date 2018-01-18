@@ -31,7 +31,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '5000',
                 'max_price' => '10000',
                 'buyout_price' => '20000',
-                'end_date' => '2018-01-18',
+                'end_date' => '2018-01-19',
             ],
             [
                 'user_id' => 1,
@@ -71,7 +71,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '100000',
                 'max_price' => '200000',
                 'buyout_price' => '500000',
-                'end_date' => '2018-01-18',
+                'end_date' => '2018-01-19',
             ],
             [
                 'user_id' => 2,
