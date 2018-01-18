@@ -31,7 +31,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '5000',
                 'max_price' => '10000',
                 'buyout_price' => '20000',
-                'end_date' => '2018/02/14',
+                'end_date' => '2018-01-18',
             ],
             [
                 'user_id' => 1,
@@ -51,7 +51,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '15000',
                 'max_price' => '21000',
                 'buyout_price' => '86500',
-                'end_date' => '2018/02/24',
+                'end_date' => '2018-02-24',
             ],
             [
                 'user_id' => 2,
@@ -71,7 +71,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '100000',
                 'max_price' => '200000',
                 'buyout_price' => '500000',
-                'end_date' => '2018/03/16',
+                'end_date' => '2018-01-18',
             ],
             [
                 'user_id' => 2,
@@ -91,7 +91,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '100',
                 'max_price' => '865',
                 'buyout_price' => '1500',
-                'end_date' => '2018/01/28',
+                'end_date' => '2018-01-28',
             ],
         ]);
     }

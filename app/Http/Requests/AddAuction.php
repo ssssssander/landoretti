@@ -41,7 +41,7 @@ class AddAuction extends FormRequest
             'min_price' => 'required|digits_between:1,8',
             'max_price' => 'required|digits_between:1,8',
             'buyout_price' => 'nullable|digits_between:1,8',
-            'end_date' => 'required|date_format:d/m/y|after:today|max:8',
+            'end_date' => 'required|date_format:d/m/y|max:8',
             'agree_tac' => 'accepted',
         ];
     }

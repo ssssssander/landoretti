@@ -81,8 +81,12 @@
                                 @endif
                             </span>
                         </div>
-                    @else
-                        <p class="sold">@lang('auction_detail.sold')</p>
+                    @endif
+                    @if($auction->status == 'expired')
+                        <p class="ended">@lang('auction_detail.expired')</p>
+                    @endif
+                    @if($auction->status == 'sold')
+                        <p class="ended">@lang('auction_detail.sold')</p>
                     @endif
                 @endauth
                 @guest

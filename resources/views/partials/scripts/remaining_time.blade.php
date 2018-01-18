@@ -12,7 +12,7 @@
         let distance = countDownDate - now;
 
         let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) - 1;
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
         remainingTimeElems[i].innerHTML = days + 'd ' + hours + 'h ' + minutes + 'm ';

@@ -76,7 +76,7 @@
             </ul>
             <ul>
                 <li>@lang('footer.contact')</li>
-                <li>@lang('footer.landoretti_art')</li>
+                <li>{{ config('app.name') }}</li>
                 <li>@lang('footer.street_name')</li>
                 <li>@lang('footer.oostende')</li>
                 <li>

@@ -570,7 +570,7 @@ main {
             filter: brightness(50%);
         }
     }
-    .none {
+    .empty {
         padding: 40px;
     }
     .image {
@@ -649,7 +649,7 @@ main {
             width: 250px;
             text-align: right;
 
-            .sold {
+            .ended {
                 font-size: 60px;
                 font-weight: bold;
             }
@@ -799,11 +799,10 @@ main {
     flex-wrap: wrap;
 
     .auction-info {
-        padding: 20px;
-        line-height: 1.2;
+        margin-top: 5px;
+        line-height: 1.5;
     }
     .auction-card {
-
         width: 250px;
         margin: 0 3px 50px 3px;
         max-height: 400px;
@@ -821,8 +820,9 @@ main {
         }
         .small-button {
             margin: 0;
-            padding: 3px;
+            padding: 5px;
             float: initial;
+            border-bottom: 0;
         }
         .title {
             font-size: 20px;
@@ -831,13 +831,17 @@ main {
                 color: $primary-color;
             }
         }
+        .space {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $tertiary-color;
+        }
         .year {
             color: $secondary-color;
         }
         .remaining-time {
             font-size: 14px;
-            padding-bottom: 3.7px;
-            border-bottom: 1px solid $tertiary-color;
         }
     }
 }

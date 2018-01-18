@@ -66,7 +66,6 @@ return [
     ],
     'find_what_you_need' => 'FIND WHAT YOU NEED.',
     'contact' => 'CONTACT',
-    'landoretti_art' => 'Landoretti ART',
     'street_name' => 'Kleine Weststraat 5',
     'oostende' => '8400, Oostende',
     'phone_number' => '+32 486 98 76 54',

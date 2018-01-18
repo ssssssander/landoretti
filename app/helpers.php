@@ -1,7 +1,7 @@
 <?php
 
 function staticImage($filename) {
-    return "https://static.sander.borret.mtantwerp.eu/img/{$filename}";
+    return "https://static.sander.borret.mtantwerp.eu/{$filename}";
 }
 
 function clean($string) {

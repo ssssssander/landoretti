@@ -8,8 +8,8 @@ use App\Http\Requests\AddBid;
 use App\Auction;
 use App\Bid;
 use App\WatchlistItem;
+use Carbon\Carbon;
 use Auth;
-use DateTime;
 use Image;
 
 class PageController extends Controller
@@ -87,7 +87,7 @@ class PageController extends Controller
 
     public function addAuction(AddAuction $request) {
         $optionalImagePath = null;
-        $endDate = DateTime::createFromFormat('d/m/y', $request->end_date);
+        $endDate = Carbon::createFromFormat('d/m/y', $request->end_date);
         $formattedEndDate = $endDate->format('Y-m-d');
         $imageQuality = 60;
 

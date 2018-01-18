@@ -30,7 +30,7 @@
         </tr>
     @empty
         <tr>
-            <td class="none" colspan="5">@lang('auction_table.no_auctions')</td>
+            <td class="empty" colspan="5">@lang('auction_table.no_auctions')</td>
         </tr>
     @endforelse
 </table>

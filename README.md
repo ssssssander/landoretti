@@ -9,6 +9,6 @@
 6. Run `crontab -e` (or `nano /etc/crontab`) and add this Cron entry to the end of the file to set up the Laravel scheduler: `* * * * * php /path-to-your-project/artisan schedule:run >> /dev/null 2>&1`
 
 ## Additional info
-- This project uses the following dependencies: `laravelcollective/html`, `guzzlehttp/guzzle`, `davejamesmiller/laravel-breadcrumbs` and `vue` along with any other framework dependencies
+- This project uses the following dependencies: `laravelcollective/html`, `guzzlehttp/guzzle`, `davejamesmiller/laravel-breadcrumbs`, `intervention/image` and `vue` along with any other framework dependencies
 - When an auction expires all bidders will be notified by email
 - Remember to never make your `.env` file publicly available

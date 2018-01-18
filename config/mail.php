@@ -57,7 +57,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'sparkpost@sander.borret.mtantwerp.eu'),
-        'name' => env('MAIL_FROM_NAME', 'Landoretti'),
+        'name' => env('MAIL_FROM_NAME', 'Landoretti ART'),
     ],
 
     /*
