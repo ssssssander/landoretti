@@ -14,4 +14,4 @@
 - Remember to never make your `.env` file publicly available
 
 ## ERD
-![ERD](https://github.com/ssssssander/landoretti/erd.png)
+![ERD](https://github.com/ssssssander/landoretti/master/erd.png)
