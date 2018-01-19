@@ -12,3 +12,6 @@
 - This project uses the following dependencies: `laravelcollective/html`, `guzzlehttp/guzzle`, `davejamesmiller/laravel-breadcrumbs`, `intervention/image` and `vue` along with any other framework dependencies
 - When an auction expires all bidders will be notified by email
 - Remember to never make your `.env` file publicly available
+
+## ERD
+![ERD](https://raw.githubusercontent.com/ssssssander/landoretti/master/erd.png)
