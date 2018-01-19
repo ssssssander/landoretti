@@ -1,4 +1,4 @@
-{!! $auctions->appends($request->except(['page']))->links() !!}
+@if(Route::currentRouteName() == 'art') {!! $auctions->appends($request->except(['page']))->links() !!} @endif
 <div class="auction-cards">
     @forelse($auctions as $auction)
         <div class="auction-card">
@@ -21,4 +21,4 @@
         <p>@lang('auction_table.no_auctions')</p>
     @endforelse
 </div>
-{!! $auctions->appends($request->except(['page']))->links() !!}
+@if(Route::currentRouteName() == 'art') {!! $auctions->appends($request->except(['page']))->links() !!} @endif

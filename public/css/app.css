@@ -981,3 +981,10 @@ main form .row.cash .icons-euro {
   border-right: 0;
   padding: 30px 0;
 }
+
+.active-auctions {
+  margin-top: 40px;
+}
+.active-auctions h2 {
+  margin-bottom: 20px;
+}

@@ -69,8 +69,9 @@ class PageController extends Controller
 
     public function profile(Request $request) {
         $user = Auth::user();
+        $activeAuctions = Auction::where('status', 'active')->take(4)->get();
 
-        return view('profile', compact('user'));
+        return view('profile', compact('user', 'activeAuctions'));
     }
 
     public function iSearch(Request $request) {

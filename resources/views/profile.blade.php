@@ -33,4 +33,9 @@
             </div>
         </div>
     </div>
+    <div class="active-auctions">
+        <h2>@lang('profile.active_auctions')</h2>
+        @include('partials.auction_cards', ['auctions' => $activeAuctions])
+    </div>
+    @include('partials.scripts.remaining_time')
 @endsection
