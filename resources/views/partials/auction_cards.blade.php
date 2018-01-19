@@ -22,4 +22,3 @@
     @endforelse
 </div>
 {!! $auctions->appends($request->except(['page']))->links() !!}
-@include('partials.scripts.remaining_time')

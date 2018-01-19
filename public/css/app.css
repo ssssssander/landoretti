@@ -255,8 +255,6 @@ h2 {
   box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
   position: absolute;
   z-index: 10;
-  width: 103px;
-  height: 140px;
 }
 
 .logo-top {
@@ -468,49 +466,49 @@ header .logout form input[type=submit] {
   filter: brightness(50%);
 }
 
-footer, #filter {
+footer, .filter {
   border-top: 1px solid #eaeaea;
 }
-footer ul, #filter ul {
+footer ul:not(.pagination), .filter ul:not(.pagination) {
   margin-bottom: 22px;
 }
-footer ul li, #filter ul li {
+footer ul:not(.pagination) li, .filter ul:not(.pagination) li {
   font-size: 14px;
 }
-footer ul li:first-of-type, #filter ul li:first-of-type {
+footer ul:not(.pagination) li:first-of-type, .filter ul:not(.pagination) li:first-of-type {
   color: #000000;
   font-size: 16px;
   font-weight: bold;
 }
-footer ul li a, #filter ul li a {
+footer ul:not(.pagination) li a, .filter ul:not(.pagination) li a {
   color: #01a6a0;
 }
-footer .footer-item, footer .sitemap, footer #filter .sitemap, #filter footer .sitemap, footer .contact, footer #filter .contact, #filter footer .contact, #filter .footer-item, #filter .sitemap, #filter .contact {
+footer .footer-item, footer .sitemap, footer .filter .sitemap, .filter footer .sitemap, footer .contact, footer .filter .contact, .filter footer .contact, .filter .footer-item, .filter .sitemap, .filter .contact {
   padding-top: 40px;
   display: inline-block;
 }
-footer .sitemap, #filter .sitemap {
+footer .sitemap, .filter .sitemap {
   border-right: 1px solid #eaeaea;
   padding-bottom: 65px;
 }
-footer .contact, #filter .contact {
+footer .contact, .filter .contact {
   vertical-align: top;
   padding-left: 30px;
 }
-footer .contact ul:first-of-type li, #filter .contact ul:first-of-type li {
+footer .contact ul:first-of-type li, .filter .contact ul:first-of-type li {
   margin-bottom: 20px;
 }
-footer .contact div, #filter .contact div {
+footer .contact div, .filter .contact div {
   margin-top: 30px;
 }
-footer .contact div.copyright, #filter .contact div.copyright {
+footer .contact div.copyright, .filter .contact div.copyright {
   margin-top: 86px;
   font-size: 12px;
 }
-footer .search input[type=search], #filter .search input[type=search] {
+footer .search input[type=search], .filter .search input[type=search] {
   width: 183px;
 }
-footer .social, #filter .social {
+footer .social, .filter .social {
   margin-top: 40px;
 }
 
@@ -959,20 +957,21 @@ main form .row.cash .icons-euro {
   color: #01a6a0;
 }
 
-#filter {
+.filter {
+  border-top: 0;
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 50px;
 }
-#filter .filter-menu {
+.filter .filter-menu {
   padding: 30px 0 50px;
   display: flex;
   justify-content: space-between;
 }
-#filter .filter-menu .advanced {
+.filter .filter-menu .advanced {
   color: #0a1e75;
   font-size: 20px;
 }
-#filter .filter-menu .advanced span {
+.filter .filter-menu .advanced span {
   vertical-align: middle;
   transform: rotate(-90deg);
   margin-left: 15px;

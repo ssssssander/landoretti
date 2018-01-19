@@ -19,9 +19,16 @@ class PageController extends Controller
     }
 
     public function art(Request $request) {
-        $auctions = Auction::where('status', 'active')->paginate(12);
+        $paginate = 12;
+        $endingSoonest = Auction::where('status', 'active')->orderBy('end_date')->paginate($paginate);
+        $endingLatest = Auction::where('status', 'active')->orderByDesc('end_date')->paginate($paginate);
+        $new = Auction::where('status', 'active')->orderByDesc('created_at')->paginate($paginate);
+        $popular = Auction::withCount('bids')->where('status', 'active')->orderByDesc('bids_count')->paginate($paginate);
 
-        return view('art', compact('request', 'auctions'));
+        $sortedAuctions = [$endingSoonest, $endingLatest, $new, $popular];
+        $sortedAuctionTypes = ['ending_soonest', 'ending_latest', 'new', 'popular'];
+
+        return view('art', compact('request', 'sortedAuctions', 'sortedAuctionTypes'));
     }
 
     public function watchlist(Request $request) {
@@ -37,9 +44,9 @@ class PageController extends Controller
         $soldWatchlistAuctions = $allWatchlistAuctions->where('status', 'sold');
 
         $watchlistAuctions = [$allWatchlistAuctions, $activeWatchlistAuctions, $expiredWatchlistAuctions, $soldWatchlistAuctions];
-        $watchlistStatuses = ['all', 'active', 'expired', 'sold'];
+        $watchlistCategories = ['all', 'active', 'expired', 'sold'];
 
-        return view('watchlist', compact('watchlistAuctions', 'watchlistStatuses'));
+        return view('watchlist', compact('watchlistAuctions', 'watchlistCategories'));
     }
 
     public function deleteSelectedWatchlistAuctions(Request $request) {
@@ -70,7 +77,7 @@ class PageController extends Controller
         $query = $request->input('query');
         $searchResults = Auction::where([['title', 'like', "%{$query}%"], ['status', 'active']])->paginate(8);
 
-        return view('isearch', compact('request', 'searchResults'));
+        return view('isearch', compact('searchResults'));
     }
 
     public function myAuctions(Request $request) {

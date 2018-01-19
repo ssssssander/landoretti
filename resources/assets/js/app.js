@@ -42,19 +42,22 @@ var watchlistCategories = new Vue({
 });
 
 var filter = new Vue({
-  el: '#filter',
+  el: '#art-filter',
   data: {
     filterPaneIsShown: false,
-    sortBy: 'ending_soonest',
+    orderBy: 'ending_soonest',
     transform: '',
   },
   methods: {
     toggleFilterPane: function() {
       this.filterPaneIsShown = !this.filterPaneIsShown;
-      this.transform == '' ? this.transform = 'initial' : this.transform = '';
+      this.filterPaneIsShown ? this.transform = 'initial' : this.transform = '';
     },
-    sort: function(sortBy) {
-      this.sortBy = sortBy;
+    sort: function(orderBy) {
+      this.orderBy = orderBy;
     },
+    doIt: function(event) {
+        console.log(event.target.value + '_' + event.target.checked);
+    }
   },
 });

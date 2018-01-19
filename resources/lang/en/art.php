@@ -7,8 +7,8 @@ return [
     'sort_by' => 'SORT BY:',
     'ending_soonest' => 'ending soonest',
     'ending_latest' => 'ending latest',
-    'new_auctions' => 'new auctions',
-    'popular_auctions' => 'popular auctions',
+    'new' => 'new auctions',
+    'popular' => 'popular auctions',
     'advanced_options' => 'Advanced Options',
 
 ];

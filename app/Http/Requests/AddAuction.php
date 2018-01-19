@@ -25,7 +25,7 @@ class AddAuction extends FormRequest
     public function rules()
     {
         return [
-            'style' => ['required', Rule::in(array_keys(trans('footer.styles1')))],
+            'style' => ['required', Rule::in(array_keys(trans('footer.styles')))],
             'title' => 'required|string|max:255',
             'year' => 'required|date_format:Y|max:4',
             'width' => 'required|digits_between:1,8',

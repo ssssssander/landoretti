@@ -12,12 +12,12 @@
         <h1>@lang('watchlist.watchlist')</h1>
         <p class="categories">
             @for($i = 0; $i < count($watchlistAuctions); $i++)
-                <a href="#" v-on:click.prevent="showCategory('{{ $watchlistStatuses[$i] }}')"
-                v-bind:class="{ active: shownCategory == '{{ $watchlistStatuses[$i] }}' }">@lang("watchlist.{$watchlistStatuses[$i]}")({{ count($watchlistAuctions[$i]) }})</a>
+                <a href="#" v-on:click.prevent="showCategory('{{ $watchlistCategories[$i] }}')"
+                v-bind:class="{ active: shownCategory == '{{ $watchlistCategories[$i] }}' }">@lang("watchlist.{$watchlistCategories[$i]}")({{ count($watchlistAuctions[$i]) }})</a>
             @endfor
         </p>
         @for($i = 0; $i < count($watchlistAuctions); $i++)
-            <div v-if="shownCategory == '{{ $watchlistStatuses[$i] }}'">
+            <div v-if="shownCategory == '{{ $watchlistCategories[$i] }}'">
                 @include('partials.auction_table', ['auctions' => $watchlistAuctions[$i]])
             </div>
         @endfor

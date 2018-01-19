@@ -114,8 +114,6 @@ h2 {
     box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
     position: absolute;
     z-index: 10;
-    width: 103px;
-    height: 140px;
 }
 .logo-top {
     @extend .logo;
@@ -331,10 +329,10 @@ header {
         }
     }
 }
-footer, #filter {
+footer, .filter {
     border-top: 1px solid $tertiary-color;
 
-    ul {
+    ul:not(.pagination) {
         margin-bottom: 22px;
 
         li {
@@ -873,7 +871,8 @@ main {
         }
     }
 }
-#filter {
+.filter {
+    border-top: 0;
     border-bottom: 1px solid $tertiary-color;
     margin-bottom: 50px;
 
