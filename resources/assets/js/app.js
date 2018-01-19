@@ -56,8 +56,5 @@ var filter = new Vue({
     order: function(orderBy) {
       this.orderBy = orderBy;
     },
-    doIt: function(event) {
-        console.log(event.target.value + '_' + event.target.checked);
-    }
   },
 });

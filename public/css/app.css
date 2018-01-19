@@ -963,7 +963,7 @@ main form .row.cash .icons-euro {
   margin-bottom: 50px;
 }
 .filter .filter-menu {
-  padding: 30px 0 50px;
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -976,4 +976,8 @@ main form .row.cash .icons-euro {
   transform: rotate(-90deg);
   margin-left: 15px;
   transition: .5s;
+}
+.filter .sitemap {
+  border-right: 0;
+  padding: 30px 0;
 }

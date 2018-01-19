@@ -17,37 +17,55 @@
             </div>
             <transition name="fade">
                 <div v-if="filterPaneIsShown" class="filter-pane">
-                    <div class="col">
-                        <ul>
-                            @foreach(trans('footer.prices') as $price)
-                                @if($loop->first)
-                                    <li>{{ $price }}</li>
-                                @else
-                                    <li><a href="#">{{ $price }}</a></li>
-                                @endif
-                            @endforeach
-                        </ul>
-                        <ul>
-                            @foreach(trans('footer.endings_texts') as $endings_text)
-                                @if($loop->first)
-                                    <li>{{ $endings_text }}</li>
-                                @else
-                                    <li><a href="#">{{ $endings_text }}</a></li>
-                                @endif
-                            @endforeach
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <ul>
-                            <li>@lang('footer.style')</li>
-                            @foreach(trans('footer.styles') as $style)
-                                <li>
-                                    <a href="#">{{ $style }}</a>
-                                    {!! Form::checkbox("orderBy[{$loop->index}]", trans('footer.styles')[array_keys(trans('footer.styles'))[$loop->index]], '', ['v-on:click' => 'doIt($event)', 'id' => "orderBy[{$loop->index}]"]) !!}
-                                    <label for="{{ "orderBy[{$loop->index}]" }}"><span></span></label>
-                                </li>
-                            @endforeach
-                        </ul>
+                    <div class="sitemap">
+                        <div class="col">
+                            <ul>
+                                @foreach(trans('footer.prices') as $price)
+                                    @if($loop->first)
+                                        <li>{{ $price }}</li>
+                                    @else
+                                        <li><a href="#">{{ $price }}</a></li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                            <ul>
+                                @foreach(trans('footer.endings_texts') as $endings_text)
+                                    @if($loop->first)
+                                        <li>{{ $endings_text }}</li>
+                                    @else
+                                        <li><a href="#">{{ $endings_text }}</a></li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                @foreach(trans('footer.eras') as $era)
+                                    @if($loop->first)
+                                        <li>{{ $era }}</li>
+                                    @else
+                                        <li><a href="#">{{ $era }}</a></li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                            <ul>
+                                @foreach(trans('footer.media') as $media)
+                                    @if($loop->first)
+                                        <li>{{ $media }}</li>
+                                    @else
+                                        <li><a href="#">{{ $media }}</a></li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li>@lang('footer.style')</li>
+                                @foreach(trans('footer.styles') as $style)
+                                    <li><a href="#">{{ $style }}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </transition>

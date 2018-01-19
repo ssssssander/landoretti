@@ -1026,9 +1026,6 @@ var filter = new Vue({
     },
     order: function order(orderBy) {
       this.orderBy = orderBy;
-    },
-    doIt: function doIt(event) {
-      console.log(event.target.value + '_' + event.target.checked);
     }
   }
 });

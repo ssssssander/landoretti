@@ -877,7 +877,7 @@ main {
     margin-bottom: 50px;
 
     .filter-menu {
-        padding: 30px 0 50px;
+        margin: 30px 0;
         display: flex;
         justify-content: space-between;
 
@@ -892,5 +892,9 @@ main {
                 transition: .5s;
             }
         }
+    }
+    .sitemap {
+        border-right: 0;
+        padding: 30px 0;
     }
 }

@@ -15,7 +15,7 @@ class AuctionsTableSeeder extends Seeder
         DB::table('auctions')->insert([
             [
                 'user_id' => 1,
-                'style' => 'Contemporary',
+                'style' => 'contemporary',
                 'title' => 'Winter Landscape',
                 'year' => 1879,
                 'width' => 22,
@@ -35,7 +35,7 @@ class AuctionsTableSeeder extends Seeder
             ],
             [
                 'user_id' => 1,
-                'style' => 'Contemporary',
+                'style' => 'abstract',
                 'title' => 'Winter Morning',
                 'year' => 1901,
                 'width' => 11,
@@ -55,7 +55,7 @@ class AuctionsTableSeeder extends Seeder
             ],
             [
                 'user_id' => 2,
-                'style' => 'Contemporary',
+                'style' => 'contemporary',
                 'title' => 'Hunters in the Snow',
                 'year' => 1565,
                 'width' => 55,
@@ -75,7 +75,7 @@ class AuctionsTableSeeder extends Seeder
             ],
             [
                 'user_id' => 2,
-                'style' => 'Contemporary',
+                'style' => 'abstract',
                 'title' => 'The Polar Sea',
                 'year' => 1824,
                 'width' => 505,
