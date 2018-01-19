@@ -1003,35 +1003,11 @@ var bids = new Vue({
 var watchlistCategories = new Vue({
   el: '#watchlist-categories',
   data: {
-    allAreShown: true,
-    activeAreShown: false,
-    expiredAreShown: false,
-    soldAreShown: false
+    shownCategory: 'all'
   },
   methods: {
-    showAll: function showAll() {
-      this.allAreShown = true;
-      this.activeAreShown = false;
-      this.expiredAreShown = false;
-      this.soldAreShown = false;
-    },
-    showActive: function showActive() {
-      this.allAreShown = false;
-      this.activeAreShown = true;
-      this.expiredAreShown = false;
-      this.soldAreShown = false;
-    },
-    showExpired: function showExpired() {
-      this.allAreShown = false;
-      this.activeAreShown = false;
-      this.expiredAreShown = true;
-      this.soldAreShown = false;
-    },
-    showSold: function showSold() {
-      this.allAreShown = false;
-      this.activeAreShown = false;
-      this.expiredAreShown = false;
-      this.soldAreShown = true;
+    showCategory: function showCategory(category) {
+      this.shownCategory = category;
     }
   }
 });

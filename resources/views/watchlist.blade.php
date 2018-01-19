@@ -11,21 +11,21 @@
         {!! Form::submit(trans('watchlist.delete_selected'), ['class' => 'small-button']) !!}
         <h1>@lang('watchlist.watchlist')</h1>
         <p class="watchlist-categories">
-            <a href="#" v-on:click.prevent="showAll" v-bind:class="{ active: allAreShown }">@lang('watchlist.all')({{ count($watchlistAuctions) }})</a>
-            <a href="#" v-on:click.prevent="showActive" v-bind:class="{ active: activeAreShown }">@lang('watchlist.active')({{ count($activeWatchlistAuctions) }})</a>
-            <a href="#" v-on:click.prevent="showExpired" v-bind:class="{ active: expiredAreShown }">@lang('watchlist.expired')({{ count($expiredWatchlistAuctions) }})</a>
-            <a href="#" v-on:click.prevent="showSold" v-bind:class="{ active: soldAreShown }">@lang('watchlist.sold')({{ count($soldWatchlistAuctions) }})</a>
+            <a href="#" v-on:click.prevent="showCategory('all')" v-bind:class="{ active: shownCategory == 'all' }">@lang('watchlist.all')({{ count($watchlistAuctions) }})</a>
+            <a href="#" v-on:click.prevent="showCategory('active')" v-bind:class="{ active: shownCategory == 'active' }">@lang('watchlist.active')({{ count($activeWatchlistAuctions) }})</a>
+            <a href="#" v-on:click.prevent="showCategory('expired')" v-bind:class="{ active: shownCategory == 'expired' }">@lang('watchlist.expired')({{ count($expiredWatchlistAuctions) }})</a>
+            <a href="#" v-on:click.prevent="showCategory('sold')" v-bind:class="{ active: shownCategory == 'sold' }">@lang('watchlist.sold')({{ count($soldWatchlistAuctions) }})</a>
         </p>
-        <div v-if="allAreShown">
+        <div v-if="shownCategory == 'all'">
             @include('partials.auction_table', ['auctions' => $watchlistAuctions])
         </div>
-        <div v-if="activeAreShown">
+        <div v-if="shownCategory == 'active'">
             @include('partials.auction_table', ['auctions' => $activeWatchlistAuctions])
         </div>
-        <div v-if="expiredAreShown">
+        <div v-if="shownCategory == 'expired'">
             @include('partials.auction_table', ['auctions' => $expiredWatchlistAuctions])
         </div>
-        <div v-if="soldAreShown">
+        <div v-if="shownCategory == 'sold'">
             @include('partials.auction_table', ['auctions' => $soldWatchlistAuctions])
         </div>
         {!! Form::close() !!}
