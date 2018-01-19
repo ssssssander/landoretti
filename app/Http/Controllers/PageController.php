@@ -25,18 +25,21 @@ class PageController extends Controller
     }
 
     public function watchlist(Request $request) {
-        $watchlistAuctions = WatchlistItem
+        $allWatchlistAuctions = WatchlistItem
             ::join('users', function($join) {
                 $join->on('watchlist_items.user_id', 'users.id')
                 ->where('watchlist_items.user_id', Auth::id());
             })
             ->join('auctions', 'watchlist_items.auction_id', 'auctions.id')->get();
 
-        $activeWatchlistAuctions = $watchlistAuctions->where('status', 'active');
-        $expiredWatchlistAuctions = $watchlistAuctions->where('status', 'expired');
-        $soldWatchlistAuctions = $watchlistAuctions->where('status', 'sold');
+        $activeWatchlistAuctions = $allWatchlistAuctions->where('status', 'active');
+        $expiredWatchlistAuctions = $allWatchlistAuctions->where('status', 'expired');
+        $soldWatchlistAuctions = $allWatchlistAuctions->where('status', 'sold');
 
-        return view('watchlist', compact('watchlistAuctions', 'activeWatchlistAuctions', 'expiredWatchlistAuctions', 'soldWatchlistAuctions'));
+        $watchlistAuctions = [$allWatchlistAuctions, $activeWatchlistAuctions, $expiredWatchlistAuctions, $soldWatchlistAuctions];
+        $watchlistStatuses = ['all', 'active', 'expired', 'sold'];
+
+        return view('watchlist', compact('watchlistAuctions', 'watchlistStatuses'));
     }
 
     public function deleteSelectedWatchlistAuctions(Request $request) {
