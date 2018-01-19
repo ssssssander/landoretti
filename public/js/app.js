@@ -1012,6 +1012,24 @@ var watchlistCategories = new Vue({
   }
 });
 
+var filter = new Vue({
+  el: '#filter',
+  data: {
+    filterPaneIsShown: false,
+    sortBy: 'ending_soonest',
+    transform: ''
+  },
+  methods: {
+    toggleFilterPane: function toggleFilterPane() {
+      this.filterPaneIsShown = !this.filterPaneIsShown;
+      this.transform == '' ? this.transform = 'initial' : this.transform = '';
+    },
+    sort: function sort(sortBy) {
+      this.sortBy = sortBy;
+    }
+  }
+});
+
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {

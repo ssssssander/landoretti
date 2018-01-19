@@ -14,19 +14,21 @@
                         ({{ trans_choice('auction_detail.bids', $amountOfBids, ['bids' => $amountOfBids]) }}@auth, {{ trans('auction_detail.yours', ['bids' => $amountOfBidsByCurrentUser]) }}@endauth)
                     </a>
                     <span class="icons-hamburger"></span>
-                    <div v-if="bidsAreShown">
-                        @if(count($auction->bids))
-                            <ol>
-                                @foreach($auction->bids as $bid)
-                                    <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">
-                                        € {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}
-                                    </li>
-                                @endforeach
-                            </ol>
-                        @else
-                            <p>@lang('auction_detail.no_bids')</p>
-                        @endif
-                    </div>
+                    <transition name="fade">
+                        <div v-if="bidsAreShown">
+                            @if(count($auction->bids))
+                                <ol>
+                                    @foreach($auction->bids as $bid)
+                                        <li class="{{ $bid->user_id == Auth::id() ? 'you' : '' }}">
+                                            € {{ formatPrice($bid->price) }}, {{ $bid->user->name }}, {{ formatDate($bid->created_at) }}
+                                        </li>
+                                    @endforeach
+                                </ol>
+                            @else
+                                <p>@lang('auction_detail.no_bids')</p>
+                            @endif
+                        </div>
+                    </transition>
                 </span>
             </div>
         @endif

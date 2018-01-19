@@ -40,3 +40,21 @@ var watchlistCategories = new Vue({
     },
   },
 });
+
+var filter = new Vue({
+  el: '#filter',
+  data: {
+    filterPaneIsShown: false,
+    sortBy: 'ending_soonest',
+    transform: '',
+  },
+  methods: {
+    toggleFilterPane: function() {
+      this.filterPaneIsShown = !this.filterPaneIsShown;
+      this.transform == '' ? this.transform = 'initial' : this.transform = '';
+    },
+    sort: function(sortBy) {
+      this.sortBy = sortBy;
+    },
+  },
+});

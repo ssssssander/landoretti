@@ -19,7 +19,7 @@ return [
         'en' => 'English',
     ],
     'style' => 'STYLE',
-    'styles1' => [
+    'styles' => [
         'abstract' => 'Abstract',
         'african_american' => 'African American',
         'asian_contemporary' => 'Asian Contemporary',
@@ -34,7 +34,8 @@ return [
         'urban' => 'Urban',
         'vintage_photographs' => 'Vintage Photographs',
     ],
-    'styles2' => [
+    'media' => [
+        'media' => 'MEDIA',
         'design' => 'Design',
         'paintings_and_works_on_paper' => 'Paintings and Works on Paper',
         'photographs' => 'Photographs',
@@ -62,7 +63,6 @@ return [
         'ending_this_week' => 'Ending this Week',
         'newly_listed' => 'Newly Listed',
         'purchase_now' => 'Purchase Now',
-        '1990_present' => '1990s-Present',
     ],
     'find_what_you_need' => 'FIND WHAT YOU NEED.',
     'contact' => 'CONTACT',

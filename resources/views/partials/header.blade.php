@@ -9,7 +9,7 @@
                                 @lang('header.register')
                             </a>
                         </li>
-                        <li id="login" v-bind:style="{ borderLeft: borderLeft, paddingLeft: paddingLeft}">
+                        <li id="login" v-bind:style="{ borderLeft: borderLeft, paddingLeft: paddingLeft }">
                             <a href="#" v-on:click.prevent="showLoginForm" v-if="!loginFormIsShown">
                                 @lang('header.login')
                             </a>

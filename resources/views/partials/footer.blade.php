@@ -28,14 +28,17 @@
             <div class="col">
                 <ul>
                     <li>@lang('footer.style')</li>
-                    @foreach(trans('footer.styles1') as $style)
+                    @foreach(trans('footer.styles') as $style)
                         <li><a href="#">{{ $style }}</a></li>
                     @endforeach
                 </ul>
                 <ul>
-                    <li>@lang('footer.style')</li>
-                    @foreach(trans('footer.styles2') as $style)
-                        <li><a href="#">{{ $style }}</a></li>
+                    @foreach(trans('footer.media') as $media)
+                        @if($loop->first)
+                            <li>{{ $media }}</li>
+                        @else
+                            <li><a href="#">{{ $media }}</a></li>
+                        @endif
                     @endforeach
                 </ul>
             </div>

@@ -10,7 +10,7 @@
         {!! Form::open(['route' => 'deleteSelectedWatchlistAuctions', 'method' => 'delete']) !!}
         {!! Form::submit(trans('watchlist.delete_selected'), ['class' => 'small-button']) !!}
         <h1>@lang('watchlist.watchlist')</h1>
-        <p class="watchlist-categories">
+        <p class="categories">
             @for($i = 0; $i < count($watchlistAuctions); $i++)
                 <a href="#" v-on:click.prevent="showCategory('{{ $watchlistStatuses[$i] }}')"
                 v-bind:class="{ active: shownCategory == '{{ $watchlistStatuses[$i] }}' }">@lang("watchlist.{$watchlistStatuses[$i]}")({{ count($watchlistAuctions[$i]) }})</a>

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo:400,700");
-/* line 5, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,148 +20,120 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 144, icons/*.png */
 .icons-sprite, .icons-arrow_down, .icons-checkbox_checked, input[type=checkbox]:checked + label span, .icons-checkbox_unchecked, input[type=checkbox] + label span, .icons-euro, .icons-facebook, .icons-hamburger, .icons-magnifying_glass, .icons-mail, .icons-person, .icons-phone, .icons-plus, .icons-twitter, .icons-youtube {
   background-image: url('../img/icons-sed319c359b.png');
   background-repeat: no-repeat;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-arrow_down {
   background-position: 0 0;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-checkbox_checked, input[type=checkbox]:checked + label span {
   background-position: 0 -28px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-checkbox_unchecked, input[type=checkbox] + label span {
   background-position: 0 -44px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-euro {
   background-position: 0 -60px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-facebook {
   background-position: 0 -76px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-hamburger {
   background-position: 0 -108px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-magnifying_glass {
   background-position: 0 -118px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-mail {
   background-position: 0 -136px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-person {
   background-position: 0 -145px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-phone {
   background-position: 0 -159px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-plus {
   background-position: 0 -171px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-twitter {
   background-position: 0 -203px;
 }
 
-/* line 84, ../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-youtube {
   background-position: 0 -235px;
 }
 
-/* line 8, ../../resources/assets/sass/app.scss */
 * {
   box-sizing: border-box;
   word-wrap: break-word;
 }
 
-/* line 12, ../../resources/assets/sass/app.scss */
 ul {
   list-style-type: none;
 }
 
-/* line 15, ../../resources/assets/sass/app.scss */
 a {
   text-decoration: none;
   color: #0a1e75;
 }
-/* line 19, ../../resources/assets/sass/app.scss */
 a[href^=mailto] {
   text-decoration: underline;
   color: #01a6a0;
 }
 
-/* line 24, ../../resources/assets/sass/app.scss */
 ol {
   list-style-type: decimal;
 }
 
-/* line 27, ../../resources/assets/sass/app.scss */
 body {
   font-family: "Arimo", sans-serif;
   font-size: 15px;
@@ -170,18 +141,15 @@ body {
   position: relative;
 }
 
-/* line 33, ../../resources/assets/sass/app.scss */
 input[type=submit] {
   vertical-align: middle;
   cursor: pointer;
 }
 
-/* line 37, ../../resources/assets/sass/app.scss */
 input[type=checkbox] {
   display: none;
 }
 
-/* line 40, ../../resources/assets/sass/app.scss */
 input[type=checkbox] + label span {
   display: inline-block;
   width: 16px;
@@ -191,82 +159,75 @@ input[type=checkbox] + label span {
   margin-right: 10px;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
 h1 {
   font-weight: normal;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
 h2 {
   font-weight: normal;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
 h3 {
   font-weight: normal;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
 h4 {
   font-weight: normal;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
 h5 {
   font-weight: normal;
 }
 
-/* line 53, ../../resources/assets/sass/app.scss */
 h6 {
   font-weight: normal;
 }
 
-/* line 57, ../../resources/assets/sass/app.scss */
 h2 {
   font-size: 24px;
 }
 
-/* line 60, ../../resources/assets/sass/app.scss */
 [class^=icons] {
   display: inline-block;
   vertical-align: -5%;
 }
 
-/* line 64, ../../resources/assets/sass/app.scss */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 .active {
   font-weight: bold;
 }
 
-/* line 67, ../../resources/assets/sass/app.scss */
 .wrapper, .info, .popular {
   margin: 0 auto;
   width: 1024px;
 }
 
-/* line 71, ../../resources/assets/sass/app.scss */
 .stretch-bg {
   background-color: #eaeaea;
 }
 
-/* line 74, ../../resources/assets/sass/app.scss */
 .slideshow-home {
   width: 100%;
 }
 
-/* line 77, ../../resources/assets/sass/app.scss */
 .line {
   background-color: #01a6a0;
   height: 4px;
 }
 
-/* line 81, ../../resources/assets/sass/app.scss */
 .col, .profile-info .profile-info-col {
   vertical-align: top;
   width: 250px;
   display: inline-block;
 }
 
-/* line 86, ../../resources/assets/sass/app.scss */
 .small-button {
   padding: 10px;
   border: 1px solid #eaeaea;
@@ -279,7 +240,6 @@ h2 {
   color: #0a1e75;
 }
 
-/* line 97, ../../resources/assets/sass/app.scss */
 .big-button, .auction-detail .top .side .bid .bid-form .price-submit {
   background-color: #01a6a0;
   text-align: center;
@@ -291,7 +251,6 @@ h2 {
   border: 0;
 }
 
-/* line 107, ../../resources/assets/sass/app.scss */
 .logo, .logo-top, .logo-bottom {
   box-shadow: 0px 0px 24px 0px rgba(1, 1, 1, 0.19);
   position: absolute;
@@ -300,113 +259,93 @@ h2 {
   height: 140px;
 }
 
-/* line 114, ../../resources/assets/sass/app.scss */
 .logo-top {
   top: 0;
 }
 
-/* line 118, ../../resources/assets/sass/app.scss */
 .logo-bottom {
   bottom: 0;
 }
 
-/* line 122, ../../resources/assets/sass/app.scss */
 .input, header #login input[type=email], header #login input[type=password], main form input:not([type=submit]):not([type=checkbox]), main form select, main form textarea {
   border: 1px solid #eaeaea;
   background-color: #f8f8f8;
 }
 
-/* line 126, ../../resources/assets/sass/app.scss */
 .icons-arrow_down {
   width: 28px;
   height: 28px;
 }
 
-/* line 130, ../../resources/assets/sass/app.scss */
 .icons-magnifying_glass {
   width: 18px;
   height: 18px;
 }
 
-/* line 134, ../../resources/assets/sass/app.scss */
 .icons-phone {
   width: 9px;
   height: 12px;
 }
 
-/* line 138, ../../resources/assets/sass/app.scss */
 .icons-mail {
   width: 13px;
   height: 9px;
 }
 
-/* line 142, ../../resources/assets/sass/app.scss */
 .icons-hamburger {
   width: 11px;
   height: 10px;
 }
 
-/* line 146, ../../resources/assets/sass/app.scss */
 .icons-person {
   width: 13px;
   height: 14px;
 }
 
-/* line 150, ../../resources/assets/sass/app.scss */
 .icons-euro {
   width: 16px;
   height: 16px;
 }
 
-/* line 155, ../../resources/assets/sass/app.scss */
 .icons-facebook {
   width: 32px;
   height: 32px;
 }
 
-/* line 155, ../../resources/assets/sass/app.scss */
 .icons-twitter {
   width: 32px;
   height: 32px;
 }
 
-/* line 155, ../../resources/assets/sass/app.scss */
 .icons-youtube {
   width: 32px;
   height: 32px;
 }
 
-/* line 155, ../../resources/assets/sass/app.scss */
 .icons-plus {
   width: 32px;
   height: 32px;
 }
 
-/* line 161, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic::-webkit-input-placeholder, .search input[type=search]::-webkit-input-placeholder, header #login input[type=email]::-webkit-input-placeholder, header #login input[type=password]::-webkit-input-placeholder {
   font-style: italic;
 }
-/* line 164, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic:-moz-placeholder, .search input[type=search]:-moz-placeholder, header #login input[type=email]:-moz-placeholder, header #login input[type=password]:-moz-placeholder {
   font-style: italic;
 }
-/* line 167, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic::-moz-placeholder, .search input[type=search]::-moz-placeholder, header #login input[type=email]::-moz-placeholder, header #login input[type=password]::-moz-placeholder {
   font-style: italic;
 }
-/* line 170, ../../resources/assets/sass/app.scss */
 .input-placeholder-italic:-ms-input-placeholder, .search input[type=search]:-ms-input-placeholder, header #login input[type=email]:-ms-input-placeholder, header #login input[type=password]:-ms-input-placeholder {
   font-style: italic;
 }
 
-/* line 175, ../../resources/assets/sass/app.scss */
 .search input[type=search] {
   border: 1px solid #eaeaea;
   width: 207px;
   padding: 5px 0 5px 25px;
   border-radius: 3px;
 }
-/* line 182, ../../resources/assets/sass/app.scss */
 .search input[type=submit] {
   border: none;
   vertical-align: middle;
@@ -415,7 +354,6 @@ h2 {
   background-color: #ffffff;
 }
 
-/* line 190, ../../resources/assets/sass/app.scss */
 .header-item, header .header-personal, .header-nav {
   margin-left: 170px;
   padding: 14px 0;
@@ -423,86 +361,69 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-/* line 197, ../../resources/assets/sass/app.scss */
 .header-item nav, header .header-personal nav, .header-nav nav, .header-item li, header .header-personal li, .header-nav li {
   display: inline-block;
 }
 
-/* line 203, ../../resources/assets/sass/app.scss */
 header #login input[type=email], header #login input[type=password] {
   padding: 2px 0 2px 5px;
   margin-right: 20px;
   width: 100px;
 }
-/* line 210, ../../resources/assets/sass/app.scss */
 header #login input[type=submit] {
   width: 23px;
   height: 23px;
   background-color: #eaeaea;
   border: 0;
 }
-/* line 216, ../../resources/assets/sass/app.scss */
 header #login form a {
   margin-left: 10px;
 }
-/* line 220, ../../resources/assets/sass/app.scss */
 header .header-personal {
   font-size: 13px;
 }
-/* line 224, ../../resources/assets/sass/app.scss */
 header .header-personal li {
   border-left: 1px solid #0a1e75;
   color: #0a1e75;
   padding: 0 30px;
 }
-/* line 229, ../../resources/assets/sass/app.scss */
 header .header-personal li:first-of-type {
   border-left: 0;
   padding-left: 0;
 }
-/* line 233, ../../resources/assets/sass/app.scss */
 header .header-personal .icons-hamburger, header .header-personal .icons-person {
   margin-right: 10px;
 }
-/* line 238, ../../resources/assets/sass/app.scss */
 header .logout form {
   display: inline-block;
 }
-/* line 241, ../../resources/assets/sass/app.scss */
 header .logout form input[type=submit] {
   background-color: #ffffff;
   color: #0a1e75;
   border: 0;
 }
 
-/* line 252, ../../resources/assets/sass/app.scss */
 .header-nav nav {
   font-weight: bold;
 }
-/* line 255, ../../resources/assets/sass/app.scss */
 .header-nav nav li {
   padding: 0 15px;
 }
-/* line 258, ../../resources/assets/sass/app.scss */
 .header-nav nav li a {
   color: #4e4e4e;
 }
-/* line 261, ../../resources/assets/sass/app.scss */
 .header-nav nav li:first-of-type {
   padding-left: 0;
 }
-/* line 266, ../../resources/assets/sass/app.scss */
 .header-nav .languages {
   color: #0a1e75;
   font-size: 13px;
 }
-/* line 270, ../../resources/assets/sass/app.scss */
 .header-nav .languages li {
   width: 36px;
   text-align: right;
 }
 
-/* line 277, ../../resources/assets/sass/app.scss */
 .block h2, .info h2, .popular h2 {
   font-size: 40px;
   color: #0a1e75;
@@ -510,11 +431,9 @@ header .logout form input[type=submit] {
   padding: 50px 0;
 }
 
-/* line 284, ../../resources/assets/sass/app.scss */
 .info {
   margin-bottom: 50px;
 }
-/* line 289, ../../resources/assets/sass/app.scss */
 .info div {
   width: 300px;
   padding: 0 55px;
@@ -522,138 +441,110 @@ header .logout form input[type=submit] {
   display: inline-block;
   text-align: center;
 }
-/* line 296, ../../resources/assets/sass/app.scss */
 .info div:last-of-type {
   margin-right: 0;
 }
-/* line 299, ../../resources/assets/sass/app.scss */
 .info div h3 {
   font-size: 25px;
   padding: 30px 0 12px 0;
 }
 
-/* line 305, ../../resources/assets/sass/app.scss */
 .info + .stretch-bg {
   padding-bottom: 100px;
   margin-bottom: 100px;
 }
 
-/* line 313, ../../resources/assets/sass/app.scss */
 .popular span {
   margin-left: 20px;
 }
-/* line 316, ../../resources/assets/sass/app.scss */
 .popular div {
   width: 314px;
   display: inline-block;
 }
-/* line 320, ../../resources/assets/sass/app.scss */
 .popular img {
   transition: .3s;
 }
-/* line 323, ../../resources/assets/sass/app.scss */
 .popular img:hover {
   filter: brightness(50%);
 }
 
-/* line 328, ../../resources/assets/sass/app.scss */
-footer {
+footer, #filter {
   border-top: 1px solid #eaeaea;
 }
-/* line 331, ../../resources/assets/sass/app.scss */
-footer ul {
+footer ul, #filter ul {
   margin-bottom: 22px;
 }
-/* line 334, ../../resources/assets/sass/app.scss */
-footer ul li {
+footer ul li, #filter ul li {
   font-size: 14px;
 }
-/* line 337, ../../resources/assets/sass/app.scss */
-footer ul li:first-of-type {
+footer ul li:first-of-type, #filter ul li:first-of-type {
   color: #000000;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 342, ../../resources/assets/sass/app.scss */
-footer ul li a {
+footer ul li a, #filter ul li a {
   color: #01a6a0;
 }
-/* line 347, ../../resources/assets/sass/app.scss */
-footer .footer-item, footer .sitemap, footer .contact {
+footer .footer-item, footer .sitemap, footer #filter .sitemap, #filter footer .sitemap, footer .contact, footer #filter .contact, #filter footer .contact, #filter .footer-item, #filter .sitemap, #filter .contact {
   padding-top: 40px;
   display: inline-block;
 }
-/* line 351, ../../resources/assets/sass/app.scss */
-footer .sitemap {
+footer .sitemap, #filter .sitemap {
   border-right: 1px solid #eaeaea;
   padding-bottom: 65px;
 }
-/* line 356, ../../resources/assets/sass/app.scss */
-footer .contact {
+footer .contact, #filter .contact {
   vertical-align: top;
   padding-left: 30px;
 }
-/* line 361, ../../resources/assets/sass/app.scss */
-footer .contact ul:first-of-type li {
+footer .contact ul:first-of-type li, #filter .contact ul:first-of-type li {
   margin-bottom: 20px;
 }
-/* line 364, ../../resources/assets/sass/app.scss */
-footer .contact div {
+footer .contact div, #filter .contact div {
   margin-top: 30px;
 }
-/* line 367, ../../resources/assets/sass/app.scss */
-footer .contact div.copyright {
+footer .contact div.copyright, #filter .contact div.copyright {
   margin-top: 86px;
   font-size: 12px;
 }
-/* line 374, ../../resources/assets/sass/app.scss */
-footer .search input[type=search] {
+footer .search input[type=search], #filter .search input[type=search] {
   width: 183px;
 }
-/* line 378, ../../resources/assets/sass/app.scss */
-footer .social {
+footer .social, #filter .social {
   margin-top: 40px;
 }
 
-/* line 382, ../../resources/assets/sass/app.scss */
 .new-auction {
   width: 750px;
 }
 
-/* line 385, ../../resources/assets/sass/app.scss */
 main {
   margin: 80px 0 60px 0;
 }
-/* line 388, ../../resources/assets/sass/app.scss */
 main h1 {
   font-size: 45px;
   margin-bottom: 40px;
 }
-/* line 393, ../../resources/assets/sass/app.scss */
 main form label {
   color: #0a1e75;
   font-size: 20px;
   margin-bottom: 10px;
   display: block;
 }
-/* line 399, ../../resources/assets/sass/app.scss */
 main form input:not([type=submit]):not([type=checkbox]), main form select, main form textarea {
   padding: 15px;
   width: 100%;
   height: 47px;
   color: #4e4e4e;
 }
-/* line 406, ../../resources/assets/sass/app.scss */
 main form input:not([type=submit]):not([type=checkbox]).has-error, main form select.has-error, main form textarea.has-error {
   background-color: #fff1f1;
   border-color: #fd0100;
 }
-/* line 411, ../../resources/assets/sass/app.scss */
 main form textarea {
   font-family: "Arimo", sans-serif;
   height: 120px;
 }
-/* line 415, ../../resources/assets/sass/app.scss */
 main form input[type=submit] + a {
   min-width: 200px;
   display: inline-block;
@@ -662,7 +553,6 @@ main form input[type=submit] + a {
   margin-top: 20px;
   font-size: 13px;
 }
-/* line 423, ../../resources/assets/sass/app.scss */
 main form .upload {
   background-color: #4e4e4e;
   color: #ffffff;
@@ -677,298 +567,238 @@ main form .upload {
   font-size: 14px;
   cursor: pointer;
 }
-/* line 437, ../../resources/assets/sass/app.scss */
 main form p {
   font-size: 14px;
 }
-/* line 440, ../../resources/assets/sass/app.scss */
 main form .agree-tac {
   margin-top: 80px;
 }
-/* line 443, ../../resources/assets/sass/app.scss */
 main form .agree-tac input[type=checkbox] + label {
   color: #4e4e4e;
   font-size: 15px;
   display: initial;
 }
-/* line 448, ../../resources/assets/sass/app.scss */
 main form .agree-tac input[type=checkbox] + label + a {
   text-decoration: underline;
   color: #01a6a0;
 }
-/* line 454, ../../resources/assets/sass/app.scss */
 main form .row {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
-/* line 459, ../../resources/assets/sass/app.scss */
 main form .row .row-item {
   width: 48%;
   display: inline-block;
 }
-/* line 463, ../../resources/assets/sass/app.scss */
 main form .row .row-item.has-error {
   border: 1px solid #fd0100;
 }
-/* line 467, ../../resources/assets/sass/app.scss */
 main form .row .half {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-/* line 472, ../../resources/assets/sass/app.scss */
 main form .row .full {
   width: 100%;
 }
-/* line 475, ../../resources/assets/sass/app.scss */
 main form .row .third {
   width: 32%;
 }
-/* line 478, ../../resources/assets/sass/app.scss */
 main form .row .two-third {
   width: 64%;
 }
-/* line 482, ../../resources/assets/sass/app.scss */
 main form .row .optional label {
   display: inline-block;
 }
-/* line 485, ../../resources/assets/sass/app.scss */
 main form .row .optional label:last-of-type {
   font-size: 15px;
 }
-/* line 491, ../../resources/assets/sass/app.scss */
 main form .row.cash .row-item {
   position: relative;
 }
-/* line 494, ../../resources/assets/sass/app.scss */
 main form .row.cash input {
   padding-left: 30px;
 }
-/* line 497, ../../resources/assets/sass/app.scss */
 main form .row.cash .icons-euro {
   position: absolute;
   top: 44.5px;
   left: 10px;
 }
 
-/* line 506, ../../resources/assets/sass/app.scss */
 .errors {
   padding: 30px 50px;
   margin: 60px 0 40px 0;
   color: #fd0100;
   background-color: #fff1f1;
 }
-/* line 512, ../../resources/assets/sass/app.scss */
 .errors ul {
   list-style-type: initial;
 }
 
-/* line 516, ../../resources/assets/sass/app.scss */
 .profile-info {
   padding: 20px 45px;
   border: 1px solid #eaeaea;
 }
-/* line 520, ../../resources/assets/sass/app.scss */
 .profile-info h2 {
   margin-bottom: 30px;
 }
-/* line 523, ../../resources/assets/sass/app.scss */
 .profile-info .profile-info-col {
   border-right: 1px solid #eaeaea;
   margin-left: 45px;
 }
-/* line 528, ../../resources/assets/sass/app.scss */
 .profile-info .profile-info-col:first-of-type {
   margin-left: 0;
 }
-/* line 531, ../../resources/assets/sass/app.scss */
 .profile-info .profile-info-col:last-of-type {
   border-right: 0;
 }
-/* line 534, ../../resources/assets/sass/app.scss */
 .profile-info .profile-info-col p {
   margin-bottom: 2px;
 }
-/* line 537, ../../resources/assets/sass/app.scss */
 .profile-info .profile-info-col .sub-title {
   color: #0a1e75;
   font-weight: bold;
 }
-/* line 541, ../../resources/assets/sass/app.scss */
 .profile-info .profile-info-col .item:first-of-type {
   margin-bottom: 30px;
 }
 
-/* line 546, ../../resources/assets/sass/app.scss */
 .auction-table {
   width: 100%;
   border: 1px solid #eaeaea;
   border-collapse: collapse;
   margin: 30px 0 60px 0;
 }
-/* line 552, ../../resources/assets/sass/app.scss */
 .auction-table th {
   background-color: #f8f8f8;
   padding: 10px 0;
   text-align: center;
   font-weight: normal;
 }
-/* line 558, ../../resources/assets/sass/app.scss */
 .auction-table td {
   border: 1px solid #eaeaea;
   text-align: center;
   font-size: 20px;
 }
-/* line 563, ../../resources/assets/sass/app.scss */
 .auction-table img {
   width: 100%;
   height: 100%;
   transition: .3s;
   object-fit: cover;
 }
-/* line 569, ../../resources/assets/sass/app.scss */
 .auction-table img:hover {
   filter: brightness(50%);
 }
-/* line 573, ../../resources/assets/sass/app.scss */
 .auction-table .empty {
   padding: 40px;
 }
-/* line 576, ../../resources/assets/sass/app.scss */
 .auction-table .image {
   border-right: 0;
   width: 150px;
   height: 150px;
   position: relative;
 }
-/* line 582, ../../resources/assets/sass/app.scss */
 .auction-table .image input[type=checkbox] + label {
   display: initial;
   margin: 0;
 }
-/* line 586, ../../resources/assets/sass/app.scss */
 .auction-table .image input[type=checkbox] + label span {
   position: absolute;
   top: 60px;
   left: -40px;
 }
-/* line 593, ../../resources/assets/sass/app.scss */
 .auction-table .title {
   border-left: 0;
   text-align: left;
   padding: 0 40px;
   font-size: 22px;
 }
-/* line 599, ../../resources/assets/sass/app.scss */
 .auction-table .title a {
   color: #4e4e4e;
 }
-/* line 602, ../../resources/assets/sass/app.scss */
 .auction-table .title p {
   color: #0a1e75;
   font-size: 18px;
 }
-/* line 607, ../../resources/assets/sass/app.scss */
 .auction-table .price, .auction-table .end-date, .auction-table .remaining-time {
   width: 17%;
   padding: 0 5px;
 }
 
-/* line 613, ../../resources/assets/sass/app.scss */
 .auction-detail h1 {
   margin-bottom: 15px;
 }
-/* line 616, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info {
   font-size: 14px;
 }
-/* line 620, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .icons-hamburger {
   margin-left: 5px;
 }
-/* line 623, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids div {
   padding: 20px 30px;
   margin-top: 30px;
   border: 1px solid #eaeaea;
 }
-/* line 628, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids div li {
   padding: 5px;
 }
-/* line 632, ../../resources/assets/sass/app.scss */
 .auction-detail .title-info #bids .you {
   background-color: #eaeaea;
 }
-/* line 637, ../../resources/assets/sass/app.scss */
 .auction-detail .top {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
-/* line 642, ../../resources/assets/sass/app.scss */
 .auction-detail .top img {
   width: 710px;
   height: 502px;
   object-fit: cover;
 }
-/* line 648, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side {
   width: 250px;
   text-align: right;
 }
-/* line 652, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .ended {
   font-size: 60px;
   font-weight: bold;
 }
-/* line 656, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div {
   margin-bottom: 15px;
   padding-bottom: 20px;
 }
-/* line 660, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div * {
   margin-bottom: 5px;
 }
-/* line 663, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div.border-bottom {
   border-bottom: 1px solid #eaeaea;
 }
-/* line 666, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 {
   color: #000000;
   font-size: 27px;
 }
-/* line 670, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div h2 + p {
   color: #0a1e75;
 }
-/* line 675, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time {
   color: #01a6a0;
 }
-/* line 678, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side div .remaining-time + span {
   color: #01a6a0;
 }
-/* line 683, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid {
   color: #0a1e75;
   border: 1px solid #eaeaea;
   padding-top: 20px;
 }
-/* line 688, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .padding {
   padding: 0 20px;
 }
-/* line 691, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .estimated-price {
   font-size: 25px;
   font-weight: bold;
 }
-/* line 695, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .buyout {
   color: #01a6a0;
   text-decoration: underline;
@@ -977,41 +807,34 @@ main form .row.cash .icons-euro {
   border: 0;
   background-color: #ffffff;
 }
-/* line 703, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form {
   display: flex;
   justify-content: flex-end;
 }
-/* line 707, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-input {
   width: 128px;
   border: 10px solid #01a6a0;
   vertical-align: middle;
   outline: none;
 }
-/* line 713, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .bid-form .price-submit {
   min-width: 120px;
   display: inline-block;
 }
-/* line 719, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container {
   text-align: center;
   display: block;
 }
-/* line 723, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .icons-hamburger {
   margin-bottom: 0;
   vertical-align: baseline;
 }
-/* line 727, ../../resources/assets/sass/app.scss */
 .auction-detail .top .side .bid .add-to-watchlist-container .add-to-watchlist {
   color: #0a1e75;
   text-decoration: underline;
   border: 0;
   background-color: #ffffff;
 }
-/* line 737, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom {
   padding: 20px;
   border: 1px solid #eaeaea;
@@ -1020,26 +843,21 @@ main form .row.cash .icons-euro {
   justify-content: space-between;
   min-height: 300px;
 }
-/* line 745, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom h3 {
   font-weight: bold;
   margin: 20px 0 10px 0;
 }
-/* line 749, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom p {
   padding-right: 20px;
   margin-bottom: 20px;
 }
-/* line 753, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-texts {
   width: 750px;
   border-right: 1px solid #eaeaea;
 }
-/* line 757, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra {
   width: 200px;
 }
-/* line 760, ../../resources/assets/sass/app.scss */
 .auction-detail .bottom .auction-extra .big-button, .auction-detail .bottom .auction-extra .top .side .bid .bid-form .price-submit, .auction-detail .top .side .bid .bid-form .bottom .auction-extra .price-submit {
   background-color: #4e4e4e;
   text-align: center;
@@ -1049,111 +867,114 @@ main form .row.cash .icons-euro {
   margin-top: 50px;
 }
 
-/* line 771, ../../resources/assets/sass/app.scss */
-.watchlist-categories {
+.categories {
   height: 26px;
+  display: inline-block;
 }
-/* line 774, ../../resources/assets/sass/app.scss */
-.watchlist-categories a {
+.categories span {
+  font-weight: bold;
+}
+.categories a {
   color: #4e4e4e;
   padding: 0 5px 2px 0;
   border-right: 1px solid #4e4e4e;
+  vertical-align: text-top;
 }
-/* line 779, ../../resources/assets/sass/app.scss */
-.watchlist-categories a.active {
+.categories a.active {
   border-bottom: 3px solid #eaeaea;
 }
-/* line 782, ../../resources/assets/sass/app.scss */
-.watchlist-categories a:last-of-type {
+.categories a:last-of-type {
   border-right: 0;
 }
 
-/* line 789, ../../resources/assets/sass/app.scss */
 .isearch .search input[type=search] {
   width: 996px;
 }
-/* line 793, ../../resources/assets/sass/app.scss */
 .isearch h2 {
   margin-top: 40px;
 }
 
-/* line 797, ../../resources/assets/sass/app.scss */
 .auction-cards {
   display: flex;
   flex-wrap: wrap;
 }
-/* line 801, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-info {
   margin-top: 5px;
   line-height: 1.5;
 }
-/* line 805, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card {
   width: 250px;
   margin: 0 3px 50px 3px;
   max-height: 400px;
   overflow: auto;
 }
-/* line 811, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card img {
   width: 100%;
   height: 180px;
   transition: .3s;
   object-fit: cover;
 }
-/* line 817, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card img:hover {
   filter: brightness(50%);
 }
-/* line 821, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card .small-button {
   margin: 0;
   padding: 5px;
   float: initial;
   border-bottom: 0;
 }
-/* line 827, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card .title {
   font-size: 20px;
 }
-/* line 830, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card .title a {
   color: #4e4e4e;
 }
-/* line 834, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card .space {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eaeaea;
 }
-/* line 840, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card .year {
   color: #0a1e75;
 }
-/* line 843, ../../resources/assets/sass/app.scss */
 .auction-cards .auction-card .remaining-time {
   font-size: 14px;
 }
 
-/* line 848, ../../resources/assets/sass/app.scss */
 .pagination {
   text-align: right;
 }
-/* line 851, ../../resources/assets/sass/app.scss */
 .pagination li {
   display: inline-block;
 }
 
-/* line 855, ../../resources/assets/sass/app.scss */
 .breadcrumb {
   margin-bottom: 40px;
 }
-/* line 857, ../../resources/assets/sass/app.scss */
 .breadcrumb li {
   display: inline-block;
 }
-/* line 860, ../../resources/assets/sass/app.scss */
 .breadcrumb li a {
   color: #01a6a0;
+}
+
+#filter {
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 50px;
+}
+#filter .filter-menu {
+  padding: 30px 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#filter .filter-menu .advanced {
+  color: #0a1e75;
+  font-size: 20px;
+}
+#filter .filter-menu .advanced span {
+  vertical-align: middle;
+  transform: rotate(-90deg);
+  margin-left: 15px;
+  transition: .5s;
 }
