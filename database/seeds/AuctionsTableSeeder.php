@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class AuctionsTableSeeder extends Seeder
 {
@@ -31,7 +32,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '5000',
                 'max_price' => '10000',
                 'buyout_price' => '20000',
-                'end_date' => '2018-01-19',
+                'end_date' => Carbon::now()->addDay()->toDateString(),
             ],
             [
                 'user_id' => 1,
@@ -51,7 +52,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '15000',
                 'max_price' => '21000',
                 'buyout_price' => '86500',
-                'end_date' => '2018-02-24',
+                'end_date' => Carbon::now()->addMonth()->toDateString(),
             ],
             [
                 'user_id' => 2,
@@ -71,7 +72,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '100000',
                 'max_price' => '200000',
                 'buyout_price' => '500000',
-                'end_date' => '2018-01-19',
+                'end_date' => Carbon::now()->addWeek()->toDateString(),
             ],
             [
                 'user_id' => 2,
@@ -91,7 +92,7 @@ class AuctionsTableSeeder extends Seeder
                 'min_price' => '100',
                 'max_price' => '865',
                 'buyout_price' => '1500',
-                'end_date' => '2018-01-28',
+                'end_date' => Carbon::now()->addDays(3)->toDateString(),
             ],
         ]);
     }
