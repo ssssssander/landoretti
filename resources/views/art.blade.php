@@ -7,10 +7,10 @@
         <div class="filter">
             <div class="filter-menu">
                 <p class="categories">
-                    <span>@lang('art.sort_by')</span>
-                    @for($i = 0; $i < count($sortedAuctions); $i++)
-                        <a href="#" v-on:click.prevent="sort('{{ $sortedAuctionTypes[$i] }}')"
-                        v-bind:class="{ active: orderBy == '{{ $sortedAuctionTypes[$i] }}' }">@lang("art.{$sortedAuctionTypes[$i]}")</a>
+                    <span>@lang('art.order_by')</span>
+                    @for($i = 0; $i < count($orderedAuctions); $i++)
+                        <a href="#" v-on:click.prevent="order('{{ $orderedAuctionTypes[$i] }}')"
+                        v-bind:class="{ active: orderBy == '{{ $orderedAuctionTypes[$i] }}' }">@lang("art.{$orderedAuctionTypes[$i]}")</a>
                     @endfor
                 </p>
                 <a href="#" v-on:click.prevent="toggleFilterPane" class="advanced">@lang('art.advanced_options')<span v-bind:style="{ transform: transform}" class="icons-arrow_down"></span></a>
@@ -52,9 +52,9 @@
                 </div>
             </transition>
         </div>
-        @for($i = 0; $i < count($sortedAuctions); $i++)
-            <div v-if="orderBy == '{{ $sortedAuctionTypes[$i] }}'">
-                @include('partials.auction_cards', ['auctions' => $sortedAuctions[$i]])
+        @for($i = 0; $i < count($orderedAuctions); $i++)
+            <div v-if="orderBy == '{{ $orderedAuctionTypes[$i] }}'">
+                @include('partials.auction_cards', ['auctions' => $orderedAuctions[$i]])
             </div>
         @endfor
     </div>

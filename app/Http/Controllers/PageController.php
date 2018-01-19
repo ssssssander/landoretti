@@ -25,10 +25,10 @@ class PageController extends Controller
         $new = Auction::where('status', 'active')->orderByDesc('created_at')->paginate($paginate);
         $popular = Auction::withCount('bids')->where('status', 'active')->orderByDesc('bids_count')->paginate($paginate);
 
-        $sortedAuctions = [$endingSoonest, $endingLatest, $new, $popular];
-        $sortedAuctionTypes = ['ending_soonest', 'ending_latest', 'new', 'popular'];
+        $orderedAuctions = [$endingSoonest, $endingLatest, $new, $popular];
+        $orderedAuctionTypes = ['ending_soonest', 'ending_latest', 'new', 'popular'];
 
-        return view('art', compact('request', 'sortedAuctions', 'sortedAuctionTypes'));
+        return view('art', compact('request', 'orderedAuctions', 'orderedAuctionTypes'));
     }
 
     public function watchlist(Request $request) {

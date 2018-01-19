@@ -1024,7 +1024,7 @@ var filter = new Vue({
       this.filterPaneIsShown = !this.filterPaneIsShown;
       this.filterPaneIsShown ? this.transform = 'initial' : this.transform = '';
     },
-    sort: function sort(orderBy) {
+    order: function order(orderBy) {
       this.orderBy = orderBy;
     },
     doIt: function doIt(event) {

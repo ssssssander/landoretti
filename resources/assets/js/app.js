@@ -53,7 +53,7 @@ var filter = new Vue({
       this.filterPaneIsShown = !this.filterPaneIsShown;
       this.filterPaneIsShown ? this.transform = 'initial' : this.transform = '';
     },
-    sort: function(orderBy) {
+    order: function(orderBy) {
       this.orderBy = orderBy;
     },
     doIt: function(event) {

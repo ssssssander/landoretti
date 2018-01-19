@@ -4,7 +4,7 @@ return [
 
     'art' => 'Art',
     'visit_auction' => 'VISIT AUCTION &gt;',
-    'sort_by' => 'SORT BY:',
+    'order_by' => 'ORDER BY:',
     'ending_soonest' => 'ending soonest',
     'ending_latest' => 'ending latest',
     'new' => 'new auctions',
