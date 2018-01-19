@@ -11,26 +11,26 @@
 |
 */
 
-Route::get('home', 'PageController@redirectHome');
-Route::get('login', 'PageController@redirectHome');
+Route::get('home', 'EtcController@redirectHome');
+Route::get('login', 'EtcController@redirectHome');
 
-Route::get('setlocale/{locale}', 'PageController@setLocale')->name('setLocale');
-Route::get('/', 'PageController@home')->name('home');
-Route::get('art', 'PageController@art')->name('art');
-Route::get('isearch', 'PageController@isearch')->name('iSearch');
-Route::get('auction/{auction}/{auctionTitle?}', 'PageController@auctionDetail')->name('auctionDetail');
+Route::get('setlocale/{locale}', 'EtcController@setLocale')->name('setLocale');
+Route::get('/', 'EtcController@home')->name('home');
+Route::get('art', 'EtcController@art')->name('art');
+Route::get('isearch', 'EtcController@isearch')->name('iSearch');
+Route::get('auction/{auction}/{auctionTitle?}', 'AuctionController@auctionDetail')->name('auctionDetail');
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('watchlist', 'PageController@watchlist')->name('watchlist');
-    Route::delete('watchlist/deleteselected', 'PageController@deleteSelectedWatchlistAuctions')->name('deleteSelectedWatchlistAuctions');
-    Route::delete('watchlist/clear', 'PageController@clearWatchlist')->name('clearWatchlist');
-    Route::get('profile', 'PageController@profile')->name('profile');
-    Route::get('myauctions', 'PageController@myAuctions')->name('myAuctions');
-    Route::get('newauction', 'PageController@newAuction')->name('newAuction');
-    Route::post('addauction', 'PageController@addAuction')->name('addAuction');
-    Route::post('auction/{auction}/{auctionTitle?}/buyout', 'PageController@auctionBuyout')->name('auctionBuyout');
-    Route::post('auction/{auction}/{auctionTitle?}/bid', 'PageController@addBid')->name('addBid');
-    Route::post('auction/{auction}/{auctionTitle?}/addtowatchlist', 'PageController@addAuctionToWatchlist')->name('addAuctionToWatchlist');
+    Route::get('watchlist', 'WatchlistController@watchlist')->name('watchlist');
+    Route::delete('watchlist/deleteselected', 'WatchlistController@deleteSelectedWatchlistAuctions')->name('deleteSelectedWatchlistAuctions');
+    Route::delete('watchlist/clear', 'WatchlistController@clearWatchlist')->name('clearWatchlist');
+    Route::get('profile', 'EtcController@profile')->name('profile');
+    Route::get('myauctions', 'AuctionController@myAuctions')->name('myAuctions');
+    Route::get('newauction', 'AuctionController@newAuction')->name('newAuction');
+    Route::post('addauction', 'AuctionController@addAuction')->name('addAuction');
+    Route::post('auction/{auction}/{auctionTitle?}/buyout', 'AuctionController@auctionBuyout')->name('auctionBuyout');
+    Route::post('auction/{auction}/{auctionTitle?}/bid', 'AuctionController@addBid')->name('addBid');
+    Route::post('auction/{auction}/{auctionTitle?}/addtowatchlist', 'WatchlistController@addAuctionToWatchlist')->name('addAuctionToWatchlist');
 });
 
 // Auth routes
