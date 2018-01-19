@@ -3,7 +3,7 @@
     @forelse($auctions as $auction)
         <div class="auction-card">
             <a href="{{ route('auctionDetail', ['auction' => $auction, 'auctionTitle' => clean($auction->title)]) }}">
-                <img src="{{ asset($auction->artwork_image_path) }}" alt="{{ $auction->title }}">
+                <img src="{{ staticImage($auction->artwork_image_path) }}" alt="{{ $auction->title }}">
             </a>
             <div class="auction-info">
                 <div class="year">{{ $auction->year }}, {{ $auction->artist }}</div>

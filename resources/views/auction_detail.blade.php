@@ -33,7 +33,7 @@
             </div>
         @endif
         <div class="top">
-            <img src="{{ asset($auction->artwork_image_path) }}" alt="{{ $auction->title }}">
+            <img src="{{ staticImage($auction->artwork_image_path) }}" alt="{{ $auction->title }}">
             <div class="side">
                 <div class="border-bottom">
                     <h2>{{ $auction->title }}</h2>
