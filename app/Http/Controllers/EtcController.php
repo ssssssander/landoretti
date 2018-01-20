@@ -27,7 +27,7 @@ class EtcController extends Controller
 
     public function profile(Request $request) {
         $user = Auth::user();
-        $activeAuctions = Auction::where('status', 'active')->get()->random(4);
+        $activeAuctions = Auction::where('status', 'active')->take(4)->get();
 
         return view('profile', compact('user', 'activeAuctions'));
     }
